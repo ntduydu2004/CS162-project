@@ -1,0 +1,39 @@
+﻿  course.cpp
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(22,11): error C3646: 'teacher': unknown override specifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,12): error C2143: syntax error: missing ';' before '*'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,28): error C2238: unexpected token(s) preceding ';'
+  COURSE_MANAGEMENT.cpp
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(16,10): error C3646: 'dob': unknown override specifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(16,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(19,12): error C3646: 'Result': unknown override specifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(19,18): error C2143: syntax error: missing ',' before '['
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(19,22): error C2238: unexpected token(s) preceding ';'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(24,15): error C2039: 'dob': is not a member of 'Student'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(10): message : see declaration of 'Student'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(26,15): error C2039: 'dob': is not a member of 'Student'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(10): message : see declaration of 'Student'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(28,15): error C2039: 'dob': is not a member of 'Student'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(10): message : see declaration of 'Student'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(36,10): error C3646: 'dob': unknown override specifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.h(36,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  main.cpp
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(22,11): error C3646: 'teacher': unknown override specifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,12): error C2143: syntax error: missing ';' before '*'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,28): error C2238: unexpected token(s) preceding ';'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\main.cpp(15,5): error C2065: 'pUserHead': undeclared identifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\main.cpp(20,23): error C2065: 'pUserHead': undeclared identifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\main.cpp(25,13): error C2065: 'pUserHead': undeclared identifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\main.cpp(26,13): error C2065: 'pUserHead': undeclared identifier
+  user.cpp
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(22,11): error C3646: 'teacher': unknown override specifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,12): error C2143: syntax error: missing ';' before '*'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\course.h(26,28): error C2238: unexpected token(s) preceding ';'
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.cpp(23,27): error C2065: 'pUserHead': undeclared identifier
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\COURSE_MANAGEMENT\COURSE_MANAGEMENT\user.cpp(26,26): warning C4553: '==': result of expression not used; did you intend '='?
+  Generating Code...

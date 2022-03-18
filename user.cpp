@@ -1,7 +1,13 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 #include "user.h"
 #include "Linkedlist.h"
+
+#include <stdio.h>
+#include <iostream>
+
+
 using namespace std;
+
 void dangnhap(user x)
 {
     cout << "Ten dang nhap: ";
@@ -14,7 +20,7 @@ void checkuser(user &x)// lưu danh sách users vô hàm main trước
 {
     do
     {
-        Nodeuser* cur = pUserHead;
+        Node<user>* cur = pUserHead;
         while (cur != NULL){
             if (cur->data.ID == x.ID && cur->data.matkhau == x.matkhau){
                 x.chucvu == cur->data.chucvu;

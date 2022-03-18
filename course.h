@@ -1,6 +1,17 @@
-#include <bits/stdc++.h>
+#pragma once
+
+#include <stdio.h>
+#include <string>
+
+#include "user.h"
+#include "CustomTime.h"
+#include "Linkedlist.h"
+#include "course.h"
+
 using namespace std;
+
 const int maxNum = 50;
+
 struct Session{
     string weekday;
     Time time;

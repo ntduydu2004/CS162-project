@@ -1,12 +1,12 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#pragma once
+
 #include "user.h"
 #include "course.h"
+
 using namespace std;
 template <class T>
-struct Node{
+struct Node {
     T data;
-    Node *next = NULL, *prev = NULL;
-    
-}
-
-
+    Node* next = NULL, * prev = NULL;
+};
