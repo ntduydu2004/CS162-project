@@ -15,15 +15,17 @@ void dangnhap(user x)
     cout << "matkhau: ";
     cin >> x.matkhau;
     x.chucvu = -1;
+    x.locate = "";
 }
-void checkuser(user &x)// lưu danh sách users vô hàm main trước
+void checkuser(user &x, Node <user>* &pHead)// lưu danh sách users vô hàm main trước
 {
     do
     {
-        Node<user>* cur = pUserHead;
+        Node<user>* cur = pHead;
         while (cur != NULL){
             if (cur->data.ID == x.ID && cur->data.matkhau == x.matkhau){
-                x.chucvu == cur->data.chucvu;
+                x.chucvu = cur->data.chucvu;
+                x.locate = cur->data.locate;
                 return;
             }
             cur = cur->next;

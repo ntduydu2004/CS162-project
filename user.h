@@ -12,10 +12,11 @@ struct Student{
     string firstName;
     string lastName;
     string Class;
-    bool gender;// 1 là nam, 0 là nữ
+    short gender = -1;// 1 là nam, 0 là nữ, -1 là chưa xác định được danh tính
     Date dob;
     string SocialID;
     // mark
+    short numCourse; //
     result Result[20];
     // Info related functions
     void getDoB(string& input_date) // get a student's DoB from an input string "dd/mm/yyyy"
@@ -32,7 +33,7 @@ struct Staff{
     string ID;
     string firstName;
     string lastName;
-    bool gender;// 0 là nam, 1 là nữ
+    short gender;// 0 là nam, 1 là nữ, -1 la chưa xác định được danh tính
     Date dob;
     string SocialID;
 };
@@ -40,6 +41,10 @@ struct user{
     string ID;
     string matkhau;
     short chucvu; // 0 là student, 1 là staff, -1 la khong co user hop le
+    string locate; //lưu class
 };
 void dangnhap(user x);
-void checkuser(user &x);
+void checkuser(user &x, Node <user>* &phead);
+extern user x;
+extern Student infoX;
+extern Staff infoY;
