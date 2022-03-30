@@ -6,3 +6,4 @@ void inputstudent(Student &p);
 void staffFunc();
 void outputstaff(Staff p);
 void inputstaff(Staff &p);
+extern bool regisopen; // course registration 

@@ -33,7 +33,7 @@ void menuchinh()
             fin >> n;
             for (int i = 0; i < n; i++)
             {
-                Node<user> *tmp = new Node<user>;
+                Node<user> *tmp = new Node <user>;
                 fin >> tmp->data.ID >> tmp->data.matkhau >> tmp->data.chucvu >> tmp->data.locate;
                 tmp->next = NULL;
                 if (pUserHead == NULL)
