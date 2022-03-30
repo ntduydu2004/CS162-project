@@ -7,7 +7,6 @@
 #include "user.h"
 #include "CustomTime.h"
 #include "Linkedlist.h"
-//#include "course.h"
 
 using namespace std;
 
@@ -24,7 +23,7 @@ struct course{
     Session session;
     Date startday, endday;
     // student List...
-    Student* Student = NULL;
+    Student Student;
     int numStudent;
 };
 struct result{

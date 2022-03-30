@@ -5,6 +5,7 @@
 #include "user.h"
 #include "course.h"
 #include "Linkedlist.h"
+#include "function.h"
 using namespace std;
 void menuchinh()
 {
@@ -142,7 +143,6 @@ void inputstudent(Student& p)
     fin.open(s);
     int n;
     fin >> n;
-    Student p;
     p.Class = x.locate;
     for (int i = 0; i < n; i++)
     {

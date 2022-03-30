@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="course.cpp" />
     <ClCompile Include="CustomTime.cpp" />
+    <ClCompile Include="function.cpp" />
     <ClCompile Include="Linkedlist.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="user.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="course.h" />
     <ClInclude Include="CustomTime.h" />
+    <ClInclude Include="function.h" />
     <ClInclude Include="Linkedlist.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>

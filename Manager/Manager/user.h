@@ -1,7 +1,10 @@
 #pragma once
+#include <iostream>
+#include <string>
+
+
 #include "course.h"
 
-#include <string>
 
 using namespace std;
 

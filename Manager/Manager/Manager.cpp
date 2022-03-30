@@ -4,7 +4,7 @@
 #include "user.h"
 #include "course.h"
 #include "Linkedlist.h"
-#include "functions.h"
+#include "function.h"
 #include <fstream>
 #include <stdio.h>
 #include <iostream>
@@ -14,6 +14,7 @@ using namespace std;
 int main()
 {
     menuchinh();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

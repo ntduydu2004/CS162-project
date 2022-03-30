@@ -1,0 +1,21 @@
+﻿  course.cpp
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'Student': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  function.cpp
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'Student': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Manager.cpp
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'Student': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  user.cpp
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'Student': unknown override specifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
