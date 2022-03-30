@@ -10,6 +10,52 @@ using namespace std;
 
 const int maxCourse = 5;
 
+class User
+{
+private:
+    string ID;
+    string firstName;
+    string lastName;
+    string Class;
+    char gender; // "m" = male, "f" = female, "u" = unknown
+    Date dob;
+    string SocialID;
+public:
+    User() // Default Constructor
+    {
+        ID = "Unknown";
+        firstName = "Unknown";
+        lastName = "Unknown";
+        Class = "Unknown";
+        gender = 'u';
+        SocialID = "Unknown";
+    }
+    // Full Constructor
+    User(string ID, string firstName, string lastName, string Class, char gender, Date dob, string SocialID)
+    {
+        this->ID = ID;
+        this->firstName = firstName;
+        this->lastName = lastName;
+        this->Class = Class;
+        this->gender = gender;
+        this->dob = dob;
+        this->SocialID = SocialID;
+    }
+    void setID(string ID)
+    {
+        this->ID = ID;
+    }
+    void setFirstName(string firstName)
+    {
+        this->firstName = firstName;
+    }
+    void setLastName(string lastName)
+    {
+        this->lastName = lastName;
+    }
+
+};
+
 struct Student {
     string ID;
     string firstName;
@@ -21,6 +67,8 @@ struct Student {
     // mark
     short numCourse; //
     result Result[20];
+    // Constructor
+    Student() {};
     // Info related functions
     void getDoB(string& input_date) // get a student's DoB from an input string "dd/mm/yyyy"
     {
