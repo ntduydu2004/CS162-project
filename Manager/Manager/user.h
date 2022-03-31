@@ -22,6 +22,16 @@ struct user
     // Account information
     string password;
     char role; // 'p' = pupil (student), 's' = staff, 'u' = unknown
+    void getDoB(string& input_date) // get a student's DoB from an input string "dd/mm/yyyy"
+    {
+        string s = input_date.substr(0, 2); // get the day
+        dob.day = stoi(s);
+        s = input_date.substr(3, 2); // get the month
+        dob.month = (stoi(s));
+        s = input_date.substr(6, 4); // get the year
+        dob.year = stoi(s);
+    }
+};
 };
 struct student
 {
