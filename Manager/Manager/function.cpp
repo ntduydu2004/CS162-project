@@ -10,7 +10,7 @@ using namespace std;
 void menuchinh()
 {
     system("cls");
-    Node<user>* pUserHead = NULL;
+    Node<User>* pUserHead = new Node<User>;
     cout << "1. Dang nhap" << '\n';
     cout << "2. Thoat" << '\n';
     cout << "Nhap 1 so: ";

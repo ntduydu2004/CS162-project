@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-
+#include "CustomTime.h"
 #include "course.h"
 
 
@@ -10,44 +10,26 @@ using namespace std;
 
 const int maxCourse = 5;
 
-struct Student {
+struct user
+{
+    // Personal Infomation
     string ID;
     string firstName;
     string lastName;
+    char gender; // 'm' = male, 'f' = female, 'u' = unknown
+    Date dob;
+    string SocialID;
+    // Account information
+    string password;
+    char role; // 'p' = pupil (student), 's' = staff, 'u' = unknown
+};
+struct student
+{
+    user student;
     string Class;
-    short gender = -1;// 1 là nam, 0 là nữ, -1 là chưa xác định được danh tính
-    Date dob;
-    string SocialID;
-    // mark
-    short numCourse; //
-    result Result[20];
-    // Info related functions
-    void getDoB(string& input_date) // get a student's DoB from an input string "dd/mm/yyyy"
-    {
-        string s = input_date.substr(0, 2); // get the day
-        this->dob.day = stoi(s);
-        s = input_date.substr(3, 2); // get the month
-        this->dob.month = stoi(s);
-        s = input_date.substr(6, 4); // get the year
-        this->dob.year = stoi(s);
-    }
-};
-struct Staff {
-    string ID;
-    string firstName;
-    string lastName;
-    short gender;// 0 là nam, 1 là nữ, -1 la chưa xác định được danh tính
-    Date dob;
-    string SocialID;
-};
-struct user {
-    string ID;
-    string matkhau;
-    short chucvu; // 0 là student, 1 là staff, -1 la khong co user hop le
-    string locate; //lưu class
+    int numCourse;
+    Node<result>* Result{};  
 };
 void dangnhap(user x);
 void checkuser(user& x, Node <user>*& phead);
 extern user x;
-extern Student infoX;
-extern Staff infoY;

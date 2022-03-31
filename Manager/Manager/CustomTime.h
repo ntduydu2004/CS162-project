@@ -3,8 +3,11 @@
 #include <iostream>
 using namespace std;
 
-struct Date {
-    int day, month, year;
+struct Date 
+{
+    int day;
+    int month;
+    int year;
 };
 struct Time {
     int min, hour;

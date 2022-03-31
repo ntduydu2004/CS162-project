@@ -23,7 +23,7 @@ struct course{
     Session session;
     Date startday, endday;
     // student List...
-    Student Student;
+    Student student;
     int numStudent;
 };
 struct result{
