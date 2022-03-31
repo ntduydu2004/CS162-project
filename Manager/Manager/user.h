@@ -3,6 +3,8 @@
 #include <string>
 
 
+
+#include "CustomTime.h"
 #include "course.h"
 
 
@@ -13,34 +15,40 @@ const int maxCourse = 5;
 class User
 {
 private:
+    // Personal Infomation
     string ID;
     string firstName;
     string lastName;
-    string Class;
-    char gender; // "m" = male, "f" = female, "u" = unknown
+    char gender; // 'm' = male, 'f' = female, 'u' = unknown
     Date dob;
     string SocialID;
+    // Account information
+    string password;
+    char role; // 'p' = pupil (student), 's' = staff, 'u' = unknown
 public:
     User() // Default Constructor
     {
         ID = "Unknown";
         firstName = "Unknown";
         lastName = "Unknown";
-        Class = "Unknown";
         gender = 'u';
         SocialID = "Unknown";
+        password = "1";
+        role = 'u';
     }
     // Full Constructor
-    User(string ID, string firstName, string lastName, string Class, char gender, Date dob, string SocialID)
+    User(string ID, string firstName, string lastName, char gender, Date dob, string SocialID, char role)
     {
         this->ID = ID;
         this->firstName = firstName;
         this->lastName = lastName;
-        this->Class = Class;
         this->gender = gender;
         this->dob = dob;
         this->SocialID = SocialID;
-    }
+        this->role = role;
+        this->password = "1";
+    };
+    // Setters
     void setID(string ID)
     {
         this->ID = ID;
@@ -53,49 +61,86 @@ public:
     {
         this->lastName = lastName;
     }
-
-};
-
-struct Student {
-    string ID;
-    string firstName;
-    string lastName;
-    string Class;
-    short gender = -1;// 1 là nam, 0 là nữ, -1 là chưa xác định được danh tính
-    Date dob;
-    string SocialID;
-    // mark
-    short numCourse; //
-    result Result[20];
-    // Constructor
-    Student() {};
-    // Info related functions
-    void getDoB(string& input_date) // get a student's DoB from an input string "dd/mm/yyyy"
+    void setGender(char gender)
     {
-        string s = input_date.substr(0, 2); // get the day
-        this->dob.day = stoi(s);
-        s = input_date.substr(3, 2); // get the month
-        this->dob.month = stoi(s);
-        s = input_date.substr(6, 4); // get the year
-        this->dob.year = stoi(s);
+        this->gender = gender;
+    }
+    void setDoB(Date dob)
+    {
+        this->dob = dob;
+    }
+    void setDoB(int day, int month, int year)
+    {
+        this->dob = Date(day, month, year);
+    }
+    void setSocialID(string SocialID)
+    {
+        this->SocialID = SocialID;
+    }
+    void setPassword(string password)
+    {
+        this->password = password;
+    }
+    void setRole(char role)
+    {
+        this->role = role;
+    }
+    // Getters
+    string getID()
+    {
+        return this->ID;
+    }
+    string getFirstName()
+    {
+        return this->firstName;
+    }
+    string getLastName()
+    {
+        return this->lastName;
+    }
+    char getGender()
+    {
+        return this->gender;
+    }
+    Date getDob()
+    {
+        return this->dob;
+    }
+    string getSocialID()
+    {
+        return this->SocialID;
+    }
+    char getRole()
+    {
+        return this->role;
+    }
+    string getPassword()
+    {
+        return this->password;
     }
 };
-struct Staff {
-    string ID;
-    string firstName;
-    string lastName;
-    short gender;// 0 là nam, 1 là nữ, -1 la chưa xác định được danh tính
-    Date dob;
-    string SocialID;
-};
-struct user {
-    string ID;
-    string matkhau;
-    short chucvu; // 0 là student, 1 là staff, -1 la khong co user hop le
-    string locate; //lưu class
+class Student : public User
+{
+private:
+    string Class;
+    int numCourse;
+    Node<result>* Result{};
+public:
+    Student() : User()
+    {
+        Class = "Unknown";
+        numCourse = 0;
+        setRole('p');
+        setPassword("1");
+    }
+    Student(string ID, string firstName, string lastName, char gender, Date dob, string SocialID, int numCourse)
+        : User(ID, firstName, lastName, gender, dob, SocialID, 'p')
+    {
+        this->numCourse = numCourse;
+    }
+
+    
 };
 void dangnhap(user x);
 void checkuser(user& x, Node <user>*& phead);
 extern user x;
-extern Student infoX;
-extern Staff infoY;
