@@ -7,50 +7,30 @@
 
 using namespace std;
 
-void studentLogin(student& x)
+void dangnhap(user x)
 {
-    cout << "ID: ";
-    cin >> x.student.ID;
-    cout << "Password: ";
-    cin >> x.student.password;
-}
-void checkStudentLogin(student& x, Node <student>*& pHead)// lưu danh sách users vô hàm main trước
-{
-    do
-    {
-        Node<student>* cur = pHead;
-        while (cur != NULL) {
-            if (cur->data.student.ID == x.student.ID && cur->data.student.password == x.student.password) {
-                x.Class = cur->data.Class;
-                return;
-            }
-            cur = cur->next;
-        }
-        cout << "Ten dang nhap hoac mat khau khong dung!";
-        studentLogin(x);
-    } while (1);
-
-}
-void staffLogin(user& x)
-{
-    cout << "ID: ";
+    cout << "Ten dang nhap: ";
     cin >> x.ID;
-    cout << "Password: ";
-    cin >> x.password;
+    cout << "matkhau: ";
+    cin >> x.matkhau;
+    x.chucvu = -1;
+    x.locate = "";
 }
-void checkStaffLogin(user& x, Node <user>*& pHead)// lưu danh sách users vô hàm main trước
+void checkuser(user& x, Node <user>*& pHead)// lưu danh sách users vô hàm main trước
 {
     do
     {
         Node<user>* cur = pHead;
         while (cur != NULL) {
-            if (cur->data.ID == x.ID && cur->data.password == x.password) {
+            if (cur->data.ID == x.ID && cur->data.matkhau == x.matkhau) {
+                x.chucvu = cur->data.chucvu;
+                x.locate = cur->data.locate;
                 return;
             }
             cur = cur->next;
         }
         cout << "Ten dang nhap hoac mat khau khong dung!";
-        staffLogin(x);
+        dangnhap(x);
     } while (1);
 
 }

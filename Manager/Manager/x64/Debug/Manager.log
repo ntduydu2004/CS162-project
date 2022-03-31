@@ -81,41 +81,88 @@ C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\c
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'student': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,6): error C2182: 'outputstudent': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,6): error C2365: 'outputstudent': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5,6): error C2182: 'outputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5,20): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5,28): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6,6): error C2182: 'inputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6,19): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6,28): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8,6): error C2182: 'outputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8,18): error C2065: 'User': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8,23): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9,6): error C2182: 'inputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9,17): error C2065: 'User': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9,23): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13,10): error C2065: 'User': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13,5): error C2923: 'Node': 'User' is not a valid template type argument for parameter 'T'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13): message : see declaration of 'User'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13,38): error C2065: 'User': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13,33): error C2923: 'Node': 'User' is not a valid template type argument for parameter 'T'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13): message : see declaration of 'User'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(13,43): error C2512: 'Node': no appropriate default constructor available
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(30,40): error C2440: 'initializing': cannot convert from 'Node *' to 'Node<user> *'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(30,29): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(38,50): error C2039: 'matkhau': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(38,71): error C2039: 'chucvu': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(38,91): error C2039: 'locate': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(42,36): error C2440: '=': cannot convert from 'Node<user> *' to 'Node *'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(42,33): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(53,31): error C2664: 'void checkuser(user &,Node<user> *&)': cannot convert argument 2 from 'Node *' to 'Node<user> *&'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(34,6): message : see declaration of 'checkuser'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(58,11): error C2039: 'chucvu': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(62,16): error C2039: 'chucvu': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(67,6): error C2182: 'outputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(67,6): error C2374: 'outputstudent': redefinition; multiple initialization
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5): message : see declaration of 'outputstudent'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,20): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,28): error C2146: syntax error: missing ')' before identifier 'p'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(100,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(100,1): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(140,18): error C2065: 'infoX': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(145,23): error C2065: 'infoX': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,6): error C2182: 'inputstudent': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,6): error C2365: 'inputstudent': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(67,20): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(67,28): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(68,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(68,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(108,18): error C2065: 'infoX': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(113,23): error C2065: 'infoX': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(139,6): error C2182: 'inputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(139,6): error C2374: 'inputstudent': redefinition; multiple initialization
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6): message : see declaration of 'inputstudent'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,19): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,28): error C2065: 'p': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(172,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(172,1): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,6): error C2182: 'outputstaff': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,6): error C2365: 'outputstaff': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(139,19): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(139,28): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(140,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(140,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(164,6): error C2182: 'outputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(164,6): error C2374: 'outputstaff': redefinition; multiple initialization
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8): message : see declaration of 'outputstaff'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,18): error C2065: 'Staff': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,24): error C2146: syntax error: missing ')' before identifier 'p'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(197,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(197,1): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,6): error C2182: 'inputstaff': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,6): error C2365: 'inputstaff': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(164,18): error C2065: 'Staff': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(164,24): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(165,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(165,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(170,6): error C2182: 'inputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(170,6): error C2374: 'inputstaff': redefinition; multiple initialization
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9): message : see declaration of 'inputstaff'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,17): error C2065: 'Staff': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,24): error C2065: 'p': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(203,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(203,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(170,17): error C2065: 'Staff': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(170,24): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,1): error C2447: '{': missing function header (old-style formal list?)
   Manager.cpp
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'student': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5,6): error C2182: 'outputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5,20): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5,28): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6,6): error C2182: 'inputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6,19): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6,28): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8,6): error C2182: 'outputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8,18): error C2065: 'User': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8,23): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9,6): error C2182: 'inputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9,17): error C2065: 'User': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9,23): error C2065: 'p': undeclared identifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\Manager.cpp(17,5): error C2065: 'Student': undeclared identifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\Manager.cpp(17,13): error C2146: syntax error: missing ';' before identifier 'trong'
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\Manager.cpp(17,13): error C2065: 'trong': undeclared identifier
@@ -124,4 +171,22 @@ C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\c
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'student': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(15,14): error C2039: 'matkhau': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(16,7): error C2039: 'chucvu': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(17,7): error C2039: 'locate': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(25,51): error C2039: 'matkhau': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(25,64): error C2039: 'matkhau': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(26,19): error C2039: 'chucvu': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(26,38): error C2039: 'chucvu': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(27,19): error C2039: 'locate': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.cpp(27,38): error C2039: 'locate': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
   Generating Code...
