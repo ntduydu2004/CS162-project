@@ -1,3 +1,4 @@
+# Project changes
 1. Thêm 2 file functions.cpp và functions.h, 2 file này sẽ tham gia vào các hàm chính của systems.Trong file functions gồm có:
 	- Menu chính: biểu diễn menu
 	- inputstudent - inputstaff: Nhập vào thông tin của user từ file csv
