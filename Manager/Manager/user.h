@@ -40,6 +40,7 @@ struct student
     int numCourse;
     Node<result>* Result{};  
 };
-void dangnhap(user x);
-void checkuser(user& x, Node <user>*& phead);
-extern user x;
+void studentLogin(student& x);
+void checkStudentLogin(student& x, Node <student>*& pHead);
+void staffLogin(user& x);
+void checkStaffLogin(user& x, Node <user>*& pHead);
