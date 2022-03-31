@@ -54,14 +54,7 @@ void menuchinh()
     else
         exit(0);
 
-    if (x.chucvu == 0)
-    {
-        studentFunc();
-    }
-    else if (x.chucvu == 1)
-    {
-        staffFunc();
-    }
+    x.chucvu == 0 ? studentFunc() : staffFunc();
 }
 void outputstudent(Student p)
 {
@@ -74,7 +67,7 @@ void outputstudent(Student p)
     else
         cout << "Female" << endl;
     cout << "Date of Birth: ";
-    cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << endl;
+    cout << p.dob.getDay() << "/" << p.dob.getMonth() << "/" << p.dob.getYear() << endl;
 }
 
 void studentFunc()
@@ -116,7 +109,6 @@ void studentFunc()
     }
     else if (m == 2)
     {
-        
 
         cout << "Enter a number to back to menu: ";
         cin >> m;
@@ -124,7 +116,6 @@ void studentFunc()
     }
     else if (m == 3)
     {
-
 
         cout << "Enter a number to back to menu: ";
         cin >> m;
