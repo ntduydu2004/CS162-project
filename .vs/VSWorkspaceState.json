@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Manager",
+    "\\Manager\\Manager"
   ],
+  "SelectedNode": "\\Manager\\Manager\\function.h",
   "PreviewInSolutionExplorer": false
 }
