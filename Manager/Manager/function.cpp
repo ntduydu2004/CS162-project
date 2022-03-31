@@ -7,10 +7,12 @@
 #include "Linkedlist.h"
 #include "function.h"
 using namespace std;
-void menuchinh()
+void mainMenu()
 {
+    user uStaff;
+    student uStudent;
     system("cls");
-    Node<User>* pUserHead = new Node<User>;
+    
     cout << "1. Dang nhap" << '\n';
     cout << "2. Thoat" << '\n';
     cout << "Nhap 1 so: ";
@@ -23,46 +25,76 @@ void menuchinh()
     }
     if (t == 1)
     {
-        dangnhap(x);
-
-        if (pUserHead == NULL)
+        cout << "Choose your role (0: Staff, 1: Student): ";
+        int x;
+        cin >> x;
+        if (x == 0)
         {
-            Node<user>* cur = pUserHead;
-            ifstream fin;
-            int n;
-            fin.open("listofusers.txt");
-            fin >> n;
-            for (int i = 0; i < n; i++)
+            staffLogin(uStaff);
+            Node<user>* pUserHead = NULL;
+            if (pUserHead == NULL)
             {
-                Node<user>* tmp = new Node<user>;
-                fin >> tmp->data.ID >> tmp->data.matkhau >> tmp->data.chucvu >> tmp->data.locate;
-                tmp->next = NULL;
-                if (pUserHead == NULL)
+                Node<user>* cur = pUserHead;
+                ifstream fin;
+                int n;
+                fin.open("listofstaffs.txt");
+                fin >> n;
+                for (int i = 0; i < n; i++)
                 {
-                    pUserHead = tmp;
-                    cur = tmp;
+                    Node<user>* tmp = new Node<user>;
+                    fin >> tmp->data.ID >> tmp->data.password;
+                    tmp->next = NULL;
+                    if (pUserHead == NULL)
+                    {
+                        pUserHead = tmp;
+                        cur = tmp;
+                    }
+                    else
+                    {
+                        cur->next = tmp;
+                        cur = cur->next;
+                    }
                 }
-                else
-                {
-                    cur->next = tmp;
-                    cur = cur->next;
-                }
+                fin.close();
             }
-            fin.close();
+            checkStaffLogin(uStaff, pUserHead);
+            staffFunc();
         }
-        checkuser(x, pUserHead);
+        else
+        {
+            studentLogin(uStudent);
+            Node<student>* pUserHead = NULL;
+            if (pUserHead == NULL)
+            {
+                Node<student>* cur = pUserHead;
+                ifstream fin;
+                int n;
+                fin.open("listofstudents.txt");
+                fin >> n;
+                for (int i = 0; i < n; i++)
+                {
+                    Node<student>* tmp = new Node<student>;
+                    fin >> tmp->data.student.ID >> tmp->data.student.password >> tmp->data.Class;
+                    tmp->next = NULL;
+                    if (pUserHead == NULL)
+                    {
+                        pUserHead = tmp;
+                        cur = tmp;
+                    }
+                    else
+                    {
+                        cur->next = tmp;
+                        cur = cur->next;
+                    }
+                }
+                fin.close();
+            }
+            checkStudentLogin(uStudent, pUserHead);
+            studentFunc();
+        }
     }
     else
         exit(0);
-
-    if (x.chucvu == 0)
-    {
-        studentFunc();
-    }
-    else if (x.chucvu == 1)
-    {
-        staffFunc();
-    }
 }
 void outputstudent(Student p)
 {

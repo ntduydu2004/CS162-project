@@ -2,8 +2,8 @@
 #include "user.h"
 void menuchinh();
 void studentFunc();
-void outputstudent(Student p);
-void inputstudent(Student& p);
+void outputstudent(student p);
+void inputstudent(student& p);
 void staffFunc();
-void outputstaff(User p);
-void inputstaff(User& p);
+void outputstaff(user p);
+void inputstaff(user& p);
