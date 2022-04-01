@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 .vscode
 .vs
 Debug
 x64
+=======
+.vscode/
+.vs/
+x64/
+21APCS1.txt
+>>>>>>> 1c2c58fed9f2b7fc0c79ad412f38a9c2e20607c1
