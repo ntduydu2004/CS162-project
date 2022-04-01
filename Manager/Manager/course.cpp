@@ -11,40 +11,51 @@
 
 using namespace std;
 
-Node<Student>*	Create_Schoolyear()
+Node<student>* Create_Schoolyear()
 {
 	/*
 	* This function reads the CSV file containing new classes followed by their student list. The
 	* file should be of the below format:
-	* 
-	* Class, Student ID, First name, Last name, Gender, Date of Birth, Social ID
-	* 
-	* Sample input:
-	* 21APCS1, 21125118, Minh, Bui Vu Bao, 1, 07/07/2003, ABCDEFGH
 	*
-	* Note: 
+	* Class, Student ID, First name, Last name, Gender, Date of Birth, Social ID
+	*
+	* Sample input:
+	* 21APCS1, 21125118, Minh, Bui Vu Bao, m, 07/07/2003, ABCDEFGH
+	*
+	* Note:
 	* - Default input file for 1st Year students is "New_Classes.txt"
 	*/
 	ifstream fin;
 	fin.open("New_Classes.txt");
-	Node<Student>* Temp = new Node<Student>; // Create a dummy Head for student list
-	Node<Student>* cur = Temp;
+	Node<student>* Temp = new Node<student>; // Create a dummy Head for student list
+	Node<student>* cur = Temp;
 	string className;
 	while (getline(fin, className, ','))
 	{
-		cur->next = new Node<Student>; // New student read
+		// New student read
+		cur->next = new Node<student>;
 		cur = cur->next;
-		cur->data.Class = className; // Get Class
+		// Get Class
+		cur->data.Class = className;
 		fin.ignore(2);
-		getline(fin, cur->data.ID, ','); // Get student ID
+		// Get student ID
+		getline(fin, cur->data.student.ID, ',');
 		fin.ignore(2);
-		getline(fin, cur->data.firstName, ','); // Get firstName
+		// Get firstName
+		getline(fin, cur->data.student.firstName, ',');
 		fin.ignore(2);
-		getline(fin, cur->data.lastName, ','); // Get lastName
+		// Get lastName
+		getline(fin, cur->data.student.lastName, ',');
 		fin.ignore(2);
-		fin >> cur->data.gender;// Get gender
+		// Get gender
+		fin >> cur->data.student.gender;
 		fin.ignore(2);
-		getline(fin, cur->data.SocialID, '\n'); // Get Social ID
+		// Get Date of Birth
+		string input_date;
+		getline(fin, input_date, ',');
+		cur->data.student.getDoB(input_date);
+		// Get Social ID
+		getline(fin, cur->data.student.SocialID, '\n');
 		fin.get();
 	}
 	cur = Temp->next; // Set cur to the Head
