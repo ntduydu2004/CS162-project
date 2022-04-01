@@ -20,6 +20,13 @@ struct Session{
         time.hour = -1;
         time.min = -1;
     }
+    void getTimeOfCourse(string& input_date)
+    {
+        string s = input_date.substr(0, 2); 
+        time.hour = stoi(s);
+        s = input_date.substr(3, 2);
+        time.min = stoi(s);
+    }
 };
 struct course{
     string ID;
