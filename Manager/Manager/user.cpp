@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void dangnhap(user x)
+void dangnhap(User x)
 {
     cout << "Ten dang nhap: ";
     cin >> x.ID;
@@ -15,22 +15,13 @@ void dangnhap(user x)
     x.chucvu = -1;
     x.locate = "";
 }
-<<<<<<< HEAD:user.cpp
-void checkuser(user &x, Node <user>* &pHead)// lưu danh sách users vô hàm main trước
-=======
-void checkuser(user& x, Node <user>*& pHead)// lưu danh sách users vô hàm main trước
->>>>>>> 7573cc529352ea07d5aaa294b9b918981d5db865:Manager/Manager/user.cpp
+void checkuser(User &x, Node <User>* &pHead)// lưu danh sách users vô hàm main trước
 {
     do
     {
-        Node<user>* cur = pHead;
-<<<<<<< HEAD:user.cpp
+        Node<User>* cur = pHead;
         while (cur != NULL){
-            if (cur->data.ID == x.ID && cur->data.matkhau == x.matkhau){
-=======
-        while (cur != NULL) {
-            if (cur->data.ID == x.ID && cur->data.matkhau == x.matkhau) {
->>>>>>> 7573cc529352ea07d5aaa294b9b918981d5db865:Manager/Manager/user.cpp
+            if (cur->data.getID() == x.getID() && cur->data.getPassword() == x.getPassword()){
                 x.chucvu = cur->data.chucvu;
                 x.locate = cur->data.locate;
                 return;
@@ -39,12 +30,6 @@ void checkuser(user& x, Node <user>*& pHead)// lưu danh sách users vô hàm ma
         }
         cout << "Ten dang nhap hoac mat khau khong dung!";
         dangnhap(x);
-<<<<<<< HEAD:user.cpp
     } while(1);
     
 }
-=======
-    } while (1);
-
-}
->>>>>>> 7573cc529352ea07d5aaa294b9b918981d5db865:Manager/Manager/user.cpp

@@ -6,25 +6,24 @@
 
 using namespace std;
 template <class T>
-struct Node {
+class Node {
+private:
     T data;
-    Node* next = NULL, * prev = NULL;
-<<<<<<< HEAD:Linkedlist.h
-    Node<T> (const T& x){
-        data = x;
+    Node* next;
+    Node* prev;
+public:
+    Node<T> (T data){
+        this->data = data;
+        this->next = NULL;
+        this->prev = NULL;
     };
-=======
->>>>>>> 7573cc529352ea07d5aaa294b9b918981d5db865:Manager/Manager/Linkedlist.h
 };
 
 template <class T>
-struct Linkedlist {
-    Node<T>* head = NULL;
-    Node<T>* tail = NULL;
-<<<<<<< HEAD:Linkedlist.h
-    void Insert(T x);
+class Linkedlist {
+public:
+    Node<T>* head;
+    Node<T>* tail;
+    
 };
 #include "Linkedlist.hpp"
-=======
-};
->>>>>>> 7573cc529352ea07d5aaa294b9b918981d5db865:Manager/Manager/Linkedlist.h

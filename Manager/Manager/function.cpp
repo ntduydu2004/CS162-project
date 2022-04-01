@@ -10,7 +10,7 @@ using namespace std;
 void menuchinh()
 {
     system("cls");
-    Node<user>* pUserHead = NULL;
+    Node<User>* pUserHead = NULL;
     cout << "1. Dang nhap" << '\n';
     cout << "2. Thoat" << '\n';
     cout << "Nhap 1 so: ";
@@ -27,14 +27,14 @@ void menuchinh()
 
         if (pUserHead == NULL)
         {
-            Node<user>* cur = pUserHead;
+            Node<User>* cur = pUserHead;
             ifstream fin;
             int n;
             fin.open("listofusers.txt");
             fin >> n;
             for (int i = 0; i < n; i++)
             {
-                Node<user>* tmp = new Node<user>;
+                Node<User>* tmp = new Node<User>;
                 fin >> tmp->data.ID >> tmp->data.matkhau >> tmp->data.chucvu >> tmp->data.locate;
                 tmp->next = NULL;
                 if (pUserHead == NULL)
@@ -52,8 +52,10 @@ void menuchinh()
         }
         checkuser(x, pUserHead);
     }
-    else
+    else{
         exit(0);
+        return;
+    }
 
     if (x.chucvu == 0)
     {

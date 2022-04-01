@@ -1,9 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-
-
-
 #include "CustomTime.h"
 #include "course.h"
 
@@ -141,6 +138,6 @@ public:
 
     
 };
-void dangnhap(user x);
-void checkuser(user& x, Node <user>*& phead);
-extern user x;
+void dangnhap(User x);
+void checkuser(User& x, Node <User>*& phead);
+extern User x;

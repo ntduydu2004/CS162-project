@@ -23,11 +23,7 @@ struct course{
     Session session;
     Date startday, endday;
     // student List...
-<<<<<<< HEAD:course.h
     Node <Student>* Student = NULL;
-=======
-    Student student;
->>>>>>> 7573cc529352ea07d5aaa294b9b918981d5db865:Manager/Manager/course.h
     int numStudent;
 };
 struct result{

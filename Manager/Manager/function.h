@@ -5,5 +5,5 @@ void studentFunc();
 void outputstudent(Student p);
 void inputstudent(Student& p);
 void staffFunc();
-void outputstaff(Staff p);
-void inputstaff(Staff& p);
+void outputstaff(User p);
+void inputstaff(User& p);
