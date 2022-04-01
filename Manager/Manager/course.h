@@ -15,15 +15,20 @@ const int maxNum = 50;
 struct Session{
     string weekday;
     Time time;
+    Session() {
+        weekday = "Unknown";
+        time.hour = -1;
+        time.min = -1;
+    }
 };
 struct course{
     string ID;
     string name;
-    Staff teacher;
+    user teacher;
     Session session;
     Date startday, endday;
     // student List...
-    Student student;
+    student Student;
     int numStudent;
 };
 struct result{

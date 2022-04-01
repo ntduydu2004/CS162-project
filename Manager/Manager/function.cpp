@@ -96,18 +96,18 @@ void mainMenu()
     else
         exit(0);
 }
-void outputstudent(Student p)
+void outputStudent(student p)
 {
     cout << "Class: " << p.Class << endl;
-    cout << "Student ID: " << p.ID << endl;
-    cout << "Full name: " << p.lastName << " " << p.firstName << endl;
+    cout << "Student ID: " << p.student.ID << endl;
+    cout << "Full name: " << p.student.lastName << " " << p.student.firstName << endl;
     cout << "Gender: ";
-    if (p.gender)
+    if (p.student.gender)
         cout << "Male" << endl;
     else
         cout << "Female" << endl;
     cout << "Date of Birth: ";
-    cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << endl;
+    cout << p.student.dob.day << "/" << p.student.dob.month << "/" << p.student.dob.year << endl;
 }
 
 void studentFunc()
@@ -168,7 +168,7 @@ void studentFunc()
         menuchinh();
     }
 }
-void inputstudent(Student& p)
+void inputstudent(student& p)
 {
     ifstream fin;
     string s = x.locate + ".txt";
