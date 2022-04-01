@@ -19,12 +19,30 @@ struct Session{
 struct course{
     string ID;
     string name;
-    Staff teacher;
+    user lecturer;
     Session session;
-    Date startday, endday;
     // student List...
-    Student student;
+    Node<student>* nStudent;
     int numStudent;
+    Date startDay, endDay;
+    void getStartDayOfCourse(string& input_date) 
+    {
+        string s = input_date.substr(0, 2); // get the day
+        startDay.day = stoi(s);
+        s = input_date.substr(3, 2); // get the month
+        startDay.month = stoi(s);
+        s = input_date.substr(6, 4); // get the year
+        startDay.year = stoi(s);
+    }
+    void getEndDayOfCourse(string& input_date) 
+    {
+        string s = input_date.substr(0, 2); // get the day
+        endDay.day = stoi(s);
+        s = input_date.substr(3, 2); // get the month
+        endDay.month = stoi(s);
+        s = input_date.substr(6, 4); // get the year
+        endDay.year = stoi(s);
+    }
 };
 struct result{
     string courseID;

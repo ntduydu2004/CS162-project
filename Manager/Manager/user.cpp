@@ -52,5 +52,4 @@ void checkStaffLogin(user& x, Node <user>*& pHead)// lưu danh sách users vô h
         cout << "Ten dang nhap hoac mat khau khong dung!";
         staffLogin(x);
     } while (1);
-
 }

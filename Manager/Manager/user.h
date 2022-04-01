@@ -14,9 +14,8 @@ struct user
 {
     // Personal Infomation
     string ID;
-    string firstName;
-    string lastName;
-    char gender; // 'm' = male, 'f' = female, 'u' = unknown
+    string fullname;
+    char gender; // 'm' = male, 'f' = female, 'a' = Another
     Date dob;
     string SocialID;
     // Account information

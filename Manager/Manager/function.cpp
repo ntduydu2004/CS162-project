@@ -6,6 +6,7 @@
 #include "course.h"
 #include "Linkedlist.h"
 #include "function.h"
+
 using namespace std;
 void mainMenu()
 {
@@ -96,18 +97,43 @@ void mainMenu()
     else
         exit(0);
 }
-void outputstudent(Student p)
+void outputstudent(student p)
 {
     cout << "Class: " << p.Class << endl;
-    cout << "Student ID: " << p.ID << endl;
-    cout << "Full name: " << p.lastName << " " << p.firstName << endl;
+    cout << "Student ID: " << p.student.ID << endl;
+    cout << "Full name: " << p.student.fullname << endl;
     cout << "Gender: ";
-    if (p.gender)
+    if (p.student.gender == 'm')
         cout << "Male" << endl;
-    else
+    else if (p.student.gender == 'f')
         cout << "Female" << endl;
+    else 
+        cout << "Another" << endl;
     cout << "Date of Birth: ";
-    cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << endl;
+    cout << p.student.dob.day << "/" << p.student.dob.month << "/" << p.student.dob.year << endl;
+}
+
+void loadClass(Node<student>* pStudentHead, int& n)
+{
+    ifstream fin;
+    string str = pStudentHead->data.Class + ".txt";
+    fin.open(str);
+    fin >> n;
+    Node<student>* pStudentCur = pStudentHead;
+    for (int i = 0;i < n;i++)
+    {
+        getline(fin, pStudentCur->data.student.ID, ',');
+        fin.get();
+        getline(fin, pStudentCur->data.student.fullname, ',');
+        fin.get();
+        fin >> pStudentCur->data.student.gender;
+        fin.get();
+        fin.get();
+        string input_date;
+        getline(fin, input_date, ',');
+        pStudentCur->data.student.getDoB(input_date);
+    }
+    fin.close();
 }
 
 void studentFunc()
