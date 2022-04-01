@@ -20,7 +20,7 @@ Node<student>* Create_Schoolyear()
 	* Class, Student ID, First name, Last name, Gender, Date of Birth, Social ID
 	*
 	* Sample input:
-	* 21APCS1, 21125118, Minh, Bui Vu Bao, m, 07/07/2003, ABCDEFGH
+	* 21APCS1, 21125118, Bui Vu Bao Minh, m, 07/07/2003, ABCDEFGH
 	*
 	* Note:
 	* - Default input file for 1st Year students is "New_Classes.txt"
@@ -37,26 +37,24 @@ Node<student>* Create_Schoolyear()
 		cur = cur->next;
 		// Get Class
 		cur->data.Class = className;
-		fin.ignore(2);
 		// Get student ID
+		fin.get();
 		getline(fin, cur->data.student.ID, ',');
-		fin.ignore(2);
 		// Get firstName
-		getline(fin, cur->data.student.firstName, ',');
-		fin.ignore(2);
-		// Get lastName
-		getline(fin, cur->data.student.lastName, ',');
-		fin.ignore(2);
+		fin.get();
+		getline(fin, cur->data.student.fullname, ',');
 		// Get gender
+		fin.get();
 		fin >> cur->data.student.gender;
-		fin.ignore(2);
+		fin.get();
+		fin.get();
 		// Get Date of Birth
 		string input_date;
 		getline(fin, input_date, ',');
 		cur->data.student.getDoB(input_date);
 		// Get Social ID
-		getline(fin, cur->data.student.SocialID, '\n');
 		fin.get();
+		getline(fin, cur->data.student.SocialID, '\n');
 	}
 	cur = Temp->next; // Set cur to the Head
 	delete Temp; // delete dummy head Node

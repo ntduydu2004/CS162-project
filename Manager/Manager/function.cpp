@@ -6,6 +6,7 @@
 #include "course.h"
 #include "Linkedlist.h"
 #include "function.h"
+
 using namespace std;
 void mainMenu()
 {
@@ -100,14 +101,68 @@ void outputStudent(student p)
 {
     cout << "Class: " << p.Class << endl;
     cout << "Student ID: " << p.student.ID << endl;
-    cout << "Full name: " << p.student.lastName << " " << p.student.firstName << endl;
+    cout << "Full name: " << p.student.fullname << endl;
     cout << "Gender: ";
-    if (p.student.gender)
+    if (p.student.gender == 'm')
         cout << "Male" << endl;
-    else
+    else if (p.student.gender == 'f')
         cout << "Female" << endl;
+    else 
+        cout << "Another" << endl;
     cout << "Date of Birth: ";
     cout << p.student.dob.day << "/" << p.student.dob.month << "/" << p.student.dob.year << endl;
+}
+
+void loadClass(string className, Node<student>* pStudentHead, int& numStudent)
+{
+    Node<student>* pStudentHead;
+    ifstream fin;
+    string str = className + ".txt";
+    fin.open(str);
+    fin >> n;
+    fin.get();
+    Node<student>* pStudentCur = pStudentHead;
+    for (int i = 0;i < n;i++)
+    {
+        pStudentCur->next = new Node<student>;
+        pStudentCur->data.Class = className;
+        getline(fin, pStudentCur->data.student.ID, ',');
+        fin.get();
+        getline(fin, pStudentCur->data.student.fullname, ',');
+        fin.get();
+        fin >> pStudentCur->data.student.gender;
+        fin.get();
+        fin.get();
+        string input_date;
+        getline(fin, input_date, ',');
+        pStudentCur->data.student.getDoB(input_date);
+        fin.get();
+        getline(fin, pStudentCur->data.student.SocialID, '\n');
+        pStudentCur = pStudentCur->next;
+    }
+    fin.close();
+}
+
+void loadCourse(string courseID, course cCourse)
+{
+    ifstream fin;
+    string str = courseID + ".txt";
+    fin.open(str);
+    getline(fin, cCourse.ID, '\n');
+    getline(fin, cCourse.name, '\n');
+    //getline(fin, cCourse.lec , '\n');
+    string input_date;
+    getline(fin, input_date, '\n');
+    cCourse.getStartDayOfCourse(input_date);
+    getline(fin, input_date, '\n');
+    cCourse.getEndDayOfCourse(input_date);
+    int n;
+    fin >> n;
+    for (int i = 0;i < n;i++)
+    {
+
+    }
+    fin.close();
 }
 
 void studentFunc()

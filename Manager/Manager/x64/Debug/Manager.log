@@ -3,114 +3,110 @@ C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\c
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'student': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(14,6): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(14,1): error C2923: 'Node': 'Student' is not a valid template type argument for parameter 'T'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(14): message : see declaration of 'Student'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30,7): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30,2): error C2923: 'Node': 'Student' is not a valid template type argument for parameter 'T'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30): message : see declaration of 'Student'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30,33): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30,28): error C2923: 'Node': 'Student' is not a valid template type argument for parameter 'T'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30): message : see declaration of 'Student'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(30,41): error C2512: 'Node': no appropriate default constructor available
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(31,7): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(31,2): error C2923: 'Node': 'Student' is not a valid template type argument for parameter 'T'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(31): message : see declaration of 'Student'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(35,24): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(35,19): error C2923: 'Node': 'Student' is not a valid template type argument for parameter 'T'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(35): message : see declaration of 'Student'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(35,32): error C2512: 'Node': no appropriate default constructor available
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(36,18): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(36,12): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,3): error C2672: 'getline': no matching overloaded function found
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,33): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,34): error C2039: 'firstName': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,3): error C2672: 'getline': no matching overloaded function found
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,48): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,33): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,48): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,33): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,48): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,33): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,48): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,33): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,48): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(39,33): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(45,48): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,3): error C2672: 'getline': no matching overloaded function found
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,34): error C2039: 'lastName': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,3): error C2672: 'getline': no matching overloaded function found
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,47): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,47): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,40): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,47): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,47): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,47): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(41,40): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(48,47): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,3): error C2672: 'getline': no matching overloaded function found
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,39): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,39): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,39): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,39): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,39): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(43,39): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,3): error C2672: 'getline': no matching overloaded function found
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,40): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,40): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(47,40): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(50,18): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.cpp(50,12): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   function.cpp
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,13): error C3646: 'student': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(26,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,6): error C2182: 'outputstudent': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,6): error C2365: 'outputstudent': redefinition; previous definition was 'function'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(5): message : see declaration of 'outputstudent'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,20): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(99,28): error C2146: syntax error: missing ')' before identifier 'p'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(100,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(100,1): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(140,18): error C2065: 'infoX': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(145,23): error C2065: 'infoX': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,6): error C2182: 'inputstudent': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,6): error C2365: 'inputstudent': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(103,40): error C2039: 'lastName': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(103,69): error C2039: 'firstName': is not a member of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\user.h(13): message : see declaration of 'user'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,13): error C2672: 'getline': no matching overloaded function found
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 3 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2782: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): message : could be 'const char *'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): message : or       'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const char [2]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 3 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2782: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): message : could be 'const char *'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): message : or       'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(126,60): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const char [2]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,13): error C2672: 'getline': no matching overloaded function found
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 3 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(81): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2782: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): message : could be 'const char *'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): message : or       'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const char [2]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(75): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': expects 2 arguments - 3 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(69): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2782: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): message : could be 'const char *'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): message : or       'char'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(127,66): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const char [2]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\string(26): message : see declaration of 'std::getline'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(160,18): error C2065: 'infoX': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(165,23): error C2065: 'infoX': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(191,6): error C2182: 'inputstudent': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(191,6): error C2365: 'inputstudent': redefinition; previous definition was 'function'
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(6): message : see declaration of 'inputstudent'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,19): error C2065: 'Student': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(171,28): error C2065: 'p': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(172,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(172,1): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,6): error C2182: 'outputstaff': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,6): error C2365: 'outputstaff': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(191,19): error C2065: 'Student': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(191,28): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(192,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(192,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(216,6): error C2182: 'outputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(216,6): error C2365: 'outputstaff': redefinition; previous definition was 'function'
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(8): message : see declaration of 'outputstaff'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,18): error C2065: 'Staff': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(196,24): error C2146: syntax error: missing ')' before identifier 'p'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(197,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(197,1): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,6): error C2182: 'inputstaff': illegal use of type 'void'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,6): error C2365: 'inputstaff': redefinition; previous definition was 'function'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(216,18): error C2065: 'Staff': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(216,24): error C2146: syntax error: missing ')' before identifier 'p'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(217,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(217,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(222,6): error C2182: 'inputstaff': illegal use of type 'void'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(222,6): error C2365: 'inputstaff': redefinition; previous definition was 'function'
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.h(9): message : see declaration of 'inputstaff'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,17): error C2065: 'Staff': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(202,24): error C2065: 'p': undeclared identifier
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(203,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(203,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(222,17): error C2065: 'Staff': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(222,24): error C2065: 'p': undeclared identifier
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(223,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\function.cpp(223,1): error C2447: '{': missing function header (old-style formal list?)
   Manager.cpp
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,11): error C3646: 'teacher': unknown override specifier
 C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\course.h(22,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
