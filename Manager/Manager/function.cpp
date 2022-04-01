@@ -140,28 +140,43 @@ void loadClass(string className, Node<student>* pStudentHead, int& numStudent)
         getline(fin, pStudentCur->data.student.SocialID, '\n');
         pStudentCur = pStudentCur->next;
     }
+    delete pStudentCur;
     fin.close();
 }
 
-void loadCourse(string courseID, course cCourse)
+void loadCourse(string courseID, course& cCourse)
 {
     ifstream fin;
     string str = courseID + ".txt";
     fin.open(str);
     getline(fin, cCourse.ID, '\n');
     getline(fin, cCourse.name, '\n');
-    //getline(fin, cCourse.lec , '\n');
+    getline(fin, cCourse.lecturer.fullname, '\n');
     string input_date;
     getline(fin, input_date, '\n');
     cCourse.getStartDayOfCourse(input_date);
     getline(fin, input_date, '\n');
     cCourse.getEndDayOfCourse(input_date);
+    getline(fin, cCourse.session[0].weekday, ',');
+    fin.get();
+    getline(fin, input_date, '\n');
+    cCourse.session[0].getTimeOfCourse(input_date);
+    getline(fin, cCourse.session[1].weekday, ',');
+    fin.get();
+    getline(fin, input_date, '\n');
+    cCourse.session[1].getTimeOfCourse(input_date);
     int n;
     fin >> n;
+    cCourse.nStudentHead = new Node<student>;
+    Node<student>* nStudentCur = cCourse.nStudentHead;
     for (int i = 0;i < n;i++)
     {
-
+        nStudentCur->next = new Node<student>;
+        getline(fin, cCourse.nStudentHead->data.Class, ' ');
+        getline(fin, cCourse.nStudentHead->data.student.ID, '\n');
+        nStudentCur = nStudentCur->next;
     }
+    delete nStudentCur;
     fin.close();
 }
 

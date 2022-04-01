@@ -15,14 +15,21 @@ const int maxNum = 50;
 struct Session{
     string weekday;
     Time time;
+    void getTimeOfCourse(string& input_date)
+    {
+        string s = input_date.substr(0, 2); // get the day
+        time.hour = stoi(s);
+        s = input_date.substr(3, 2); // get the month
+        time.min = stoi(s);
+    }
 };
 struct course{
     string ID;
     string name;
-    Session session;
+    Session session[2];
     user lecturer;
     // student List...
-    Node<student>* nStudent;
+    Node<student>* nStudentHead = NULL;
     int numStudent;
     Date startDay, endDay;
     void getStartDayOfCourse(string& input_date) 
