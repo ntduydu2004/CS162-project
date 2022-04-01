@@ -97,7 +97,7 @@ void mainMenu()
     else
         exit(0);
 }
-void outputstudent(student p)
+void outputStudent(student p)
 {
     cout << "Class: " << p.Class << endl;
     cout << "Student ID: " << p.student.ID << endl;
@@ -238,7 +238,7 @@ void studentFunc()
         menuchinh();
     }
 }
-void inputstudent(Student& p)
+void inputstudent(student& p)
 {
     ifstream fin;
     string s = x.locate + ".txt";

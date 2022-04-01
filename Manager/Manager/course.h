@@ -15,12 +15,10 @@ const int maxNum = 50;
 struct Session{
     string weekday;
     Time time;
-    void getTimeOfCourse(string& input_date)
-    {
-        string s = input_date.substr(0, 2); // get the day
-        time.hour = stoi(s);
-        s = input_date.substr(3, 2); // get the month
-        time.min = stoi(s);
+    Session() {
+        weekday = "Unknown";
+        time.hour = -1;
+        time.min = -1;
     }
 };
 struct course{
