@@ -19,8 +19,8 @@ struct Session{
 struct course{
     string ID;
     string name;
-    user lecturer;
     Session session;
+    user lecturer;
     // student List...
     Node<student>* nStudent;
     int numStudent;

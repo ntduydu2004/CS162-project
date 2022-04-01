@@ -113,15 +113,19 @@ void outputstudent(student p)
     cout << p.student.dob.day << "/" << p.student.dob.month << "/" << p.student.dob.year << endl;
 }
 
-void loadClass(Node<student>* pStudentHead, int& n)
+void loadClass(string className, Node<student>* pStudentHead, int& numStudent)
 {
+    Node<student>* pStudentHead;
     ifstream fin;
-    string str = pStudentHead->data.Class + ".txt";
+    string str = className + ".txt";
     fin.open(str);
     fin >> n;
+    fin.get();
     Node<student>* pStudentCur = pStudentHead;
     for (int i = 0;i < n;i++)
     {
+        pStudentCur->next = new Node<student>;
+        pStudentCur->data.Class = className;
         getline(fin, pStudentCur->data.student.ID, ',');
         fin.get();
         getline(fin, pStudentCur->data.student.fullname, ',');
@@ -132,6 +136,31 @@ void loadClass(Node<student>* pStudentHead, int& n)
         string input_date;
         getline(fin, input_date, ',');
         pStudentCur->data.student.getDoB(input_date);
+        fin.get();
+        getline(fin, pStudentCur->data.student.SocialID, '\n');
+        pStudentCur = pStudentCur->next;
+    }
+    fin.close();
+}
+
+void loadCourse(string courseID, course cCourse)
+{
+    ifstream fin;
+    string str = courseID + ".txt";
+    fin.open(str);
+    getline(fin, cCourse.ID, '\n');
+    getline(fin, cCourse.name, '\n');
+    //getline(fin, cCourse.lec , '\n');
+    string input_date;
+    getline(fin, input_date, '\n');
+    cCourse.getStartDayOfCourse(input_date);
+    getline(fin, input_date, '\n');
+    cCourse.getEndDayOfCourse(input_date);
+    int n;
+    fin >> n;
+    for (int i = 0;i < n;i++)
+    {
+
     }
     fin.close();
 }
