@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 #include "CustomTime.h"
 #include "user.h"
 #include "course.h"
@@ -115,14 +116,13 @@ void outputStudent(student p)
 
 void loadClass(string className, Node<student>* pStudentHead, int& numStudent)
 {
-    Node<student>* pStudentHead;
     ifstream fin;
     string str = className + ".txt";
     fin.open(str);
-    fin >> n;
+    fin >> numStudent;
     fin.get();
     Node<student>* pStudentCur = pStudentHead;
-    for (int i = 0;i < n;i++)
+    for (int i = 0;i < numStudent;i++)
     {
         pStudentCur->next = new Node<student>;
         pStudentCur->data.Class = className;
@@ -179,6 +179,54 @@ void loadCourse(string courseID, course& cCourse)
     delete nStudentCur;
     fin.close();
 }
+
+void outputClass(string className)
+{
+    Node<student>* pStudentHead = new Node<student>;
+    int numStudent = 0;
+    loadClass(className, pStudentHead, numStudent);
+    cout << className << endl;
+    for (int i = 0;i < numStudent;i++)
+    {
+        cout << setprecision(10) << pStudentHead->data.student.ID << "  ";
+        cout << setprecision(30) << pStudentHead->data.student.fullname << "  ";
+        cout << setprecision(12) << (pStudentHead->data.student.gender == 'm' ? "Male" : (pStudentHead->data.student.gender == 'f' ? "Female" : "Another")) << "  ";
+        int time = pStudentHead->data.student.dob.day;
+        if (time >= 10) cout << time << "/";
+        else cout << "0" << time << "/";
+        time = pStudentHead->data.student.dob.month;
+        if (time >= 10) cout << time << "/";
+        else cout << "0" << time << "/";
+        cout << pStudentHead->data.student.dob.year << "  ";
+        cout << setprecision(15) << pStudentHead->data.student.SocialID << endl;
+    }
+    for (Node<student>* pCur = pStudentHead; pCur != NULL;pCur = pCur->next)
+        delete pCur;
+}
+
+void outputCourse(string courseID)
+{
+    course cCourse;
+    int numStudent = 0;
+    loadCourse(courseID, cCourse);
+    cout << cCourse.ID << endl;
+    cout << cCourse.name << endl;
+    cout << "Lecturer: " << cCourse.lecturer.fullname << endl;
+    int time = cCourse.startDay.day;
+    cout << "Start: " << cCourse.startDay.day << "/" << cCourse.startDay.day << "/" << cCourse.startDay.day << endl;
+    cout << "End  : " << cCourse.endDay.day << "/" << cCourse.endDay.day << "/" << cCourse.endDay.day << endl;
+    cout << "Time: " << cCourse.session[0].weekday << "  " << cCourse.session[0].time.hour << ":" << cCourse.session[0].time.min << ",  ";
+    cout << cCourse.session[0].weekday << "  " << cCourse.session[0].time.hour << ":" << cCourse.session[0].time.min << ",  ";
+    Node<student>* pCur = cCourse.nStudentHead;
+    for (int i = 0;i < cCourse.numStudent;i++)
+    {
+        cout << pCur->data.Class << "  " << pCur->data.student.ID << endl;
+        pCur = pCur->next;
+    }
+    for (Node<student>* pDel = cCourse.nStudentHead; pDel != NULL;pDel = pDel->next)
+        delete pDel;
+}
+
 
 void studentFunc()
 {

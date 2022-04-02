@@ -9,3 +9,5 @@ void outputstaff(user p);
 void inputstaff(user& p);
 void loadClass(string className, Node<student>* pStudentHead, int& numStudent);
 void loadCourse(string courseID, course& cCourse);
+void outputClass(string className);
+void outputCourse(string courseID);
