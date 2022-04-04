@@ -30,13 +30,51 @@ struct user
         s = input_date.substr(6, 4); // get the year
         dob.year = stoi(s);
     }
+    void displayProfile()
+    {
+        cout << "Full Name: " << fullname << "\n";
+        cout << "ID: " << ID << "\n";
+        cout << "Role: ";
+        switch (role)
+        {
+        case 'p':
+            cout << "Student\n";
+            break;
+        case 's':
+            cout << "Staff\n";
+            break;
+        default:
+            break;
+        }
+        cout << "Gender: ";
+        switch (gender) {
+        case 'm':
+            cout << "Male\n";
+            break;
+        case 'f':
+            cout << "Female\n";
+            break;
+        default:
+            cout << "Unknown\n";
+            break;
+        }
+        cout << dob.day << "/" << dob.month << "/" << dob.year << "\n";
+        cout << "Social ID: " << SocialID;
+    };
 };
 struct student
 {
     user student;
     string Class;
     int numCourse;
-    Node<result>* Result{};  
+    Node<course>* Course{};
+    Node<result>* Result{};
+    void displayStuProfile()
+    {
+        cout << "Class: " << Class << "\n";
+        student.displayProfile();
+        cout << "Courses enrolled: " << numCourse << "\n";
+    }
 };
 void studentLogin(student& x);
 void checkStudentLogin(student& x, Node <student>*& pHead);
