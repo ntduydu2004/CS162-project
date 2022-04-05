@@ -76,7 +76,7 @@ void mainMenu()
                 for (int i = 0; i < n; i++)
                 {
                     Node<student> *tmp = new Node<student>;
-                    fin >> tmp->data.student.ID >> tmp->data.student.password >> tmp->data.Class;
+                    fin >> tmp->data.ID >> tmp->data.password >> tmp->data.Class;
                     tmp->next = NULL;
                     if (pUserHead == NULL)
                     {
@@ -101,17 +101,17 @@ void mainMenu()
 void outputStudent(student p)
 {
     cout << "Class: " << p.Class << endl;
-    cout << "Student ID: " << p.student.ID << endl;
-    cout << "Full name: " << p.student.fullname << endl;
+    cout << "Student ID: " << p.ID << endl;
+    cout << "Full name: " << p.fullname << endl;
     cout << "Gender: ";
-    if (p.student.gender == 'm')
+    if (p.gender == 'm')
         cout << "Male" << endl;
-    else if (p.student.gender == 'f')
+    else if (p.gender == 'f')
         cout << "Female" << endl;
     else
         cout << "Another" << endl;
     cout << "Date of Birth: ";
-    cout << p.student.dob.day << "/" << p.student.dob.month << "/" << p.student.dob.year << endl;
+    cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << endl;
 }
 
 void loadClass(string className, Node<student> *pStudentHead, int &numStudent)
@@ -126,18 +126,18 @@ void loadClass(string className, Node<student> *pStudentHead, int &numStudent)
     {
         pStudentCur->next = new Node<student>;
         pStudentCur->data.Class = className;
-        getline(fin, pStudentCur->data.student.ID, ',');
+        getline(fin, pStudentCur->data.ID, ',');
         fin.get();
-        getline(fin, pStudentCur->data.student.fullname, ',');
+        getline(fin, pStudentCur->data.fullname, ',');
         fin.get();
-        fin >> pStudentCur->data.student.gender;
+        fin >> pStudentCur->data.gender;
         fin.get();
         fin.get();
         string input_date;
         getline(fin, input_date, ',');
-        pStudentCur->data.student.getDoB(input_date);
+        pStudentCur->data.getDoB(input_date);
         fin.get();
-        getline(fin, pStudentCur->data.student.SocialID, '\n');
+        getline(fin, pStudentCur->data.SocialID, '\n');
         pStudentCur = pStudentCur->next;
     }
     delete pStudentCur;
@@ -173,7 +173,7 @@ void loadCourse(string courseID, course &cCourse)
     {
         nStudentCur->next = new Node<student>;
         getline(fin, cCourse.nStudentHead->data.Class, ' ');
-        getline(fin, cCourse.nStudentHead->data.student.ID, '\n');
+        getline(fin, cCourse.nStudentHead->data.ID, '\n');
         nStudentCur = nStudentCur->next;
     }
     delete nStudentCur;
@@ -188,21 +188,21 @@ void outputClass(string className)
     cout << className << endl;
     for (int i = 0; i < numStudent; i++)
     {
-        cout << setprecision(10) << pStudentHead->data.student.ID << "  ";
-        cout << setprecision(30) << pStudentHead->data.student.fullname << "  ";
-        cout << setprecision(12) << (pStudentHead->data.student.gender == 'm' ? "Male" : (pStudentHead->data.student.gender == 'f' ? "Female" : "Another")) << "  ";
-        int time = pStudentHead->data.student.dob.day;
+        cout << setprecision(10) << pStudentHead->data.ID << "  ";
+        cout << setprecision(30) << pStudentHead->data.fullname << "  ";
+        cout << setprecision(12) << (pStudentHead->data.gender == 'm' ? "Male" : (pStudentHead->data.gender == 'f' ? "Female" : "Another")) << "  ";
+        int time = pStudentHead->data.dob.day;
         if (time >= 10)
             cout << time << "/";
         else
             cout << "0" << time << "/";
-        time = pStudentHead->data.student.dob.month;
+        time = pStudentHead->data.dob.month;
         if (time >= 10)
             cout << time << "/";
         else
             cout << "0" << time << "/";
-        cout << pStudentHead->data.student.dob.year << "  ";
-        cout << setprecision(15) << pStudentHead->data.student.SocialID << endl;
+        cout << pStudentHead->data.dob.year << "  ";
+        cout << setprecision(15) << pStudentHead->data.SocialID << endl;
     }
     for (Node<student> *pCur = pStudentHead; pCur != NULL; pCur = pCur->next)
         delete pCur;
@@ -224,7 +224,7 @@ void outputCourse(string courseID)
     Node<student> *pCur = cCourse.nStudentHead;
     for (int i = 0; i < cCourse.numStudent; i++)
     {
-        cout << pCur->data.Class << "  " << pCur->data.student.ID << endl;
+        cout << pCur->data.Class << "  " << pCur->data.ID << endl;
         pCur = pCur->next;
     }
     for (Node<student> *pDel = cCourse.nStudentHead; pDel != NULL; pDel = pDel->next)

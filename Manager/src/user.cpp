@@ -8,9 +8,9 @@ using namespace std;
 void studentLogin(student &x)
 {
     cout << "ID: ";
-    cin >> x.student.ID;
+    cin >> x.ID;
     cout << "Password: ";
-    cin >> x.student.password;
+    cin >> x.password;
 }
 void checkStudentLogin(student &x, Node<student> *&pHead) // lưu danh sách users vô hàm main trước
 {
@@ -19,7 +19,7 @@ void checkStudentLogin(student &x, Node<student> *&pHead) // lưu danh sách use
         Node<student> *cur = pHead;
         while (cur != NULL)
         {
-            if (cur->data.student.ID == x.student.ID && cur->data.student.password == x.student.password)
+            if (cur->data.ID == x.ID && cur->data.password == x.password)
             {
                 x.Class = cur->data.Class;
                 return;
