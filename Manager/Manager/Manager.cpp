@@ -14,6 +14,7 @@ using namespace std;
 int main()
 {
     menuchinh();
+    Student trong;
     return 0;
 }
 

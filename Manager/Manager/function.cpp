@@ -5,11 +5,13 @@
 #include "user.h"
 #include "course.h"
 #include "Linkedlist.h"
+#include "function.h"
 using namespace std;
-void menuchinh()
+void mainMenu()
 {
+    user uStaff;
+    student uStudent;
     system("cls");
-    Node<user> *pUserHead = NULL;
     cout << "1. Dang nhap" << '\n';
     cout << "2. Thoat" << '\n';
     cout << "Nhap 1 so: ";
@@ -22,39 +24,76 @@ void menuchinh()
     }
     if (t == 1)
     {
-        dangnhap(x);
-
-        if (pUserHead == NULL)
+        cout << "Choose your role (0: Staff, 1: Student): ";
+        int x;
+        cin >> x;
+        if (x == 0)
         {
-            Node<user> *cur = pUserHead;
-            ifstream fin;
-            int n;
-            fin.open("listofusers.txt");
-            fin >> n;
-            for (int i = 0; i < n; i++)
+            staffLogin(uStaff);
+            Node<user>* pUserHead = NULL;
+            if (pUserHead == NULL)
             {
-                Node<user> *tmp = NULL;
-                fin >> tmp->data.ID >> tmp->data.matkhau >> tmp->data.chucvu >> tmp->data.locate;
-                tmp->next = NULL;
-                if (pUserHead == NULL)
+                Node<user>* cur = pUserHead;
+                ifstream fin;
+                int n;
+                fin.open("listofstaffs.txt");
+                fin >> n;
+                for (int i = 0; i < n; i++)
                 {
-                    pUserHead = tmp;
-                    cur = tmp;
+                    Node<user>* tmp = new Node<user>;
+                    fin >> tmp->data.ID >> tmp->data.password;
+                    tmp->next = NULL;
+                    if (pUserHead == NULL)
+                    {
+                        pUserHead = tmp;
+                        cur = tmp;
+                    }
+                    else
+                    {
+                        cur->next = tmp;
+                        cur = cur->next;
+                    }
                 }
-                else
-                {
-                    cur->next = tmp;
-                    cur = cur->next;
-                }
+                fin.close();
             }
-            fin.close();
+            checkStaffLogin(uStaff, pUserHead);
+            staffFunc();
         }
-        checkuser(x, pUserHead);
+        else
+        {
+            studentLogin(uStudent);
+            Node<student>* pUserHead = NULL;
+            if (pUserHead == NULL)
+            {
+                Node<student>* cur = pUserHead;
+                ifstream fin;
+                int n;
+                fin.open("listofstudents.txt");
+                fin >> n;
+                for (int i = 0; i < n; i++)
+                {
+                    Node<student>* tmp = new Node<student>;
+                    fin >> tmp->data.student.ID >> tmp->data.student.password >> tmp->data.Class;
+                    tmp->next = NULL;
+                    if (pUserHead == NULL)
+                    {
+                        pUserHead = tmp;
+                        cur = tmp;
+                    }
+                    else
+                    {
+                        cur->next = tmp;
+                        cur = cur->next;
+                    }
+                }
+                fin.close();
+            }
+            checkStudentLogin(uStudent, pUserHead);
+            studentFunc();
+        }
     }
-    else
+    else{
         exit(0);
-
-    x.chucvu == 0 ? studentFunc() : staffFunc();
 }
 void outputstudent(Student p)
 {
@@ -67,7 +106,7 @@ void outputstudent(Student p)
     else
         cout << "Female" << endl;
     cout << "Date of Birth: ";
-    cout << p.dob.getDay() << "/" << p.dob.getMonth() << "/" << p.dob.getYear() << endl;
+    cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << endl;
 }
 
 void studentFunc()
@@ -110,12 +149,14 @@ void studentFunc()
     else if (m == 2)
     {
 
+
         cout << "Enter a number to back to menu: ";
         cin >> m;
         studentFunc();
     }
     else if (m == 3)
     {
+
 
         cout << "Enter a number to back to menu: ";
         cin >> m;
@@ -126,14 +167,13 @@ void studentFunc()
         menuchinh();
     }
 }
-void inputstudent(Student &p)
+void inputstudent(Student& p)
 {
     ifstream fin;
     string s = x.locate + ".txt";
     fin.open(s);
     int n;
     fin >> n;
-    Student p;
     p.Class = x.locate;
     for (int i = 0; i < n; i++)
     {
@@ -158,6 +198,6 @@ void outputstaff(Staff p)
 void staffFunc()
 {
 }
-void inputstaff(Staff &p)
+void inputstaff(Staff& p)
 {
 }
