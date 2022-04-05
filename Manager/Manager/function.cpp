@@ -14,7 +14,7 @@ void mainMenu()
     user uStaff;
     student uStudent;
     system("cls");
-    
+
     cout << "1. Dang nhap" << '\n';
     cout << "2. Thoat" << '\n';
     cout << "Nhap 1 so: ";
@@ -33,17 +33,17 @@ void mainMenu()
         if (x == 0)
         {
             staffLogin(uStaff);
-            Node<user>* pUserHead = NULL;
+            Node<user> *pUserHead = NULL;
             if (pUserHead == NULL)
             {
-                Node<user>* cur = pUserHead;
+                Node<user> *cur = pUserHead;
                 ifstream fin;
                 int n;
                 fin.open("listofstaffs.txt");
                 fin >> n;
                 for (int i = 0; i < n; i++)
                 {
-                    Node<user>* tmp = new Node<user>;
+                    Node<user> *tmp = new Node<user>;
                     fin >> tmp->data.ID >> tmp->data.password;
                     tmp->next = NULL;
                     if (pUserHead == NULL)
@@ -65,17 +65,17 @@ void mainMenu()
         else
         {
             studentLogin(uStudent);
-            Node<student>* pUserHead = NULL;
+            Node<student> *pUserHead = NULL;
             if (pUserHead == NULL)
             {
-                Node<student>* cur = pUserHead;
+                Node<student> *cur = pUserHead;
                 ifstream fin;
                 int n;
                 fin.open("listofstudents.txt");
                 fin >> n;
                 for (int i = 0; i < n; i++)
                 {
-                    Node<student>* tmp = new Node<student>;
+                    Node<student> *tmp = new Node<student>;
                     fin >> tmp->data.student.ID >> tmp->data.student.password >> tmp->data.Class;
                     tmp->next = NULL;
                     if (pUserHead == NULL)
@@ -108,21 +108,21 @@ void outputStudent(student p)
         cout << "Male" << endl;
     else if (p.student.gender == 'f')
         cout << "Female" << endl;
-    else 
+    else
         cout << "Another" << endl;
     cout << "Date of Birth: ";
     cout << p.student.dob.day << "/" << p.student.dob.month << "/" << p.student.dob.year << endl;
 }
 
-void loadClass(string className, Node<student>* pStudentHead, int& numStudent)
+void loadClass(string className, Node<student> *pStudentHead, int &numStudent)
 {
     ifstream fin;
     string str = className + ".txt";
     fin.open(str);
     fin >> numStudent;
     fin.get();
-    Node<student>* pStudentCur = pStudentHead;
-    for (int i = 0;i < numStudent;i++)
+    Node<student> *pStudentCur = pStudentHead;
+    for (int i = 0; i < numStudent; i++)
     {
         pStudentCur->next = new Node<student>;
         pStudentCur->data.Class = className;
@@ -144,7 +144,7 @@ void loadClass(string className, Node<student>* pStudentHead, int& numStudent)
     fin.close();
 }
 
-void loadCourse(string courseID, course& cCourse)
+void loadCourse(string courseID, course &cCourse)
 {
     ifstream fin;
     string str = courseID + ".txt";
@@ -168,8 +168,8 @@ void loadCourse(string courseID, course& cCourse)
     int n;
     fin >> n;
     cCourse.nStudentHead = new Node<student>;
-    Node<student>* nStudentCur = cCourse.nStudentHead;
-    for (int i = 0;i < n;i++)
+    Node<student> *nStudentCur = cCourse.nStudentHead;
+    for (int i = 0; i < n; i++)
     {
         nStudentCur->next = new Node<student>;
         getline(fin, cCourse.nStudentHead->data.Class, ' ');
@@ -182,25 +182,29 @@ void loadCourse(string courseID, course& cCourse)
 
 void outputClass(string className)
 {
-    Node<student>* pStudentHead = new Node<student>;
+    Node<student> *pStudentHead = new Node<student>;
     int numStudent = 0;
     loadClass(className, pStudentHead, numStudent);
     cout << className << endl;
-    for (int i = 0;i < numStudent;i++)
+    for (int i = 0; i < numStudent; i++)
     {
         cout << setprecision(10) << pStudentHead->data.student.ID << "  ";
         cout << setprecision(30) << pStudentHead->data.student.fullname << "  ";
         cout << setprecision(12) << (pStudentHead->data.student.gender == 'm' ? "Male" : (pStudentHead->data.student.gender == 'f' ? "Female" : "Another")) << "  ";
         int time = pStudentHead->data.student.dob.day;
-        if (time >= 10) cout << time << "/";
-        else cout << "0" << time << "/";
+        if (time >= 10)
+            cout << time << "/";
+        else
+            cout << "0" << time << "/";
         time = pStudentHead->data.student.dob.month;
-        if (time >= 10) cout << time << "/";
-        else cout << "0" << time << "/";
+        if (time >= 10)
+            cout << time << "/";
+        else
+            cout << "0" << time << "/";
         cout << pStudentHead->data.student.dob.year << "  ";
         cout << setprecision(15) << pStudentHead->data.student.SocialID << endl;
     }
-    for (Node<student>* pCur = pStudentHead; pCur != NULL;pCur = pCur->next)
+    for (Node<student> *pCur = pStudentHead; pCur != NULL; pCur = pCur->next)
         delete pCur;
 }
 
@@ -217,16 +221,15 @@ void outputCourse(string courseID)
     cout << "End  : " << cCourse.endDay.day << "/" << cCourse.endDay.day << "/" << cCourse.endDay.day << endl;
     cout << "Time: " << cCourse.session[0].weekday << "  " << cCourse.session[0].time.hour << ":" << cCourse.session[0].time.min << ",  ";
     cout << cCourse.session[0].weekday << "  " << cCourse.session[0].time.hour << ":" << cCourse.session[0].time.min << ",  ";
-    Node<student>* pCur = cCourse.nStudentHead;
-    for (int i = 0;i < cCourse.numStudent;i++)
+    Node<student> *pCur = cCourse.nStudentHead;
+    for (int i = 0; i < cCourse.numStudent; i++)
     {
         cout << pCur->data.Class << "  " << pCur->data.student.ID << endl;
         pCur = pCur->next;
     }
-    for (Node<student>* pDel = cCourse.nStudentHead; pDel != NULL;pDel = pDel->next)
+    for (Node<student> *pDel = cCourse.nStudentHead; pDel != NULL; pDel = pDel->next)
         delete pDel;
 }
-
 
 void studentFunc()
 {
@@ -268,14 +271,12 @@ void studentFunc()
     else if (m == 2)
     {
 
-
         cout << "Enter a number to back to menu: ";
         cin >> m;
         studentFunc();
     }
     else if (m == 3)
     {
-
 
         cout << "Enter a number to back to menu: ";
         cin >> m;
@@ -286,22 +287,18 @@ void studentFunc()
         menuchinh();
     }
 }
-void inputstudent(student& p)
+void inputstudent(student &p)
 {
     ifstream fin;
-    string s = x.locate + ".txt";
-    fin.open(s);
+    fin.open("listofstudents.txt");
     int n;
     fin >> n;
-    p.Class = x.locate;
     for (int i = 0; i < n; i++)
     {
         fin >> p.ID;
         getline(fin, p.ID, ',');
         fin.ignore(2);
-        getline(fin, p.firstName, ',');
-        fin.ignore(2);
-        getline(fin, p.lastName, ',');
+        getline(fin, p.fullname, ',');
         fin.ignore(2);
         fin >> p.gender;
         fin.ignore(2);
@@ -311,12 +308,12 @@ void inputstudent(student& p)
     }
     fin.close();
 }
-void outputstaff(Staff p)
+void outputstaff(staff p)
 {
 }
 void staffFunc()
 {
 }
-void inputstaff(Staff& p)
+void inputstaff(staff &p)
 {
 }

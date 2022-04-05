@@ -5,7 +5,6 @@
 #include "CustomTime.h"
 #include "course.h"
 
-
 using namespace std;
 
 const int maxCourse = 5;
@@ -20,8 +19,8 @@ struct user
     string SocialID;
     // Account information
     string password;
-    char role; // 'p' = pupil (student), 's' = staff,
-    void getDoB(string& input_date) // get a student's DoB from an input string "dd/mm/yyyy"
+    char role;                      // 'p' = pupil (student), 's' = staff,
+    void getDoB(string &input_date) // get a student's DoB from an input string "dd/mm/yyyy"
     {
         string s = input_date.substr(0, 2); // get the day
         dob.day = stoi(s);
@@ -47,7 +46,8 @@ struct user
             break;
         }
         cout << "Gender: ";
-        switch (gender) {
+        switch (gender)
+        {
         case 'm':
             cout << "Male\n";
             break;
@@ -62,21 +62,24 @@ struct user
         cout << "Social ID: " << SocialID;
     };
 };
-struct student
+struct student : user
 {
-    user student;
     string Class;
     int numCourse;
-    Node<course>* Course{};
-    Node<result>* Result{};
+    Node<course> *Course{};
+    Node<result> *Result{};
     void displayStuProfile()
     {
         cout << "Class: " << Class << "\n";
-        student.displayProfile();
+        displayProfile();
         cout << "Courses enrolled: " << numCourse << "\n";
     }
 };
-void studentLogin(student& x);
-void checkStudentLogin(student& x, Node <student>*& pHead);
-void staffLogin(user& x);
-void checkStaffLogin(user& x, Node <user>*& pHead);
+
+struct staff : user
+{
+};
+void studentLogin(student &x);
+void checkStudentLogin(student &x, Node<student> *&pHead);
+void staffLogin(user &x);
+void checkStaffLogin(user &x, Node<user> *&pHead);
