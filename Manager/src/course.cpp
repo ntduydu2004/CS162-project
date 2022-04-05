@@ -27,6 +27,7 @@ Node<student> *Create_Schoolyear()
 	 */
 	ifstream fin;
 	fin.open("../data/New_Classes.txt");
+
 	Node<student> *Temp = new Node<student>; // Create a dummy Head for student list
 	Node<student> *cur = Temp;
 	string className;
