@@ -11,7 +11,7 @@
 using namespace std;
 void mainMenu()
 {
-    user uStaff;
+    staff uStaff;
     student uStudent;
     system("cls");
 
@@ -22,7 +22,7 @@ void mainMenu()
     cin >> t;
     while (t < 1 || t > 2)
     {
-        cout << "Invalid input! Please enter again: ";
+        cout << "Invalid input! Please enter again\n";
         cin >> t;
     }
     if (t == 1)
@@ -39,7 +39,7 @@ void mainMenu()
                 Node<user> *cur = pUserHead;
                 ifstream fin;
                 int n;
-                fin.open("listofstaffs.txt");
+                fin.open("../data/listofstaffs.txt");
                 fin >> n;
                 for (int i = 0; i < n; i++)
                 {
@@ -71,7 +71,7 @@ void mainMenu()
                 Node<student> *cur = pUserHead;
                 ifstream fin;
                 int n;
-                fin.open("listofstudents.txt");
+                fin.open("../data/listofstudents.txt");
                 fin >> n;
                 for (int i = 0; i < n; i++)
                 {
@@ -151,7 +151,7 @@ void loadCourse(string courseID, course &cCourse)
     fin.open(str);
     getline(fin, cCourse.ID, '\n');
     getline(fin, cCourse.name, '\n');
-    getline(fin, cCourse.lecturer.fullname, '\n');
+    getline(fin, cCourse.lecturer, '\n');
     string input_date;
     getline(fin, input_date, '\n');
     cCourse.getStartDayOfCourse(input_date);
@@ -215,7 +215,7 @@ void outputCourse(string courseID)
     loadCourse(courseID, cCourse);
     cout << cCourse.ID << endl;
     cout << cCourse.name << endl;
-    cout << "Lecturer: " << cCourse.lecturer.fullname << endl;
+    cout << "Lecturer: " << cCourse.lecturer << endl;
     int time = cCourse.startDay.day;
     cout << "Start: " << cCourse.startDay.day << "/" << cCourse.startDay.day << "/" << cCourse.startDay.day << endl;
     cout << "End  : " << cCourse.endDay.day << "/" << cCourse.endDay.day << "/" << cCourse.endDay.day << endl;
@@ -258,12 +258,13 @@ void studentFunc()
         cout << "Invalid Input! Please enter again: ";
         cin >> m;
     }
-    inputstudent(infoX);
+    student curr;
+    inputstudent(curr);
     if (m == 1)
     {
         system("cls");
         cout << "Your profile: ";
-        outputstudent(infoX);
+        outputStudent(curr);
         cout << "Enter a number to back to menu: ";
         cin >> m;
         studentFunc();
@@ -284,26 +285,27 @@ void studentFunc()
     }
     else
     {
-        menuchinh();
+        mainMenu();
     }
 }
 void inputstudent(student &p)
 {
     ifstream fin;
-    fin.open("listofstudents.txt");
+    fin.open("../data/listofstudents.txt");
     int n;
     fin >> n;
+    student temp;
     for (int i = 0; i < n; i++)
     {
-        fin >> p.ID;
-        getline(fin, p.ID, ',');
+        fin >> temp.ID;
+        getline(fin, temp.ID, ',');
         fin.ignore(2);
-        getline(fin, p.fullname, ',');
+        getline(fin, temp.fullname, ',');
         fin.ignore(2);
-        fin >> p.gender;
+        fin >> temp.gender;
         fin.ignore(2);
-        getline(fin, p.SocialID);
-        if (p.ID == x.ID)
+        getline(fin, temp.SocialID);
+        if (temp.ID == p.ID)
             break;
     }
     fin.close();

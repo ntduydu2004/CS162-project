@@ -12,6 +12,7 @@
 How to build: Complete these commands
 
 ```
+cd Manager
 cd build
 mingw32-make
 ```

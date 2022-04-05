@@ -26,7 +26,7 @@ Node<student> *Create_Schoolyear()
 	 * - Default input file for 1st Year students is "New_Classes.txt"
 	 */
 	ifstream fin;
-	fin.open("New_Classes.txt");
+	fin.open("../data/New_Classes.txt");
 	Node<student> *Temp = new Node<student>; // Create a dummy Head for student list
 	Node<student> *cur = Temp;
 	string className;

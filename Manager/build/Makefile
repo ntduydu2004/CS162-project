@@ -1,2 +1,2 @@
 default:
-	g++ 
+	g++ ../src/Manager.cpp ../src/user.cpp ../src/Linkedlist.cpp ../src/function.cpp ../src/CustomTime.cpp ../src/course.cpp -o Manager.exe  -O2 -Wall -Wno-missing-braces -I ../include/
