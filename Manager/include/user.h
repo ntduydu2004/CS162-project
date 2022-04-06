@@ -60,7 +60,24 @@ struct student : user
 struct staff : user
 {
 };
-void studentLogin(student &x);
-void checkStudentLogin(student &x, Node<student> *&pHead);
-void staffLogin(user &x);
-void checkStaffLogin(user &x, Node<user> *&pHead);
+
+void login(user &x);
+template <class T>
+void checkLogin(T &x, Node<T> *&pHead) // lưu danh sách users vô hàm main trước
+{
+    do
+    {
+        Node<T> *cur = pHead;
+        while (cur != NULL)
+        {
+            if (cur->data.ID == x.ID && cur->data.password == x.password)
+            {
+                x = cur->data;
+                return;
+            }
+            cur = cur->next;
+        }
+        cout << "Ten dang nhap hoac mat khau khong dung!";
+        login(x);
+    } while (1);
+}

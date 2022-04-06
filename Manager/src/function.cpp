@@ -11,7 +11,7 @@
 using namespace std;
 void mainMenu()
 {
-    staff uStaff;
+    user uStaff;
     student uStudent;
     system("cls");
 
@@ -32,7 +32,7 @@ void mainMenu()
     cin >> x;
     if (x == 0)
     {
-        staffLogin(uStaff);
+        login(uStaff);
         Node<user> *pUserHead = NULL;
         if (pUserHead == NULL)
         {
@@ -59,15 +59,15 @@ void mainMenu()
             }
             fin.close();
         }
-        checkStaffLogin(uStaff, pUserHead);
+        checkLogin(uStaff, pUserHead);
         staffFunc();
     }
     else
     {
-        studentLogin(uStudent);
+        login(uStudent);
         Node<student> *pUserHead = NULL;
-        inputstudent(pUserHead);
-        checkStudentLogin(uStudent, pUserHead);
+        inputStudent(pUserHead);
+        checkLogin(uStudent, pUserHead);
         studentFunc(uStudent);
     }
 }
@@ -233,16 +233,11 @@ void studentFunc(student p)
         cout << "Invalid Input! Please enter again: ";
         cin >> m;
     }
-    /*
-    student curr;
-    inputstudent(curr);
-    */
     switch (m)
     {
     case 1:
         system("cls");
         cout << "Your profile: \n";
-        // outputStudent(p);
         p.displayProfile();
         break;
     case 2:
@@ -259,7 +254,7 @@ void studentFunc(student p)
     studentFunc(p);
 }
 
-void inputstudent(Node<student> *&pUserHead)
+void inputStudent(Node<student> *&pUserHead)
 {
     if (pUserHead == NULL)
     {
