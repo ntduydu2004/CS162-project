@@ -1,4 +1,8 @@
-.vscode
-.vs
-Debug
-x64
+.vscode/
+.vs/
+x64/
+
+Manager/src/Manager.vcxproj
+Manager/src/Manager.vcxproj.filters
+Manager/src/Manager.vcxproj.user
+
