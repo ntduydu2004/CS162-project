@@ -34,32 +34,9 @@ void mainMenu()
     {
         login(uStaff);
         Node<user> *pUserHead = NULL;
-        if (pUserHead == NULL)
-        {
-            Node<user> *cur = pUserHead;
-            ifstream fin;
-            int n;
-            fin.open("../data/listofstaffs.txt");
-            fin >> n;
-            for (int i = 0; i < n; i++)
-            {
-                Node<user> *tmp = new Node<user>;
-                fin >> tmp->data.ID >> tmp->data.password;
-                tmp->next = NULL;
-                if (pUserHead == NULL)
-                {
-                    pUserHead = tmp;
-                    cur = tmp;
-                }
-                else
-                {
-                    cur->next = tmp;
-                    cur = cur->next;
-                }
-            }
-            fin.close();
-        }
+        inputStaff(pUserHead);
         checkLogin(uStaff, pUserHead);
+        cout << uStaff.fullname;
         staffFunc();
     }
     else
@@ -71,22 +48,6 @@ void mainMenu()
         studentFunc(uStudent);
     }
 }
-/*
-void outputStudent(student p)
-{
-    cout << "Class: " << p.Class << '\n';
-    cout << "Student ID: " << p.ID << '\n';
-    cout << "Full name: " << p.fullname << '\n';
-
-    for (int i = 0; i < p.fullname.length(); i++)
-        cout << (p.fullname[i] == '_' ? ' ' : p.fullname[i]);
-    cout << '\n';
-    cout << "Gender: ";
-    cout << (p.gender == 'm' ? "Male" : (p.gender == 'f' ? "Female" : "Other")) << '\n';
-    cout << "Date of Birth: ";
-    cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << '\n';
-}
-*/
 
 void loadClass(string className, Node<student> *pStudentHead, int &numStudent)
 {
@@ -290,14 +251,39 @@ void inputStudent(Node<student> *&pUserHead)
     }
 }
 
-/*
-void outputstaff(staff p)
-{
-}
-*/
 void staffFunc()
 {
 }
-void inputstaff(staff &p)
+void inputStaff(Node<user> *&pUserHead)
 {
+    if (pUserHead == NULL)
+    {
+        Node<user> *cur = pUserHead;
+        ifstream fin;
+        int n;
+        fin.open("../data/listofstaffs.txt");
+        fin >> n;
+        for (int i = 0; i < n; i++)
+        {
+            Node<user> *tmp = new Node<user>;
+            fin >> tmp->data.ID >> tmp->data.password >> tmp->data.fullname >> tmp->data.gender;
+            string dob;
+            fin >> dob;
+            tmp->data.getDoB(dob);
+            fin >> tmp->data.SocialID;
+            tmp->data.role = 's';
+            tmp->next = NULL;
+            if (pUserHead == NULL)
+            {
+                pUserHead = tmp;
+                cur = tmp;
+            }
+            else
+            {
+                cur->next = tmp;
+                cur = cur->next;
+            }
+        }
+        fin.close();
+    }
 }

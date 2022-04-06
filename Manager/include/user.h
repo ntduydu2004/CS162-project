@@ -57,10 +57,6 @@ struct student : user
     }
 };
 
-struct staff : user
-{
-};
-
 void login(user &x);
 template <class T>
 void checkLogin(T &x, Node<T> *&pHead) // lưu danh sách users vô hàm main trước
