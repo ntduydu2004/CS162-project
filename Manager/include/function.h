@@ -2,9 +2,9 @@
 #include "user.h"
 #include "course.h"
 void mainMenu();
-void studentFunc();
+void studentFunc(student p);
 void outputStudent(student p);
-void inputstudent(student &p);
+void inputStudent(Node<student> *&p);
 void staffFunc();
 void outputstaff(user p);
 void inputstaff(user &p);

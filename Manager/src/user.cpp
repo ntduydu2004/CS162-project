@@ -21,7 +21,7 @@ void checkStudentLogin(student &x, Node<student> *&pHead) // lưu danh sách use
         {
             if (cur->data.ID == x.ID && cur->data.password == x.password)
             {
-                x.Class = cur->data.Class;
+                x = cur->data;
                 return;
             }
             cur = cur->next;

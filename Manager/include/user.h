@@ -35,32 +35,12 @@ struct user
         cout << "Full Name: " << fullname << "\n";
         cout << "ID: " << ID << "\n";
         cout << "Role: ";
-        switch (role)
-        {
-        case 'p':
-            cout << "Student\n";
-            break;
-        case 's':
-            cout << "Staff\n";
-            break;
-        default:
-            break;
-        }
+        cout << (role == 'p' ? "Student" : "Staff") << '\n';
         cout << "Gender: ";
-        switch (gender)
-        {
-        case 'm':
-            cout << "Male\n";
-            break;
-        case 'f':
-            cout << "Female\n";
-            break;
-        default:
-            cout << "Unknown\n";
-            break;
-        }
+        cout << (gender == 'm' ? "Male" : (gender == 'f' ? "Female" : "Other")) << '\n';
+        cout << "DOB: ";
         cout << dob.day << "/" << dob.month << "/" << dob.year << "\n";
-        cout << "Social ID: " << SocialID;
+        cout << "Social ID: " << SocialID << '\n';
     };
 };
 struct student : user

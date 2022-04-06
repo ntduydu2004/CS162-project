@@ -66,45 +66,27 @@ void mainMenu()
     {
         studentLogin(uStudent);
         Node<student> *pUserHead = NULL;
-        if (pUserHead == NULL)
-        {
-            Node<student> *cur = pUserHead;
-            ifstream fin;
-            int n;
-            fin.open("../data/listofstudents.txt");
-            fin >> n;
-            for (int i = 0; i < n; i++)
-            {
-                Node<student> *tmp = new Node<student>;
-                fin >> tmp->data.ID >> tmp->data.password >> tmp->data.Class;
-                tmp->next = NULL;
-                if (pUserHead == NULL)
-                {
-                    pUserHead = tmp;
-                    cur = tmp;
-                }
-                else
-                {
-                    cur->next = tmp;
-                    cur = cur->next;
-                }
-            }
-            fin.close();
-        }
+        inputstudent(pUserHead);
         checkStudentLogin(uStudent, pUserHead);
-        studentFunc();
+        studentFunc(uStudent);
     }
 }
+/*
 void outputStudent(student p)
 {
     cout << "Class: " << p.Class << '\n';
     cout << "Student ID: " << p.ID << '\n';
     cout << "Full name: " << p.fullname << '\n';
+
+    for (int i = 0; i < p.fullname.length(); i++)
+        cout << (p.fullname[i] == '_' ? ' ' : p.fullname[i]);
+    cout << '\n';
     cout << "Gender: ";
     cout << (p.gender == 'm' ? "Male" : (p.gender == 'f' ? "Female" : "Other")) << '\n';
     cout << "Date of Birth: ";
     cout << p.dob.day << "/" << p.dob.month << "/" << p.dob.year << '\n';
 }
+*/
 
 void loadClass(string className, Node<student> *pStudentHead, int &numStudent)
 {
@@ -223,7 +205,7 @@ void outputCourse(string courseID)
         delete pDel;
 }
 
-void studentFunc()
+void studentFunc(student p)
 {
     /*
      * This function reads the CSV file containing new classes followed by their student list. The
@@ -238,6 +220,7 @@ void studentFunc()
      * - Default input file for 1st Year students is "New_Classes.txt"
      */
     system("cls");
+    cout << p.fullname << '\n';
     cout << "1. View profile" << '\n';
     cout << "2. View courses" << '\n';
     cout << "3. Register courses" << '\n';
@@ -250,14 +233,17 @@ void studentFunc()
         cout << "Invalid Input! Please enter again: ";
         cin >> m;
     }
+    /*
     student curr;
     inputstudent(curr);
+    */
     switch (m)
     {
     case 1:
         system("cls");
-        cout << "Your profile: ";
-        outputStudent(curr);
+        cout << "Your profile: \n";
+        // outputStudent(p);
+        p.displayProfile();
         break;
     case 2:
         break;
@@ -270,33 +256,50 @@ void studentFunc()
 
     cout << "Enter a number to back to menu: ";
     cin >> m;
-    studentFunc();
+    studentFunc(p);
 }
-void inputstudent(student &p)
+
+void inputstudent(Node<student> *&pUserHead)
 {
-    ifstream fin;
-    fin.open("../data/listofstudents.txt");
-    int n;
-    fin >> n;
-    student temp;
-    for (int i = 0; i < n; i++)
+    if (pUserHead == NULL)
     {
-        fin >> temp.ID;
-        getline(fin, temp.ID, ',');
-        fin.ignore(2);
-        getline(fin, temp.fullname, ',');
-        fin.ignore(2);
-        fin >> temp.gender;
-        fin.ignore(2);
-        getline(fin, temp.SocialID);
-        if (temp.ID == p.ID)
-            break;
+        Node<student> *cur = pUserHead;
+        ifstream fin;
+        int n;
+        fin.open("../data/listofstudents.txt");
+        fin >> n;
+        for (int i = 0; i < n; i++)
+        {
+            Node<student> *tmp = new Node<student>;
+            fin >> tmp->data.ID >> tmp->data.password >>
+                tmp->data.Class >> tmp->data.fullname >> tmp->data.gender;
+            string dob;
+            fin >> dob;
+            tmp->data.getDoB(dob);
+            fin >> tmp->data.SocialID;
+            tmp->data.role = 'p';
+
+            tmp->next = NULL;
+            if (pUserHead == NULL)
+            {
+                pUserHead = tmp;
+                cur = tmp;
+            }
+            else
+            {
+                cur->next = tmp;
+                cur = cur->next;
+            }
+        }
+        fin.close();
     }
-    fin.close();
 }
+
+/*
 void outputstaff(staff p)
 {
 }
+*/
 void staffFunc()
 {
 }
