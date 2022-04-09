@@ -1,13 +1,13 @@
-#include "CustomTime.h"
-#include "user.h"
-#include "course.h"
-#include "Linkedlist.h"
-
 #include <iostream>
 #include <stdio.h>
 #include <fstream>
 #include <string>
 #include <sstream>
+
+#include "..\include\CustomTime.h"
+#include "..\include\user.h"
+#include "..\include\course.h"
+#include "..\include\Linkedlist.h"
 
 using namespace std;
 

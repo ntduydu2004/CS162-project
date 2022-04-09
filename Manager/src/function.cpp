@@ -2,11 +2,11 @@
 #include <fstream>
 #include <string>
 #include <iomanip>
-#include "CustomTime.h"
-#include "user.h"
-#include "course.h"
-#include "Linkedlist.h"
-#include "function.h"
+#include "..\include\CustomTime.h"
+#include "..\include\user.h"
+#include "..\include\course.h"
+#include "..\include\Linkedlist.h"
+#include "..\include\function.h"
 
 using namespace std;
 void mainMenu()
