@@ -197,8 +197,6 @@ void studentFunc(student p)
     switch (m)
     {
     case 1:
-        system("cls");
-        cout << "Your profile: \n";
         p.displayProfile();
         break;
     case 2:
