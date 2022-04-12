@@ -158,8 +158,6 @@
     <ClInclude Include="..\include\Linkedlist.h" />
     <ClInclude Include="..\include\menu.h" />
     <ClInclude Include="..\include\MyFunction.h" />
-    <ClInclude Include="..\include\raygui.h" />
-    <ClInclude Include="..\include\raylib.h" />
     <ClInclude Include="..\include\user.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

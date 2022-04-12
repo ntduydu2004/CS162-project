@@ -3,7 +3,7 @@
 void loadFileStaff(node<user>*& pHead, int& n)
 {
     ifstream fin;
-    fin.open("listofstaff.txt");
+    fin.open("../src/listofstaff.txt");
     fin >> n;
     fin.get();
     node<user>* pCur = nullptr;

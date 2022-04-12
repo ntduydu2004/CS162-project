@@ -3,8 +3,7 @@
 #include <fstream>
 #include <string>
 
-#include "../include/raylib.h"
-#include "raygui.h"
+#include "raylib.h"
 using namespace std;
 
 
