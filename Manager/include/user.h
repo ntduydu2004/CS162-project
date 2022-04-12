@@ -32,6 +32,8 @@ struct user
     }
     void displayProfile()
     {
+        system("cls");
+        cout << "Your profile: \n";
         cout << "Full Name: " << fullname << "\n";
         cout << "ID: " << ID << "\n";
         cout << "Role: ";
