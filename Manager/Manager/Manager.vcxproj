@@ -142,23 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\course.cpp" />
-    <ClCompile Include="..\src\CustomTime.cpp" />
-    <ClCompile Include="..\src\function.cpp" />
-    <ClCompile Include="..\src\Linkedlist.cpp" />
-    <ClCompile Include="..\src\Manager.cpp" />
-    <ClCompile Include="..\src\menu.cpp" />
-    <ClCompile Include="..\src\MyFunction.cpp" />
-    <ClCompile Include="..\src\user.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="MyFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\course.h" />
-    <ClInclude Include="..\include\CustomTime.h" />
-    <ClInclude Include="..\include\function.h" />
-    <ClInclude Include="..\include\Linkedlist.h" />
     <ClInclude Include="..\include\menu.h" />
     <ClInclude Include="..\include\MyFunction.h" />
-    <ClInclude Include="..\include\user.h" />
+    <ClInclude Include="..\include\CourseFunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

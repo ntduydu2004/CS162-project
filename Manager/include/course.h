@@ -1,33 +1,27 @@
 #pragma once
 
-#include <stdio.h>
-#include <iostream>
-#include <string>
+struct Time
+{
+    short hour, min;
+};
 
-#include "user.h"
-#include "CustomTime.h"
-#include "Linkedlist.h"
-
-using namespace std;
-
-const int maxNum = 50;
-
-struct Session
+struct session
 {
     string weekday;
-    Time time;
-    Session()
+    string sTime;
+    Time tTime;
+    session()
     {
         weekday = "Unknown";
-        time.hour = -1;
-        time.min = -1;
+        tTime.hour = -1;
+        tTime.min = -1;
     }
-    void getTimeOfCourse(string &input_date)
+    void getTimeOfCourse()
     {
-        string s = input_date.substr(0, 2);
-        time.hour = stoi(s);
-        s = input_date.substr(3, 2);
-        time.min = stoi(s);
+        string s = sTime.substr(0, 2);
+        tTime.hour = stoi(s);
+        s = sTime.substr(3, 2);
+        tTime.min = stoi(s);
     }
 };
 
@@ -43,28 +37,28 @@ struct course
 {
     string ID;
     string name;
-    Session session[2];
+    session sSession[2];
     string lecturer;
-    //  student List...
-    Node<student> *nStudentHead = NULL;
     int numStudent;
-    Date startDay, endDay;
-    void getStartDayOfCourse(string &input_date)
+    date startDay, endDay;
+    string sStartDay, sEndDay;
+    node<student>* nStudentHead = nullptr;
+    void getStartDayOfCourse()
     {
-        string s = input_date.substr(0, 2); // get the day
+        string s = sStartDay.substr(0, 2); // get the day
         startDay.day = stoi(s);
-        s = input_date.substr(3, 2); // get the month
+        s = sStartDay.substr(3, 2); // get the month
         startDay.month = stoi(s);
-        s = input_date.substr(6, 4); // get the year
+        s = sStartDay.substr(6, 4); // get the year
         startDay.year = stoi(s);
     }
-    void getEndDayOfCourse(string &input_date)
+    void getEndDayOfCourse()
     {
-        string s = input_date.substr(0, 2); // get the day
+        string s = sEndDay.substr(0, 2); // get the day
         endDay.day = stoi(s);
-        s = input_date.substr(3, 2); // get the month
+        s = sEndDay.substr(3, 2); // get the month
         endDay.month = stoi(s);
-        s = input_date.substr(6, 4); // get the year
+        s = sEndDay.substr(6, 4); // get the year
         endDay.year = stoi(s);
     }
 };
