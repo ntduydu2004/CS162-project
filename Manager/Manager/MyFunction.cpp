@@ -370,11 +370,7 @@ void registerCourse(student &sStudent, Course &cCourse)
 bool checkFileExist(student &sStudent)
 {
     ifstream fin("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
-    if (fin.good())
-    {
-        fin.close();
-        return true;
-    }
+    bool ans = fin.good();
     fin.close();
-    return false;
+    return ans;
 }

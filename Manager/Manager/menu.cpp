@@ -238,7 +238,7 @@ void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse,
         if (IsMouseButtonPressed(0))
         {
             if (CheckCollisionPointRec(touchPosition, rec_Main[0]))
-                menu = 2;
+                menu = 1;
             if (CheckCollisionPointRec(touchPosition, rec_Main[1]))
                 menu = 3;
             if (CheckCollisionPointRec(touchPosition, rec_Main[2]))
