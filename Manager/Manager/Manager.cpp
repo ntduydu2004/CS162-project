@@ -1,11 +1,12 @@
 // Manager.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include "../include/menu.h"
+#include "menu.h"
+using namespace std;
 int main()
 {
     const int screenHeight = 600;
     const int screenWidth = 1200;
-    char* ch = nullptr;
+    char *ch = nullptr;
     InitWindow(screenWidth, screenHeight, "Menu");
     SetTargetFPS(60);
     short menu = -2;
@@ -13,66 +14,59 @@ int main()
     Vector2 touchPosition;
     char a[17] = "\0", b[17] = "\0", bStar[17] = "\0";
     short idCount = 0, passwordCount = 0, role = 0;
-    string  Class;
+    string Class;
     Course cCourse;
     Rectangle rec_Role[] =
-    {
-        { GetScreenWidth() / 2 - 150,GetScreenHeight() / 2 - 60,300,60 },
-        { GetScreenWidth() / 2 - 150,GetScreenHeight() / 2 + 20,300,60 }
-    };
+        {
+            {GetScreenWidth() / 2 - 150, GetScreenHeight() / 2 - 60, 300, 60},
+            {GetScreenWidth() / 2 - 150, GetScreenHeight() / 2 + 20, 300, 60}};
 
     Rectangle rec_Login[] =
-    {
-        { GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 40 - 10, 340, 60 },
-        { GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 + 40 - 10, 340, 60 },
-        { GetScreenWidth() / 2 - 130, GetScreenHeight() / 2 + 150 - 10, 140, 60 },
-        { 30, GetScreenHeight() - 70, 140, 60 }
-    };
+        {
+            {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 40 - 10, 340, 60},
+            {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 + 40 - 10, 340, 60},
+            {GetScreenWidth() / 2 - 130, GetScreenHeight() / 2 + 150 - 10, 140, 60},
+            {30, GetScreenHeight() - 70, 140, 60}};
 
     Rectangle rec_Main[] =
-    {
-        { GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 100 - 10, 260, 50 },
-        { GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 50 - 10, 260, 50 },
-        { GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 0 - 10, 260, 50 },
-        { GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 + 50 - 10, 260, 50 }
-    };
+        {
+            {GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 100 - 10, 260, 50},
+            {GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 50 - 10, 260, 50},
+            {GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 0 - 10, 260, 50},
+            {GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 + 50 - 10, 260, 50}};
 
-    Rectangle rec_Profile{ 30, GetScreenHeight() - 70, 140, 60 };
+    Rectangle rec_Profile{30, GetScreenHeight() - 70, 140, 60};
 
     Rectangle rec_StudentCourse[] =
-    {
-        { 50, GetScreenHeight() / 2 - 130 - 10, GetScreenWidth() - 100, 50 },
-        { 50, GetScreenHeight() / 2 - 80 - 10, GetScreenWidth() - 100, 50 },
-        { 50, GetScreenHeight() / 2 - 30 - 10, GetScreenWidth() - 100, 50 },
-        { 50, GetScreenHeight() / 2 + 20 - 10, GetScreenWidth() - 100, 50 },
-        { 50, GetScreenHeight() / 2 + 70 - 10, GetScreenWidth() - 100, 50 },
-        { 30, GetScreenHeight() - 70, 140, 60 }
-    };
+        {
+            {50, GetScreenHeight() / 2 - 130 - 10, GetScreenWidth() - 100, 50},
+            {50, GetScreenHeight() / 2 - 80 - 10, GetScreenWidth() - 100, 50},
+            {50, GetScreenHeight() / 2 - 30 - 10, GetScreenWidth() - 100, 50},
+            {50, GetScreenHeight() / 2 + 20 - 10, GetScreenWidth() - 100, 50},
+            {50, GetScreenHeight() / 2 + 70 - 10, GetScreenWidth() - 100, 50},
+            {30, GetScreenHeight() - 70, 140, 60}};
 
     Rectangle rec_detailOfCourseMenu[] =
-    {
-        { 450, 285, 220, 50 },
-        { 30, GetScreenHeight() - 70, 140, 60 }
-    };
+        {
+            {450, 285, 220, 50},
+            {30, GetScreenHeight() - 70, 140, 60}};
 
     Rectangle rec_StudentSchoolYear[] =
-    {
-        { 200, 100, 200, 50 },
-        { 800, 100, 200, 50 },
-        { 200, 200, 200, 50 },
-        { 800, 200, 200, 50 },
-        { 200, 300, 200, 50 },
-        { 800, 300, 200, 50 },
-        { 30, GetScreenHeight() - 70, 140, 60 }
-    };
+        {
+            {200, 100, 200, 50},
+            {800, 100, 200, 50},
+            {200, 200, 200, 50},
+            {800, 200, 200, 50},
+            {200, 300, 200, 50},
+            {800, 300, 200, 50},
+            {30, GetScreenHeight() - 70, 140, 60}};
 
     Rectangle rec_StudentSemester[] =
-    {
-        { 480, GetScreenHeight() / 2 - 80, 240, 50 },
-        { 480, GetScreenHeight() / 2 - 30, 240, 50 },
-        { 480, GetScreenHeight() / 2 + 20, 240, 50 },
-        { 30, GetScreenHeight() - 70, 140, 60 }
-    };
+        {
+            {480, GetScreenHeight() / 2 - 80, 240, 50},
+            {480, GetScreenHeight() / 2 - 30, 240, 50},
+            {480, GetScreenHeight() / 2 + 20, 240, 50},
+            {30, GetScreenHeight() - 70, 140, 60}};
 
     student sStudent;
     user uStaff;
@@ -109,7 +103,7 @@ int main()
         case 5: // Semester Student Menu
             semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester);
             break;
-        case 6: 
+        case 6:
             break;
         case 20: // White Menu
             whiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile);

@@ -1,10 +1,6 @@
 #pragma once
-
-struct Time
-{
-    short hour, min;
-};
-
+#include "CustomTime.h"
+#include "Linkedlist.h"
 struct session
 {
     string weekday;
@@ -40,9 +36,9 @@ struct course
     session sSession[2];
     string lecturer;
     int numStudent;
-    date startDay, endDay;
+    Date startDay, endDay;
     string sStartDay, sEndDay;
-    node<student>* nStudentHead = nullptr;
+    Node<student> *nStudentHead = nullptr;
     void getStartDayOfCourse()
     {
         string s = sStartDay.substr(0, 2); // get the day

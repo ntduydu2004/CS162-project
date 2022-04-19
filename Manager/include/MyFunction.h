@@ -2,14 +2,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "raylib.h"
 using namespace std;
 
 template <class T>
 struct node
 {
     T data;
-    node* next = nullptr;
+    node *next = nullptr;
 };
 struct date
 {
@@ -90,7 +89,7 @@ struct Course
     int maxStudent = 0, numStudent = 0;
     date startDay, endDay;
     string sDay;
-    node<student>* nStudentHead = nullptr;
+    node<student> *nStudentHead = nullptr;
     void getStartDayOfCourse()
     {
         string s = sDay.substr(0, 2); // get the day
@@ -111,20 +110,19 @@ struct Course
     }
 };
 
-void loadFileStaff(node<user>*& pHead, int& n);
-void deleteListStaff(node<user>*& pHead, int n);
-bool checkStafflogin(user& uStaff);
-void loadFileDetailOfStaff(node<user>*& pHead, int& n);
-void detailOfStaff(user& uStaff);
+void loadFileStaff(node<user> *&pHead, int &n);
+void deleteListStaff(node<user> *&pHead, int n);
+bool checkStafflogin(user &uStaff);
+void loadFileDetailOfStaff(node<user> *&pHead, int &n);
+void detailOfStaff(user &uStaff);
 
-
-void loadFileStudent(node<student>*& pHead, int& n);
-void deleteListStudent(node<student>*& pHead, int n);
-bool checkStudentLogin(student& sStudent);
-void loadFileClass(node<student>*& pHead, string className, int& n);
-void detailOfStudent(student& sStudent);
-void loadFileCourseOfClass(node<student>*& pHead, student& sStudent, int& n);
-void checkStudentCourse(student& sStudent);
-void loadFileCourse(string courseID, Course& cCourse, student& sStudent);
-void registerCourse(student& sStudent, Course& cCourse);
-bool checkFileExist(student& sStudent);
+void loadFileStudent(node<student> *&pHead, int &n);
+void deleteListStudent(node<student> *&pHead, int n);
+bool checkStudentLogin(student &sStudent);
+void loadFileClass(node<student> *&pHead, string className, int &n);
+void detailOfStudent(student &sStudent);
+void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n);
+void checkStudentCourse(student &sStudent);
+void loadFileCourse(string courseID, Course &cCourse, student &sStudent);
+void registerCourse(student &sStudent, Course &cCourse);
+bool checkFileExist(student &sStudent);
