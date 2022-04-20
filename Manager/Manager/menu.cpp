@@ -486,18 +486,11 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
         DrawText("Mid", 775 - 25, GetScreenHeight() / 2 - 180, 25, BLACK);
         DrawText("Final", 845 - 25, GetScreenHeight() / 2 - 180, 25, BLACK);
         DrawText("Average", 940 - 20, GetScreenHeight() / 2 - 180, 25, BLACK);
-
-        DrawRectangleLines(rec_StudentCourse[0].x, rec_StudentCourse[0].y - 50, rec_StudentCourse[0].width, 300, BLACK);
-        DrawLine(100, rec_StudentCourse[0].y - 50, 100, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(600, rec_StudentCourse[0].y - 50, 600, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(670, rec_StudentCourse[0].y - 50, 670, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(740, rec_StudentCourse[0].y - 50, 740, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(810, rec_StudentCourse[0].y - 50, 810, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(880, rec_StudentCourse[0].y - 50, 880, rec_StudentCourse[0].y + 250, BLACK);
         if (indexMouse < 5)
             DrawRectangle(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, LIGHTGRAY);
         else if (indexMouse == 5)
-            DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, LIGHTGRAY);
+            DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, BLACK);
+        DrawRectangleLines(rec_StudentCourse[0].x, rec_StudentCourse[0].y - 50, rec_StudentCourse[0].width, 300, BLACK);
         for (int i = 0;i < 5;i++)
         {
             DrawLine(50, rec_StudentCourse[i].y, GetScreenWidth() - 50, rec_StudentCourse[i].y, BLACK);
@@ -516,6 +509,12 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
             ch = (char *)sStudent.nameCourse[i].c_str();
             DrawText(ch, 110, rec_StudentCourse[i].y + 8, 25, BLACK);
         }
+        DrawLine(100, rec_StudentCourse[0].y - 50, 100, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(600, rec_StudentCourse[0].y - 50, 600, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(670, rec_StudentCourse[0].y - 50, 670, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(740, rec_StudentCourse[0].y - 50, 740, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(810, rec_StudentCourse[0].y - 50, 810, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(880, rec_StudentCourse[0].y - 50, 880, rec_StudentCourse[0].y + 250, BLACK);
     }
     EndDrawing();
 }
@@ -537,9 +536,12 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
             deleteListStudent(cCourse.nStudentHead, cCourse.numStudent);
             menu = 2; // Student Course Menu
         }
-        if (CheckCollisionPointRec(touchPosition, rec_detailOfCourseMenu[0]) && sStudent.isRegistered[sStudent.courseView] == "Not Registered" && cCourse.numStudent < cCourse.maxStudent)
+        if (CheckCollisionPointRec(touchPosition, rec_detailOfCourseMenu[0]))
         {
-            registerCourse(sStudent, cCourse);
+            if (sStudent.isRegistered[sStudent.courseView] == "Not Registered" && cCourse.numStudent < cCourse.maxStudent)
+                registerCourse(sStudent, cCourse);
+            else if (sStudent.isRegistered[sStudent.courseView] == "Registered")
+                unregisterCourse(sStudent, cCourse);
         }
     }
     BeginDrawing();
@@ -579,6 +581,7 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
         DrawText("     FULL", 460, 295, 30, RED);
     EndDrawing();
 }
+
 void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &indexTouch,
                     char oldPass[], char newPass[], char confirmPass[],
                     char oldPassStar[], char newPassStar[], char confirmPassStar[],
@@ -764,9 +767,7 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
         oldPassCount = 0;
         newPassCount = 0;
         confirmPassCount = 0;
-        return;
     }
-
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawText("Old Pass   : ", GetScreenWidth() / 2 - 10 * 40, GetScreenHeight() / 2 - 120, 40, BLACK);
