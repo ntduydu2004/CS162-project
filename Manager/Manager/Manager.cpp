@@ -70,7 +70,7 @@ int main()
             {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 120 - 10, 340, 60},
             {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 40 - 10, 340, 60},
             {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 + 40 - 10, 340, 60},
-            {GetScreenWidth() / 2 - 130, GetScreenHeight() / 2 + 150 - 10, 140, 60},
+            {GetScreenWidth() / 2 - 130, GetScreenHeight() / 2 + 150 - 10, 160, 60},
             {30, GetScreenHeight() - 70, 140, 60}};
 
     Rectangle rec_StudentSemester[] =
