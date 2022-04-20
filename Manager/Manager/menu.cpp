@@ -179,7 +179,7 @@ void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse
 }
 
 void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, char b[], char bStar[], short& passwordCount, student& sStudent,
-     user& uStaff, short role, Rectangle rec_Main[], short& CourseOrResult) // menu = 0
+     user& uStaff, short role, Rectangle rec_Main[], short& CourseOrResult, short& numSchoolYear) // menu = 0
 {
     if (role == 0)
     {
@@ -200,11 +200,13 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
                 menu = 1; // Profile Menu
             if (CheckCollisionPointRec(touchPosition, rec_Main[1]))
             {
+                numSchoolYear = currentSchoolYear - sStudent.firstYear;
                 menu = 4; // SchoolYear Student Menu
                 CourseOrResult = 0;
             }
             if (CheckCollisionPointRec(touchPosition, rec_Main[2]))
             {
+                numSchoolYear = currentSchoolYear - sStudent.firstYear;
                 menu = 4; // SchoolYear Student Menu
                 CourseOrResult = 1;
             }
@@ -289,7 +291,7 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
     }
     BeginDrawing();
     ClearBackground(RAYWHITE);
-    DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    DrawText("BACK", 45, GetScreenHeight() - 60, 25, RED);
     if (indexMouse == 1)
         DrawRectangleLines(rec_Profile.x, rec_Profile.y, rec_Profile.width, rec_Profile.height, BLACK);
     DrawText("ID", 60, 70, 35, BLACK);
@@ -329,9 +331,9 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
 }
 
 void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-                           Rectangle rec_StudentSchoolYear[], int &numSchoolYear) // menu = 4
+                           Rectangle rec_StudentSchoolYear[], short &numSchoolYear) // menu = 4
 {
-    numSchoolYear = currentSchoolYear - sStudent.firstYear;
+    
     if (CheckCollisionPointRec(mousePosition, rec_StudentSchoolYear[6]))
         indexMouse = 6;
     else
@@ -462,7 +464,8 @@ void courseOrResultStudentMenu(Vector2& mousePosition, Vector2& touchPosition, s
         DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 + 20, 30, BLACK);
         ch = (char*)sStudent.isRegistered[4].c_str();
         DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 + 70, 30, BLACK);
-        DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, BLACK);
+        if (indexMouse >= 0)
+            DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, BLACK);
     }
     else
     {
@@ -481,7 +484,10 @@ void courseOrResultStudentMenu(Vector2& mousePosition, Vector2& touchPosition, s
         DrawLine(740, rec_StudentCourse[0].y - 50, 740, rec_StudentCourse[0].y + 250, BLACK);
         DrawLine(810, rec_StudentCourse[0].y - 50, 810, rec_StudentCourse[0].y + 250, BLACK);
         DrawLine(880, rec_StudentCourse[0].y - 50, 880, rec_StudentCourse[0].y + 250, BLACK);
-        DrawRectangle(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, LIGHTGRAY);
+        if (indexMouse < 5)
+            DrawRectangle(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, LIGHTGRAY);
+        else if (indexMouse == 5)
+            DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, LIGHTGRAY);
         for (int i = 0;i < 5;i++)
         {
             DrawLine(50, rec_StudentCourse[i].y, GetScreenWidth() - 50, rec_StudentCourse[i].y, BLACK);

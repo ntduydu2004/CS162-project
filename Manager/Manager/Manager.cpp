@@ -1,13 +1,13 @@
 // Manager.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include "menu.h"
+#include "../include/menu.h"
 using namespace std;
 int main()
 {
     const int screenHeight = 600;
     const int screenWidth = 1200;
     char *ch = nullptr;
-    InitWindow(screenWidth, screenHeight, "Menu");
+    InitWindow(screenWidth, screenHeight, "COURSE MANAGEMENT");
     SetTargetFPS(60);
     short menu = -2;
     Vector2 mousePosition;
@@ -71,7 +71,7 @@ int main()
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, CourseOrResult;
-    int numSchoolYear = 0;
+    short numSchoolYear = 0;
     while (!WindowShouldClose())
     {
         mousePosition = GetMousePosition();
@@ -86,7 +86,7 @@ int main()
             logInMenu(mousePosition, touchPosition, indexMouse, indexTouch, a, b, bStar, menu, true, idCount, passwordCount, uStaff, sStudent, role, rec_Login);
             break;
         case 0: // Main Menu
-            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult);
+            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult, numSchoolYear);
             break;
         case 1: // View Profile Menu
             viewProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, uStaff, menu, role, rec_Profile, ch);
