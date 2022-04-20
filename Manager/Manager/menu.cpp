@@ -180,7 +180,7 @@ void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse
 }
 
 void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, char b[], char bStar[], short &passwordCount, student &sStudent,
-              user &uStaff, short role, Rectangle rec_Main[], short &CourseOrResult) // menu = 0
+              user &uStaff, short role, Rectangle rec_Main[], short &CourseOrResult, short& numSchoolYear) // menu = 0
 {
     if (role == 0)
     {
@@ -289,6 +289,11 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
         if (CheckCollisionPointRec(mousePosition, rec_Profile[0]))
         {
             menu = 0;
+            return;
+        }
+        if (CheckCollisionPointRec(mousePosition, rec_Profile[1]))
+        {
+            menu = 6;
             return;
         }
     }
@@ -589,7 +594,6 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
             break;
         }
 
-    indexTouch = -1;
     if (IsMouseButtonPressed(0))
         for (int i = 0; i < 5; i++)
             if (CheckCollisionPointRec(touchPosition, rec_changePass[i]))
@@ -601,7 +605,6 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
     if (indexTouch == 0)
     {
         int key = GetCharPressed();
-        std::cerr << key << ' ';
         while (key > 0)
         {
             if ((key >= 32) && (key <= 125) && (oldPassCount < 16))
@@ -675,7 +678,7 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
     {
         if (role == -1)
         {
-            if (oldPass != "\0" && oldPass == uStaff.password && newPass == confirmPass)
+            if (oldPass != "\0" && uStaff.password == oldPass && strcmp(newPass, confirmPass) == 0)
             {
                 node<user> *pHead = NULL;
                 int n;
@@ -685,7 +688,7 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
                     p = p->next;
                 p->data.password = newPass;
                 ofstream fout;
-                fout.open("listofstaff.txt");
+                fout.open("../data/listofstaff.txt");
                 fout << n << '\n';
                 while (p)
                 {
@@ -693,14 +696,25 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
                     p = p->next;
                 }
                 fout.close();
-                menu = 0;
+                deleteListStaff(pHead, n);
+                uStaff.password = newPass;
+                menu = 1;
                 indexTouch = -1;
+                oldPass[0] = '\0';
+                newPass[0] = '\0';
+                confirmPass[0] = '\0';
+                oldPassStar[0] = '\0';
+                newPassStar[0] = '\0';
+                confirmPassStar[0] = '\0';
+                oldPassCount = 0;
+                newPassCount = 0;
+                confirmPassCount = 0;
                 return;
             }
         }
         else if (role == 0)
         {
-            if (oldPass != "\0" && oldPass == sStudent.password && newPass == confirmPass)
+            if (oldPass != "\0" && oldPass == sStudent.password && strcmp(newPass, confirmPass) == 0)
             {
                 node<student> *pHead = NULL;
                 int n;
@@ -710,16 +724,27 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
                     p = p->next;
                 p->data.password = newPass;
                 ofstream fout;
-                fout.open("listofstudent.txt");
+                fout.open("../data/listofstudent.txt");
                 fout << n << '\n';
                 while (p)
                 {
-                    fout << p->data.id << ' ' << p->data.password << '\n';
+                    fout << p->data.id << ' ' << p->data.password << ' ' << p->data.Class << '\n';
                     p = p->next;
                 }
                 fout.close();
-                menu = 0;
+                deleteListStudent(pHead, n);
+                sStudent.password = newPass;
+                menu = 1;
                 indexTouch = -1;
+                oldPass[0] = '\0';
+                newPass[0] = '\0';
+                confirmPass[0] = '\0';
+                oldPassStar[0] = '\0';
+                newPassStar[0] = '\0';
+                confirmPassStar[0] = '\0';
+                oldPassCount = 0;
+                newPassCount = 0;
+                confirmPassCount = 0;
                 return;
             }
         }
@@ -730,8 +755,15 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
     {
         menu = 1;
         indexTouch = -1;
-        oldPass[0] = newPass[0] = confirmPass[0] = oldPassStar[0] = newPassStar[0] = confirmPassStar[0] = '\0';
-        oldPassCount = newPassCount = confirmPassCount = 0;
+        oldPass[0] = '\0';
+        newPass[0] = '\0';
+        confirmPass[0] = '\0';
+        oldPassStar[0] = '\0';
+        newPassStar[0] = '\0';
+        confirmPassStar[0] = '\0';
+        oldPassCount = 0;
+        newPassCount = 0;
+        confirmPassCount = 0;
         return;
     }
 
