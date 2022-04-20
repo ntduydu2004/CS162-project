@@ -14,6 +14,8 @@ int main()
     Vector2 touchPosition;
     char a[17] = "\0", b[17] = "\0", bStar[17] = "\0";
     short idCount = 0, passwordCount = 0, role = 0;
+    char oldPass[17] = "\0", newPass[17] = "\0", confirmPass[17] = "\0", oldPassStar[17] = "\0", newPassStar[17] = "\0", confirmPassStar[17] = "\0";
+    short oldPassCount = 0, newPassCount = 0, confirmPassCount = 0;
     string Class;
     Course cCourse;
     Rectangle rec_Role[] =
@@ -35,7 +37,9 @@ int main()
             {GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 - 0 - 10, 260, 50},
             {GetScreenWidth() / 2 - 120 - 10, GetScreenHeight() / 2 + 50 - 10, 260, 50}};
 
-    Rectangle rec_Profile{30, GetScreenHeight() - 70, 140, 60};
+    Rectangle rec_Profile[] = {
+        {30, GetScreenHeight() - 70, 140, 60},
+        {30, 390, 400, 60}};
 
     Rectangle rec_StudentCourse[] =
         {
@@ -59,6 +63,14 @@ int main()
             {800, 200, 200, 50},
             {200, 300, 200, 50},
             {800, 300, 200, 50},
+            {30, GetScreenHeight() - 70, 140, 60}};
+
+    Rectangle rec_changePass[] =
+        {
+            {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 120 - 10, 340, 60},
+            {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 40 - 10, 340, 60},
+            {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 + 40 - 10, 340, 60},
+            {GetScreenWidth() / 2 - 130, GetScreenHeight() / 2 + 150 - 10, 140, 60},
             {30, GetScreenHeight() - 70, 140, 60}};
 
     Rectangle rec_StudentSemester[] =
@@ -103,7 +115,8 @@ int main()
         case 5: // Semester Student Menu
             semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, CourseOrResult);
             break;
-        case 6:
+        case 6: // Change Password
+            changePassword(mousePosition, touchPosition, indexMouse, indexTouch, oldPass, newPass, confirmPass, oldPassStar, newPassStar, confirmPassStar, oldPassCount, newPassCount, confirmPassCount, sStudent, uStaff, menu, role, rec_changePass, true);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);

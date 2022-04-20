@@ -1,2 +1,2 @@
 default:
-	g++ ../Manager/Manager.cpp ../Manager/user.cpp ../Manager/Linkedlist.cpp ../Manager/function.cpp ../Manager/CustomTime.cpp ../Manager/course.cpp ../Manager/menu.cpp ../Manager/MyFunction.cpp -o Manager.exe  -O2 -Wall -Wno-missing-braces -I ../include/ -L ../lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
+	g++ ../Manager/Manager.cpp ../Manager/user.cpp ../Manager/function.cpp ../Manager/CustomTime.cpp ../Manager/course.cpp ../Manager/menu.cpp ../Manager/MyFunction.cpp -o Manager.exe  -O2 -Wall -Wno-missing-braces -I ../include/ -L ../lib/ -lraylib -lopengl32 -lgdi32 -lwinmm

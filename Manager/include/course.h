@@ -1,6 +1,7 @@
 #pragma once
 #include "CustomTime.h"
 #include "Linkedlist.h"
+#include "user.h"
 struct session
 {
     string weekday;
