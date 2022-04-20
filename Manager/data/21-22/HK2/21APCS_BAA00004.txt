@@ -4,10 +4,11 @@ Nguyen Ngoc Phuong Hong
 TUE 13:30 - 17:10
 None -1:-1 - -1:-1
 90
-6
+7
 21APCS2 4
 21APCS2 5
 21APCS2 6
 21CLC1 7
 21CLC2 8
 21VP 10
+21APCS1 2
