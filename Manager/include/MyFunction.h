@@ -2,14 +2,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "raylib.h"
 using namespace std;
 
 template <class T>
 struct node
 {
     T data;
-    node* next = nullptr;
+    node *next = nullptr;
 };
 struct date
 {
@@ -92,7 +91,7 @@ struct Course
     int maxStudent = 0, numStudent = 0;
     date startDay, endDay;
     string sDay;
-    node<student>* nStudentHead = nullptr;
+    node<student> *nStudentHead = nullptr;
     void getStartDayOfCourse()
     {
         string s = sDay.substr(0, 2); // get the day
@@ -113,11 +112,11 @@ struct Course
     }
 };
 
-void loadFileStaff(node<user>*& pHead, int& n);
-void deleteListStaff(node<user>*& pHead, int n);
-bool checkStafflogin(user& uStaff);
-void loadFileDetailOfStaff(node<user>*& pHead, int& n);
-void detailOfStaff(user& uStaff);
+void loadFileStaff(node<user> *&pHead, int &n);
+void deleteListStaff(node<user> *&pHead, int n);
+bool checkStafflogin(user &uStaff);
+void loadFileDetailOfStaff(node<user> *&pHead, int &n);
+void detailOfStaff(user &uStaff);
 
 
 void loadFileStudent(node<student>*& pHead, int& n);

@@ -1,6 +1,6 @@
 #include "../include/menu.h"
 const int currentSchoolYear = 2021;
-void chooseRoleMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, short& role, Rectangle rec_Role[])
+void chooseRoleMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, short &role, Rectangle rec_Role[])
 {
 
     if (CheckCollisionPointRec(mousePosition, rec_Role[0]))
@@ -36,8 +36,8 @@ void chooseRoleMenu(Vector2& mousePosition, Vector2& touchPosition, short& index
     EndDrawing();
 }
 
-void logInMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& indexTouch, char a[], char b[], char bStar[], short& menu, bool flag,
-    short& idCount, short& passwordCount, user& uStaff, student& sStudent, short role, Rectangle rec_Login[])
+void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &indexTouch, char a[], char b[], char bStar[], short &menu, bool flag,
+               short &idCount, short &passwordCount, user &uStaff, student &sStudent, short role, Rectangle rec_Login[])
 {
     if (CheckCollisionPointRec(mousePosition, rec_Login[0]))
     {
@@ -53,7 +53,8 @@ void logInMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse
         indexMouse = 2;
     else if (CheckCollisionPointRec(mousePosition, rec_Login[3]))
         indexMouse = 3;
-    else indexMouse = -1;
+    else
+        indexMouse = -1;
     if (IsMouseButtonPressed(0))
     {
         if (CheckCollisionPointRec(touchPosition, rec_Login[0]))
@@ -64,7 +65,8 @@ void logInMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse
             indexTouch = 2;
         else if (CheckCollisionPointRec(touchPosition, rec_Login[3]))
             indexTouch = 3;
-        else indexTouch = -1;
+        else
+            indexTouch = -1;
     }
     if (indexTouch == 0)
     {
@@ -82,7 +84,8 @@ void logInMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse
         if (IsKeyPressed(KEY_BACKSPACE))
         {
             idCount--;
-            if (idCount < 0) idCount = 0;
+            if (idCount < 0)
+                idCount = 0;
             a[idCount] = '\0';
         }
     }
@@ -104,7 +107,8 @@ void logInMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse
         if (IsKeyPressed(KEY_BACKSPACE))
         {
             passwordCount--;
-            if (passwordCount < 0) passwordCount = 0;
+            if (passwordCount < 0)
+                passwordCount = 0;
             b[passwordCount] = '\0';
             bStar[passwordCount] = '\0';
         }
@@ -187,7 +191,8 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
             indexMouse = 2;
         else if (CheckCollisionPointRec(mousePosition, rec_Main[3]))
             indexMouse = 3;
-        else indexMouse = -1;
+        else
+            indexMouse = -1;
 
         if (IsMouseButtonPressed(0))
         {
@@ -233,7 +238,8 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
             indexMouse = 2;
         else if (CheckCollisionPointRec(mousePosition, rec_Main[3]))
             indexMouse = 3;
-        else indexMouse = -1;
+        else
+            indexMouse = -1;
 
         if (IsMouseButtonPressed(0))
         {
@@ -263,16 +269,16 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
             DrawRectangleLines(rec_Main[indexMouse].x, rec_Main[indexMouse].y, rec_Main[indexMouse].width, rec_Main[indexMouse].height, BLACK);
         EndDrawing();
     }
-
 }
 
-void viewProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student sStudent, user uStaff, short& menu, short role,
-    Rectangle rec_Profile, char* ch) // menu = 1
+void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student sStudent, user uStaff, short &menu, short role,
+                     Rectangle rec_Profile, char *ch) // menu = 1
 {
 
     if (CheckCollisionPointRec(mousePosition, rec_Profile))
         indexMouse = 1;
-    else indexMouse = 0;
+    else
+        indexMouse = 0;
     if (IsMouseButtonPressed(0))
     {
         if (CheckCollisionPointRec(mousePosition, rec_Profile))
@@ -293,43 +299,44 @@ void viewProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& inde
     DrawText("Email", 60, 310, 35, BLACK);
     if (role == -1)
     {
-        ch = (char*)uStaff.id.c_str();
+        ch = (char *)uStaff.id.c_str();
         DrawText(ch, 320, 70, 35, BLACK);
-        ch = (char*)uStaff.fullname.c_str();
+        ch = (char *)uStaff.fullname.c_str();
         DrawText(ch, 320, 130, 35, BLACK);
-        ch = (char*)uStaff.gender.c_str();
+        ch = (char *)uStaff.gender.c_str();
         DrawText(ch, 320, 190, 35, BLACK);
-        ch = (char*)uStaff.sDate.c_str();
+        ch = (char *)uStaff.sDate.c_str();
         DrawText(ch, 320, 250, 35, BLACK);
-        ch = (char*)uStaff.email.c_str();
+        ch = (char *)uStaff.email.c_str();
         DrawText(ch, 320, 310, 35, BLACK);
     }
     if (role == 0)
     {
-        ch = (char*)sStudent.schoolYear.c_str();
+        ch = (char *)sStudent.schoolYear.c_str();
         DrawText(ch, 70, 30, 30, BLACK);
-        ch = (char*)sStudent.id.c_str();
+        ch = (char *)sStudent.id.c_str();
         DrawText(ch, 320, 70, 35, BLACK);
-        ch = (char*)sStudent.fullname.c_str();
+        ch = (char *)sStudent.fullname.c_str();
         DrawText(ch, 320, 130, 35, BLACK);
-        ch = (char*)sStudent.gender.c_str();
+        ch = (char *)sStudent.gender.c_str();
         DrawText(ch, 320, 190, 35, BLACK);
-        ch = (char*)sStudent.sDate.c_str();
+        ch = (char *)sStudent.sDate.c_str();
         DrawText(ch, 320, 250, 35, BLACK);
-        ch = (char*)sStudent.email.c_str();
+        ch = (char *)sStudent.email.c_str();
         DrawText(ch, 320, 310, 35, BLACK);
     }
     EndDrawing();
 }
 
-void schoolYearStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-    Rectangle rec_StudentSchoolYear[], int& numSchoolYear) // menu = 4
+void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
+                           Rectangle rec_StudentSchoolYear[], int &numSchoolYear) // menu = 4
 {
     numSchoolYear = currentSchoolYear - sStudent.firstYear;
     if (CheckCollisionPointRec(mousePosition, rec_StudentSchoolYear[6]))
         indexMouse = 6;
-    else indexMouse = -1;
-    for (int i = 0;i <= numSchoolYear;i++)
+    else
+        indexMouse = -1;
+    for (int i = 0; i <= numSchoolYear; i++)
     {
         if (CheckCollisionPointRec(mousePosition, rec_StudentSchoolYear[i]))
             indexMouse = i;
@@ -348,8 +355,8 @@ void schoolYearStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short
     ClearBackground(RAYWHITE);
     DrawRectangleLines(rec_StudentSchoolYear[indexMouse].x, rec_StudentSchoolYear[indexMouse].y, rec_StudentSchoolYear[indexMouse].width, rec_StudentSchoolYear[indexMouse].height, BLACK);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
-    for (int i = 0;i <= numSchoolYear;i++)
-        DrawText(TextFormat("%i - %i", sStudent.firstYear + i, sStudent.firstYear + 1 + i),rec_StudentSchoolYear[i].x + 10, rec_StudentSchoolYear[i].y + 15, 30,BLACK);
+    for (int i = 0; i <= numSchoolYear; i++)
+        DrawText(TextFormat("%i - %i", sStudent.firstYear + i, sStudent.firstYear + 1 + i), rec_StudentSchoolYear[i].x + 10, rec_StudentSchoolYear[i].y + 15, 30, BLACK);
     EndDrawing();
 }
 
@@ -364,7 +371,8 @@ void semesterStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
         indexMouse = 2;
     else if (CheckCollisionPointRec(mousePosition, rec_StudentSemester[3]))
         indexMouse = 3;
-    else indexMouse = -1;
+    else
+        indexMouse = -1;
     if (IsMouseButtonPressed(0))
     {
         if (CheckCollisionPointRec(touchPosition, rec_StudentSemester[3]))
@@ -410,7 +418,8 @@ void courseOrResultStudentMenu(Vector2& mousePosition, Vector2& touchPosition, s
         indexMouse = 4;
     else if (CheckCollisionPointRec(mousePosition, rec_StudentCourse[5]))
         indexMouse = 5;
-    else indexMouse = -1;
+    else
+        indexMouse = -1;
 
     if (IsMouseButtonPressed(0))
     {
@@ -503,7 +512,8 @@ void detailOfCourseMenu(Vector2& mousePosition, Vector2& touchPosition, short& i
         indexMouse = 0;
     else if (CheckCollisionPointRec(mousePosition, rec_detailOfCourseMenu[1]))
         indexMouse = 1;
-    else indexMouse = -1;
+    else
+        indexMouse = -1;
 
     if (IsMouseButtonPressed(0))
     {
@@ -520,25 +530,25 @@ void detailOfCourseMenu(Vector2& mousePosition, Vector2& touchPosition, short& i
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawText("ID", 70, 60, 23, BLACK);
-    ch = (char*)cCourse.ID.c_str();
+    ch = (char *)cCourse.ID.c_str();
     DrawText(ch, 250, 60, 23, BLACK);
     DrawText("Course", 70, 100, 23, BLACK);
-    ch = (char*)cCourse.name.c_str();
+    ch = (char *)cCourse.name.c_str();
     DrawText(ch, 250, 100, 23, BLACK);
     DrawText("Lecturer", 70, 140, 23, BLACK);
-    ch = (char*)cCourse.lecturer.c_str();
+    ch = (char *)cCourse.lecturer.c_str();
     DrawText(ch, 250, 140, 23, BLACK);
     DrawText("Date", 70, 180, 23, BLACK);
-    ch = (char*)cCourse.sDay.c_str();
+    ch = (char *)cCourse.sDay.c_str();
     DrawText(ch, 250, 180, 23, BLACK);
     DrawText("Timetable", 70, 220, 23, BLACK);
-    for (int i = 0;i < 2;i++)
+    for (int i = 0; i < 2; i++)
     {
         if (cCourse.sSession[i].weekday != "None")
         {
-            ch = (char*)cCourse.sSession[i].weekday.c_str();
+            ch = (char *)cCourse.sSession[i].weekday.c_str();
             DrawText(ch, 250, 220 + 40 * i, 23, BLACK);
-            ch = (char*)cCourse.sSession[i].sTime.c_str();
+            ch = (char *)cCourse.sSession[i].sTime.c_str();
             DrawText(ch, 310, 220 + 40 * i, 23, BLACK);
         }
     }
@@ -560,7 +570,8 @@ void studentWhiteMenu(Vector2& mousePosition, Vector2& touchPosition, short& ind
 {
     if (CheckCollisionPointRec(mousePosition, rec_white))
         indexMouse = 0;
-    else indexMouse = -1;
+    else
+        indexMouse = -1;
     if (IsMouseButtonPressed(0))
     {
         if (CheckCollisionPointRec(touchPosition, rec_white))

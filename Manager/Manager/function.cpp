@@ -87,19 +87,18 @@ void loadCourse(string courseID, course &cCourse)
     getline(fin, cCourse.ID, '\n');
     getline(fin, cCourse.name, '\n');
     getline(fin, cCourse.lecturer, '\n');
-    string input_date;
-    getline(fin, input_date, '\n');
-    cCourse.getStartDayOfCourse(input_date);
-    getline(fin, input_date, '\n');
-    cCourse.getEndDayOfCourse(input_date);
-    getline(fin, cCourse.session[0].weekday, ',');
+    getline(fin, cCourse.sStartDay, '\n');
+    cCourse.getStartDayOfCourse();
+    getline(fin, cCourse.sEndDay, '\n');
+    cCourse.getEndDayOfCourse();
+    getline(fin, cCourse.sSession[0].weekday, ',');
     fin.get();
-    getline(fin, input_date, '\n');
-    cCourse.session[0].getTimeOfCourse(input_date);
-    getline(fin, cCourse.session[1].weekday, ',');
+    getline(fin, cCourse.sSession[0].sTime, '\n');
+    cCourse.sSession[0].getTimeOfCourse();
+    getline(fin, cCourse.sSession[1].weekday, ',');
     fin.get();
-    getline(fin, input_date, '\n');
-    cCourse.session[1].getTimeOfCourse(input_date);
+    getline(fin, cCourse.sSession[1].sTime, '\n');
+    cCourse.sSession[1].getTimeOfCourse();
     int n;
     fin >> n;
     cCourse.nStudentHead = new Node<student>;
@@ -154,8 +153,8 @@ void outputCourse(string courseID)
     int time = cCourse.startDay.day;
     cout << "Start: " << cCourse.startDay.day << "/" << cCourse.startDay.day << "/" << cCourse.startDay.day << '\n';
     cout << "End  : " << cCourse.endDay.day << "/" << cCourse.endDay.day << "/" << cCourse.endDay.day << '\n';
-    cout << "Time: " << cCourse.session[0].weekday << "  " << cCourse.session[0].time.hour << ":" << cCourse.session[0].time.min << ",  ";
-    cout << cCourse.session[0].weekday << "  " << cCourse.session[0].time.hour << ":" << cCourse.session[0].time.min << ",  ";
+    cout << "Time: " << cCourse.sSession[0].weekday << "  " << cCourse.sSession[0].tTime.hour << ":" << cCourse.sSession[0].tTime.min << ",  ";
+    cout << cCourse.sSession[0].weekday << "  " << cCourse.sSession[0].tTime.hour << ":" << cCourse.sSession[0].tTime.min << ",  ";
     Node<student> *pCur = cCourse.nStudentHead;
     for (int i = 0; i < cCourse.numStudent; i++)
     {
