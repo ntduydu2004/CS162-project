@@ -1,5 +1,6 @@
 #include "../include/menu.h"
 #include <fstream>
+#include <cstring>
 const int currentSchoolYear = 2021;
 void chooseRoleMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, short &role, Rectangle rec_Role[])
 {
@@ -180,7 +181,7 @@ void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse
 }
 
 void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, char b[], char bStar[], short &passwordCount, student &sStudent,
-              user &uStaff, short role, Rectangle rec_Main[], short &CourseOrResult, short& numSchoolYear) // menu = 0
+              user &uStaff, short role, Rectangle rec_Main[], short &CourseOrResult, short &numSchoolYear) // menu = 0
 {
     if (role == 0)
     {
@@ -342,7 +343,7 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
 void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
                            Rectangle rec_StudentSchoolYear[], short &numSchoolYear) // menu = 4
 {
-    
+
     if (CheckCollisionPointRec(mousePosition, rec_StudentSchoolYear[6]))
         indexMouse = 6;
     else
