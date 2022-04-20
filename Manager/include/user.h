@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <fstream>
 
 #include "CustomTime.h"
 #include "Linkedlist.h"
-#include "course.h"
 
 using namespace std;
 
@@ -49,8 +49,8 @@ struct student : user
 {
     string Class;
     int numCourse;
-    Node<course> *Course{};
-    Node<result> *Result{};
+    // Node<course> *Course{};
+    // Node<result> *Result{};
     void displayStuProfile()
     {
         cout << "Class: " << Class << "\n";
