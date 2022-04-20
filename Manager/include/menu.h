@@ -5,15 +5,15 @@ void chooseRoleMenu(Vector2& mousePosition, Vector2& touchPosition, short& index
 void logInMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& indexTouch, char a[], char b[], char bStar[], short& menu, bool flag,
 	short& idCount, short& passwordCount, user& uStaff, student& sStudent, short role, Rectangle rec_Login[]);
 void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, char b[], char bStar[], short& passwordCount, student& sStudent,
-	user& uStaff, short role, Rectangle rec_Main[]);
+	user& uStaff, short role, Rectangle rec_Main[], short& CourseOrResult);
 void viewProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student sStudent, user uStaff, short& menu, short role, 
 	Rectangle rec_Profile, char* ch);
-void courseStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu, Course& cCourse,
-	Rectangle rec_StudentCourse[], char* ch);
+void courseOrResultStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu, Course& cCourse,
+	Rectangle rec_StudentCourse[], char* ch, short& courseOrResult);
 void detailOfCourseMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, Course& cCourse, student& sStudent, short& menu,
 	Rectangle rec_detailOfCourseMenu[], char* ch);
 void semesterStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-	Rectangle rec_StudentSemester[]);
+	Rectangle rec_StudentSemester[], short& CourseOrResult);
 void schoolYearStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
 	Rectangle rec_StudentSchoolYear[], int& numSchoolYear);
-void whiteMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, Rectangle rec_white);
+void studentWhiteMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, Rectangle rec_white, short CourseOrResult);

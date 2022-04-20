@@ -16,6 +16,15 @@ struct date
     short day, month;
     int year;
 };
+struct result
+{
+    string courseID;
+    float lab;
+    float quiz;
+    float midterm;
+    float finalterm;
+    float average;
+};
 
 struct user
 {
@@ -42,6 +51,7 @@ struct student : user
     string isRegistered[5];
     string courseID[5];
     string nameCourse[5];
+    result rResult[5];
     short courseView;
     void getFirstYear()
     {
@@ -73,14 +83,6 @@ struct session
     }
 };
 
-struct result
-{
-    string courseID;
-    float thuchanh;
-    float quiz;
-    float giuaky;
-    float cuoiky;
-};
 struct Course
 {
     string ID;
@@ -127,4 +129,10 @@ void loadFileCourseOfClass(node<student>*& pHead, student& sStudent, int& n);
 void checkStudentCourse(student& sStudent);
 void loadFileCourse(string courseID, Course& cCourse, student& sStudent);
 void registerCourse(student& sStudent, Course& cCourse);
-bool checkFileExist(student& sStudent);
+bool checkFileExist(student& sStudent, short CourseOrResult);
+void checkStudentResult(student& sStudent);
+void loadFileResultOfClass(node<student>*& pHead, student& sStudent, int& n);
+void updateFileCourse(student& sStudent, Course& cCourse);
+void updateFileCourseOfClass(student& sStudent, node<student>* pHead, int& n);
+void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n);
+

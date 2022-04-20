@@ -76,7 +76,7 @@ int main()
 
     student sStudent;
     user uStaff;
-    short indexMouse = -1, indexTouch = -1;
+    short indexMouse = -1, indexTouch = -1, CourseOrResult;
     int numSchoolYear = 0;
     while (!WindowShouldClose())
     {
@@ -92,13 +92,13 @@ int main()
             logInMenu(mousePosition, touchPosition, indexMouse, indexTouch, a, b, bStar, menu, true, idCount, passwordCount, uStaff, sStudent, role, rec_Login);
             break;
         case 0: // Main Menu
-            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main);
+            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult);
             break;
         case 1: // View Profile Menu
             viewProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, uStaff, menu, role, rec_Profile, ch);
             break;
         case 2: // Course Student Menu
-            courseStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, ch);
+            courseOrResultStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, ch, CourseOrResult);
             break;
         case 3: // Detail of Course
             detailOfCourseMenu(mousePosition, touchPosition, indexMouse, cCourse, sStudent, menu, rec_detailOfCourseMenu, ch);
@@ -107,12 +107,12 @@ int main()
             schoolYearStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSchoolYear, numSchoolYear);
             break;
         case 5: // Semester Student Menu
-            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester);
+            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, CourseOrResult);
             break;
         case 6: 
             break;
         case 20: // White Menu
-            whiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile);
+            studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);
             break;
         }
     }
