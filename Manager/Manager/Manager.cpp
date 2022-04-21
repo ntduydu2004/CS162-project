@@ -77,7 +77,7 @@ int main()
             {900, 300, 200, 50},
             {30, GetScreenHeight() - 70, 140, 60},
             {GetScreenWidth() - 330, GetScreenHeight() - 70, 300, 60}
-
+    };
     Rectangle rec_changePass[] =
         {
             {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 120 - 10, 340, 60},

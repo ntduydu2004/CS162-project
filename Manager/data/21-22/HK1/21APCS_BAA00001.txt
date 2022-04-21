@@ -4,7 +4,7 @@ Nguyen Ngoc Phuong Hong
 TUE 13:30 - 17:10
 None -1:-1 - -1:-1
 90
-8
+7
 21APCS1 1
 21APCS1 3
 21A 4
@@ -12,4 +12,3 @@ None -1:-1 - -1:-1
 21A 6
 21A 7
 21A 8
-21APCS1 2
