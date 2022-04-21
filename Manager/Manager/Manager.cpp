@@ -6,7 +6,6 @@ int main()
 {
     const int screenHeight = 600;
     const int screenWidth = 1200;
-    char *ch = nullptr;
     InitWindow(screenWidth, screenHeight, "COURSE MANAGEMENT");
     SetTargetFPS(60);
     short menu = -2;
@@ -114,13 +113,13 @@ int main()
             mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult, numSchoolYear);
             break;
         case 1: // View Profile Menu
-            viewProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, uStaff, menu, role, rec_Profile, ch);
+            viewProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, uStaff, menu, role, rec_Profile);
             break;
         case 2: // Course Student Menu
-            courseOrResultStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, ch, CourseOrResult);
+            courseOrResultStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, CourseOrResult);
             break;
         case 3: // Detail of Course
-            detailOfCourseMenu(mousePosition, touchPosition, indexMouse, cCourse, sStudent, menu, rec_detailOfCourseMenu, ch);
+            detailOfCourseMenu(mousePosition, touchPosition, indexMouse, cCourse, sStudent, menu, rec_detailOfCourseMenu);
             break;
         case 4: // SchoolYear Student Menu
             schoolYearStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSchoolYear, numSchoolYear);

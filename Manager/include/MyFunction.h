@@ -18,6 +18,7 @@ struct date
 struct result
 {
     string courseID;
+    string type;
     float lab;
     float quiz;
     float midterm;
@@ -55,6 +56,29 @@ struct student : user
     void getFirstYear()
     {
         firstYear = stoi(Class.substr(0, 2)) + 2000;
+    }
+    void getAverageResult(int i)
+    {
+        if (rResult[i].quiz >= 0 && rResult[i].lab >= 0 && rResult[i].midterm >= 0 && rResult[i].finalterm >= -1.0)
+            rResult[i].average = rResult[i].quiz * 0.1 + rResult[i].lab * 0.2 + rResult[i].midterm * 0.3 + rResult[i].finalterm * 0.4;
+        else if (rResult[i].quiz == -2.0)
+            rResult[i].average = -2.0;
+        else rResult[i].average = -1.0;
+        if (rResult[i].average == -2.0)
+            rResult[i].type = "Not";
+        else if (rResult[i].average == -1)
+            rResult[i].type = "None";
+        else if (rResult[i].average < 5.0)
+            rResult[i].type = "None";
+        else if (rResult[i].average < 6.0)
+            rResult[i].type = "D";
+        else if (rResult[i].average < 7.0)
+            rResult[i].type = "C";
+        else if (rResult[i].average < 8.0)
+            rResult[i].type = "B";
+        else if (rResult[i].average < 9.0)
+            rResult[i].type = "A";
+        else rResult[i].type = "A+";
     }
 };
 struct Time
@@ -135,4 +159,6 @@ void loadFileResultOfClass(node<student>*& pHead, student& sStudent, int& n);
 void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister);
 void updateFileCourseOfClass(student& sStudent, node<student>* pHead, int& n);
 void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n);
+void updateFileStaff(node<user>* pHead, int n);
+void updateFileStudent(node<student>* pHead, int n);
 
