@@ -159,4 +159,6 @@ void loadFileResultOfClass(node<student>*& pHead, student& sStudent, int& n);
 void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister);
 void updateFileCourseOfClass(student& sStudent, node<student>* pHead, int& n);
 void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n);
+void updateFileStaff(node<user>* pHead, int n);
+void updateFileStudent(node<student>* pHead, int n);
 

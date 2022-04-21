@@ -551,3 +551,33 @@ void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n)
     }
     fout.close();
 }
+
+void updateFileStaff(node<user>* pHead, int n)
+{
+    node<user>* p = pHead;
+    ofstream fout;
+    fout.open("../data/listofstaff.txt");
+    fout << n << '\n';
+    while (p)
+    {
+        fout << p->data.id << ' ' << p->data.password << '\n';
+        p = p->next;
+    }
+    fout.close();
+    deleteListStaff(pHead, n);
+}
+
+void updateFileStudent(node<student>* pHead, int n)
+{
+    node<student>* p = pHead;
+    ofstream fout;
+    fout.open("../data/listofstudent.txt");
+    fout << n << '\n';
+    while (p)
+    {
+        fout << p->data.id << ' ' << p->data.password << ' ' << p->data.Class << '\n';
+        p = p->next;
+    }
+    fout.close();
+    deleteListStudent(pHead, n);
+}

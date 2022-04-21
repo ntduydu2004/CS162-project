@@ -723,20 +723,11 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
                 node<user> *pHead = NULL;
                 int n;
                 loadFileStaff(pHead, n);
-                node<user> *p = pHead;
+                node<user>* p = pHead;
                 while (p->data.id != uStaff.id)
                     p = p->next;
                 p->data.password = newPass;
-                ofstream fout;
-                fout.open("../data/listofstaff.txt");
-                fout << n << '\n';
-                while (p)
-                {
-                    fout << p->data.id << ' ' << p->data.password << '\n';
-                    p = p->next;
-                }
-                fout.close();
-                deleteListStaff(pHead, n);
+                updateFileStaff(pHead, n);
                 uStaff.password = newPass;
                 menu = 1;
                 indexTouch = -1;
@@ -763,16 +754,7 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
                 while (p->data.id != sStudent.id)
                     p = p->next;
                 p->data.password = newPass;
-                ofstream fout;
-                fout.open("../data/listofstudent.txt");
-                fout << n << '\n';
-                while (p)
-                {
-                    fout << p->data.id << ' ' << p->data.password << ' ' << p->data.Class << '\n';
-                    p = p->next;
-                }
-                fout.close();
-                deleteListStudent(pHead, n);
+                updateFileStudent(pHead, n);
                 sStudent.password = newPass;
                 menu = 1;
                 indexTouch = -1;
