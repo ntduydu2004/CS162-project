@@ -8,11 +8,11 @@ void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse
 void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, char b[], char bStar[], short &passwordCount, student &sStudent,
 			  user &uStaff, short role, Rectangle rec_Main[], short &CourseOrResult, short& numSchoolYear);
 void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student sStudent, user uStaff, short &menu, short role,
-					 Rectangle rec_Profile[], char *ch);
+					 Rectangle rec_Profile[]);
 void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu, Course &cCourse,
-							   Rectangle rec_StudentCourse[], char *ch, short &courseOrResult);
+							   Rectangle rec_StudentCourse[], short &courseOrResult);
 void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, Course &cCourse, student &sStudent, short &menu,
-						Rectangle rec_detailOfCourseMenu[], char *ch);
+						Rectangle rec_detailOfCourseMenu[]);
 void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
 						 Rectangle rec_StudentSemester[], short &CourseOrResult);
 void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
@@ -24,4 +24,4 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
 					student &sStudent, user &uStaff, short &menu, short role, Rectangle rec_changePass[], bool flag);
 void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_white[], short CourseOrResult);
 void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-	Rectangle rec_StaffSchoolYear[], short& numSchoolYear);
+						Rectangle rec_StaffSchoolYear[], short& numSchoolYear);

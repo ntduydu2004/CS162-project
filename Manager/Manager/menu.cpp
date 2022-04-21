@@ -312,7 +312,7 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
             fout << numSchoolYear;
             fout.close();
             newYear = to_string(2020 - 2000 + numSchoolYear) + "-" + to_string(2021 - 2000 + numSchoolYear);
-            _mkdir((const char*)("../data/" + newYear).c_str());
+            _mkdir(("../data/" + newYear).c_str());
             test.open("../data/" + newYear + "/test.txt");
             test << "Hello";
             test.close();
@@ -333,7 +333,7 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
 }
 
 void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student sStudent, user uStaff, short &menu, short role,
-                     Rectangle rec_Profile[], char *ch) // menu = 1
+                     Rectangle rec_Profile[]) // menu = 1
 {
 
     if (CheckCollisionPointRec(mousePosition, rec_Profile[0]))
@@ -368,31 +368,20 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
     DrawText("Change Password", 45, 400, 40, GREEN);
     if (role == -1)
     {
-        ch = (char *)uStaff.id.c_str();
-        DrawText(ch, 320, 70, 35, BLACK);
-        ch = (char *)uStaff.fullname.c_str();
-        DrawText(ch, 320, 130, 35, BLACK);
-        ch = (char *)uStaff.gender.c_str();
-        DrawText(ch, 320, 190, 35, BLACK);
-        ch = (char *)uStaff.sDate.c_str();
-        DrawText(ch, 320, 250, 35, BLACK);
-        ch = (char *)uStaff.email.c_str();
-        DrawText(ch, 320, 310, 35, BLACK);
+        DrawText(uStaff.id.c_str(), 320, 70, 35, BLACK);
+        DrawText(uStaff.fullname.c_str(), 320, 130, 35, BLACK);
+        DrawText(uStaff.gender.c_str(), 320, 190, 35, BLACK);
+        DrawText(uStaff.sDate.c_str(), 320, 250, 35, BLACK);
+        DrawText(uStaff.email.c_str(), 320, 310, 35, BLACK);
     }
     if (role == 0)
     {
-        ch = (char *)sStudent.schoolYear.c_str();
-        DrawText(ch, 70, 30, 30, BLACK);
-        ch = (char *)sStudent.id.c_str();
-        DrawText(ch, 320, 70, 35, BLACK);
-        ch = (char *)sStudent.fullname.c_str();
-        DrawText(ch, 320, 130, 35, BLACK);
-        ch = (char *)sStudent.gender.c_str();
-        DrawText(ch, 320, 190, 35, BLACK);
-        ch = (char *)sStudent.sDate.c_str();
-        DrawText(ch, 320, 250, 35, BLACK);
-        ch = (char *)sStudent.email.c_str();
-        DrawText(ch, 320, 310, 35, BLACK);
+        DrawText(sStudent.schoolYear.c_str(), 70, 30, 30, BLACK);
+        DrawText(sStudent.id.c_str(), 320, 70, 35, BLACK);
+        DrawText(sStudent.fullname.c_str(), 320, 130, 35, BLACK);
+        DrawText(sStudent.gender.c_str(), 320, 190, 35, BLACK);
+        DrawText(sStudent.sDate.c_str(), 320, 250, 35, BLACK);
+        DrawText(sStudent.email.c_str(), 320, 310, 35, BLACK);
     }
     EndDrawing();
 }
@@ -474,7 +463,7 @@ void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
 }
 
 void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu, Course &cCourse,
-                               Rectangle rec_StudentCourse[], char *ch, short &courseOrResult) // menu = 2
+                               Rectangle rec_StudentCourse[], short &courseOrResult) // menu = 2
 {
     if (CheckCollisionPointRec(mousePosition, rec_StudentCourse[0]))
         indexMouse = 0;
@@ -511,27 +500,17 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
     if (courseOrResult == 0)
     {
         DrawText("Course", 70, GetScreenHeight() / 2 - 180, 30, BLACK);
-        ch = (char *)sStudent.nameCourse[0].c_str();
-        DrawText(ch, 70, GetScreenHeight() / 2 - 130, 30, BLACK);
-        ch = (char *)sStudent.nameCourse[1].c_str();
-        DrawText(ch, 70, GetScreenHeight() / 2 - 80, 30, BLACK);
-        ch = (char *)sStudent.nameCourse[2].c_str();
-        DrawText(ch, 70, GetScreenHeight() / 2 - 30, 30, BLACK);
-        ch = (char *)sStudent.nameCourse[3].c_str();
-        DrawText(ch, 70, GetScreenHeight() / 2 + 20, 30, BLACK);
-        ch = (char *)sStudent.nameCourse[4].c_str();
-        DrawText(ch, 70, GetScreenHeight() / 2 + 70, 30, BLACK);
+        DrawText(sStudent.nameCourse[0].c_str(), 70, GetScreenHeight() / 2 - 130, 30, BLACK);
+        DrawText(sStudent.nameCourse[1].c_str(), 70, GetScreenHeight() / 2 - 80, 30, BLACK);
+        DrawText(sStudent.nameCourse[2].c_str(), 70, GetScreenHeight() / 2 - 30, 30, BLACK);
+        DrawText(sStudent.nameCourse[3].c_str(), 70, GetScreenHeight() / 2 + 20, 30, BLACK);
+        DrawText(sStudent.nameCourse[4].c_str(), 70, GetScreenHeight() / 2 + 70, 30, BLACK);
         DrawText("Status", GetScreenWidth() - 300, GetScreenHeight() / 2 - 180, 30, BLACK);
-        ch = (char *)sStudent.isRegistered[0].c_str();
-        DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 - 130, 30, BLACK);
-        ch = (char *)sStudent.isRegistered[1].c_str();
-        DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 - 80, 30, BLACK);
-        ch = (char *)sStudent.isRegistered[2].c_str();
-        DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 - 30, 30, BLACK);
-        ch = (char *)sStudent.isRegistered[3].c_str();
-        DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 + 20, 30, BLACK);
-        ch = (char *)sStudent.isRegistered[4].c_str();
-        DrawText(ch, GetScreenWidth() - 300, GetScreenHeight() / 2 + 70, 30, BLACK);
+        DrawText(sStudent.isRegistered[0].c_str(), GetScreenWidth() - 300, GetScreenHeight() / 2 - 130, 30, BLACK);
+        DrawText(sStudent.isRegistered[1].c_str(), GetScreenWidth() - 300, GetScreenHeight() / 2 - 80, 30, BLACK);
+        DrawText(sStudent.isRegistered[2].c_str(), GetScreenWidth() - 300, GetScreenHeight() / 2 - 30, 30, BLACK);
+        DrawText(sStudent.isRegistered[3].c_str(), GetScreenWidth() - 300, GetScreenHeight() / 2 + 20, 30, BLACK);
+        DrawText(sStudent.isRegistered[4].c_str(), GetScreenWidth() - 300, GetScreenHeight() / 2 + 70, 30, BLACK);
         if (indexMouse >= 0)
             DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, BLACK);
     }
@@ -539,11 +518,12 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
     {
         DrawText("", 80, GetScreenHeight() / 2 - 180, 25, BLACK);
         DrawText("Course", 300, GetScreenHeight() / 2 - 180, 25, BLACK);
-        DrawText("Quiz", 635 - 22, GetScreenHeight() / 2 - 180, 25, BLACK);
-        DrawText("Lab", 705 - 20, GetScreenHeight() / 2 - 180, 25, BLACK);
-        DrawText("Mid", 775 - 25, GetScreenHeight() / 2 - 180, 25, BLACK);
-        DrawText("Final", 845 - 25, GetScreenHeight() / 2 - 180, 25, BLACK);
-        DrawText("Average", 940 - 20, GetScreenHeight() / 2 - 180, 25, BLACK);
+        DrawText("Quiz", 640, GetScreenHeight() / 2 - 180, 25, BLACK);
+        DrawText("Lab", 722, GetScreenHeight() / 2 - 180, 25, BLACK);
+        DrawText("Mid", 810, GetScreenHeight() / 2 - 180, 25, BLACK);
+        DrawText("Final", 890, GetScreenHeight() / 2 - 180, 25, BLACK);
+        DrawText("Average", 970, GetScreenHeight() / 2 - 180, 25, BLACK);
+        DrawText("Type", 1084, GetScreenHeight() / 2 - 180, 25, BLACK);
         if (indexMouse < 5)
             DrawRectangle(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, LIGHTGRAY);
         else if (indexMouse == 5)
@@ -552,33 +532,37 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
         for (int i = 0;i < 5;i++)
         {
             DrawLine(50, rec_StudentCourse[i].y, GetScreenWidth() - 50, rec_StudentCourse[i].y, BLACK);
+            sStudent.getAverageResult(i);
             if (sStudent.rResult[i].quiz == -2.0)
                 DrawRectangle(rec_StudentCourse[i].x, rec_StudentCourse[i].y, rec_StudentCourse[i].width, rec_StudentCourse[i].height, RED);
             if (sStudent.rResult[i].quiz >= 0)
-                DrawText(TextFormat("%.2f", sStudent.rResult[i].quiz), 613, rec_StudentCourse[i].y + 10, 25, BLACK);
+                DrawText(TextFormat("%.2f", sStudent.rResult[i].quiz), 640, rec_StudentCourse[i].y + 10, 25, BLACK);
             if (sStudent.rResult[i].lab >= 0)
-                DrawText(TextFormat("%.2f", sStudent.rResult[i].lab), 681, rec_StudentCourse[i].y + 10, 25, BLACK);
+                DrawText(TextFormat("%.2f", sStudent.rResult[i].lab), 723, rec_StudentCourse[i].y + 10, 25, BLACK);
             if (sStudent.rResult[i].midterm >= 0)
-                DrawText(TextFormat("%.2f", sStudent.rResult[i].midterm), 750, rec_StudentCourse[i].y + 10, 25, BLACK);
+                DrawText(TextFormat("%.2f", sStudent.rResult[i].midterm), 807, rec_StudentCourse[i].y + 10, 25, BLACK);
             if (sStudent.rResult[i].finalterm >= 0)
-                DrawText(TextFormat("%.2f", sStudent.rResult[i].finalterm), 823, rec_StudentCourse[i].y + 10, 25, BLACK);
-            // DrawText(TextFormat("%.2f", sStudent.rResult[i].average), 840, rec_StudentCourse[i].y + 10, 25, BLACK);
+                DrawText(TextFormat("%.2f", sStudent.rResult[i].finalterm), 893, rec_StudentCourse[i].y + 10, 25, BLACK);
+            if (sStudent.rResult[i].average >= 0)
+                DrawText(TextFormat("%.2f", sStudent.rResult[i].average), 995, rec_StudentCourse[i].y + 10, 25, BLACK);
+            if (sStudent.rResult[i].type != "Not" && sStudent.rResult[i].type != "None")
+                DrawText(sStudent.rResult[i].type.c_str(), 1100, rec_StudentCourse[i].y + 10, 25, BLACK);
+            DrawText(sStudent.nameCourse[i].c_str(), 110, rec_StudentCourse[i].y + 8, 25, BLACK);
             DrawText(TextFormat("%i", i + 1), 70, rec_StudentCourse[i].y + 10, 25, BLACK);
-            ch = (char *)sStudent.nameCourse[i].c_str();
-            DrawText(ch, 110, rec_StudentCourse[i].y + 8, 25, BLACK);
         }
         DrawLine(100, rec_StudentCourse[0].y - 50, 100, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(600, rec_StudentCourse[0].y - 50, 600, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(670, rec_StudentCourse[0].y - 50, 670, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(740, rec_StudentCourse[0].y - 50, 740, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(810, rec_StudentCourse[0].y - 50, 810, rec_StudentCourse[0].y + 250, BLACK);
-        DrawLine(880, rec_StudentCourse[0].y - 50, 880, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(627, rec_StudentCourse[0].y - 50, 627, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(705, rec_StudentCourse[0].y - 50, 705, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(785, rec_StudentCourse[0].y - 50, 785, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(870, rec_StudentCourse[0].y - 50, 870, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(960, rec_StudentCourse[0].y - 50, 960, rec_StudentCourse[0].y + 250, BLACK);
+        DrawLine(1080, rec_StudentCourse[0].y - 50, 1080, rec_StudentCourse[0].y + 250, BLACK);
     }
     EndDrawing();
 }
 
 void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, Course &cCourse, student &sStudent, short &menu,
-                        Rectangle rec_detailOfCourseMenu[], char *ch) // menu = 3
+                        Rectangle rec_detailOfCourseMenu[]) // menu = 3
 {
     if (CheckCollisionPointRec(mousePosition, rec_detailOfCourseMenu[0]))
         indexMouse = 0;
@@ -605,26 +589,20 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawText("ID", 70, 60, 23, BLACK);
-    ch = (char *)cCourse.ID.c_str();
-    DrawText(ch, 250, 60, 23, BLACK);
+    DrawText(cCourse.ID.c_str(), 250, 60, 23, BLACK);
     DrawText("Course", 70, 100, 23, BLACK);
-    ch = (char *)cCourse.name.c_str();
-    DrawText(ch, 250, 100, 23, BLACK);
+    DrawText(cCourse.name.c_str(), 250, 100, 23, BLACK);
     DrawText("Lecturer", 70, 140, 23, BLACK);
-    ch = (char *)cCourse.lecturer.c_str();
-    DrawText(ch, 250, 140, 23, BLACK);
+    DrawText(cCourse.lecturer.c_str(), 250, 140, 23, BLACK);
     DrawText("Date", 70, 180, 23, BLACK);
-    ch = (char *)cCourse.sDay.c_str();
-    DrawText(ch, 250, 180, 23, BLACK);
+    DrawText(cCourse.sDay.c_str(), 250, 180, 23, BLACK);
     DrawText("Timetable", 70, 220, 23, BLACK);
     for (int i = 0; i < 2; i++)
     {
         if (cCourse.sSession[i].weekday != "None")
         {
-            ch = (char *)cCourse.sSession[i].weekday.c_str();
-            DrawText(ch, 250, 220 + 40 * i, 23, BLACK);
-            ch = (char *)cCourse.sSession[i].sTime.c_str();
-            DrawText(ch, 310, 220 + 40 * i, 23, BLACK);
+            DrawText(cCourse.sSession[i].weekday.c_str(), 250, 220 + 40 * i, 23, BLACK);
+            DrawText(cCourse.sSession[i].sTime.c_str(), 310, 220 + 40 * i, 23, BLACK);
         }
     }
     DrawRectangle(rec_detailOfCourseMenu[0].x, rec_detailOfCourseMenu[0].y, rec_detailOfCourseMenu[0].width, rec_detailOfCourseMenu[0].height, LIGHTGRAY);
