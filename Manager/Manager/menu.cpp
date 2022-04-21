@@ -1,4 +1,5 @@
 #include "../include/menu.h"
+#include <direct.h>
 const int currentSchoolYear = 2021;
 void chooseRoleMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, short &role, Rectangle rec_Role[])
 {
@@ -179,9 +180,9 @@ void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse
 }
 
 void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, char b[], char bStar[], short& passwordCount, student& sStudent,
-     user& uStaff, short role, Rectangle rec_Main[], short& CourseOrResult) // menu = 0
+     user& uStaff, short role, Rectangle rec_Main[], short& CourseOrResult, short& numSchoolYear) // menu = 0
 {
-    if (role == 0)
+    if (role == 0) //Student
     {
         if (CheckCollisionPointRec(mousePosition, rec_Main[0]))
             indexMouse = 0;
@@ -228,7 +229,7 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
             DrawRectangleLines(rec_Main[indexMouse].x, rec_Main[indexMouse].y, rec_Main[indexMouse].width, rec_Main[indexMouse].height, BLACK);
         EndDrawing();
     }
-    else if (role == -1)
+    else if (role == -1) // Staff
     {
         if (CheckCollisionPointRec(mousePosition, rec_Main[0]))
             indexMouse = 0;
@@ -246,7 +247,12 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
             if (CheckCollisionPointRec(touchPosition, rec_Main[0]))
                 menu = 1;
             if (CheckCollisionPointRec(touchPosition, rec_Main[1]))
-                menu = 3;
+            {
+                ifstream fin("../data/SchoolYear.txt");
+                fin >> numSchoolYear;
+                fin.close();
+                menu = 11;
+            }
             if (CheckCollisionPointRec(touchPosition, rec_Main[2]))
                 menu = 4;
             if (CheckCollisionPointRec(touchPosition, rec_Main[3]))
@@ -269,6 +275,57 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
             DrawRectangleLines(rec_Main[indexMouse].x, rec_Main[indexMouse].y, rec_Main[indexMouse].width, rec_Main[indexMouse].height, BLACK);
         EndDrawing();
     }
+}
+
+void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
+    Rectangle rec_StaffSchoolYear[], short &numSchoolYear) // menu = 11
+{
+    indexMouse = -1;
+    for (int i = 0; i <= numSchoolYear; i++)
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[i]))
+            indexMouse = i;
+    }
+    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[9]))
+        indexMouse = 9;
+    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[10]))
+        indexMouse = 10;
+    string newYear;
+    ofstream test;
+    ofstream fout;
+    if (IsMouseButtonPressed(0))
+    {
+        switch (indexMouse)
+        {
+        case 0:
+            break;
+        case 9:
+            menu = 0;
+            break;
+        case 10:
+            numSchoolYear++;
+            fout.open("../data/SchoolYear.txt");
+            fout << numSchoolYear;
+            fout.close();
+            newYear = to_string(2020 - 2000 + numSchoolYear) + "-" + to_string(2021 - 2000 + numSchoolYear);
+            _mkdir((const char*)("../data/" + newYear).c_str());
+            test.open("../data/" + newYear + "/test.txt");
+            test << "Hello";
+            test.close();
+            break;
+        default:
+            break;
+        }
+    }
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    DrawText("CREATE NEW YEAR", GetScreenWidth() - 330 + 15, GetScreenHeight() - 60, 28, GREEN);
+    if (indexMouse >= 0)
+        DrawRectangleLines(rec_StaffSchoolYear[indexMouse].x, rec_StaffSchoolYear[indexMouse].y, rec_StaffSchoolYear[indexMouse].width, rec_StaffSchoolYear[indexMouse].height, BLACK);
+    for (int i = 0; i <= numSchoolYear; i++)
+        DrawText(TextFormat("%i - %i", 2020 + i, 2021 + i), rec_StaffSchoolYear[i].x + 10, rec_StaffSchoolYear[i].y + 15, 30, BLACK);
+    EndDrawing();
 }
 
 void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student sStudent, user uStaff, short &menu, short role,
@@ -329,7 +386,7 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
 }
 
 void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-                           Rectangle rec_StudentSchoolYear[], int &numSchoolYear) // menu = 4
+                           Rectangle rec_StudentSchoolYear[], short &numSchoolYear) // menu = 4
 {
     numSchoolYear = currentSchoolYear - sStudent.firstYear;
     if (CheckCollisionPointRec(mousePosition, rec_StudentSchoolYear[6]))

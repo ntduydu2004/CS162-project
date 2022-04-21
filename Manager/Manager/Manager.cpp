@@ -1,6 +1,6 @@
 // Manager.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include "menu.h"
+#include "../include/menu.h"
 using namespace std;
 int main()
 {
@@ -60,7 +60,21 @@ int main()
             {200, 300, 200, 50},
             {800, 300, 200, 50},
             {30, GetScreenHeight() - 70, 140, 60}};
+    Rectangle rec_StaffSchoolYear[] =
+    {
+            {100, 100, 200, 50},
+            {500, 100, 200, 50},
+            {900, 100, 200, 50},
+            {100, 200, 200, 50},
+            {500, 200, 200, 50},
+            {900, 200, 200, 50},
+            {100, 300, 200, 50},
+            {500, 300, 200, 50},
+            {900, 300, 200, 50},
+            {30, GetScreenHeight() - 70, 140, 60},
+            {GetScreenWidth() - 330, GetScreenHeight() - 70, 300, 60}
 
+    };
     Rectangle rec_StudentSemester[] =
         {
             {480, GetScreenHeight() / 2 - 80, 240, 50},
@@ -71,7 +85,7 @@ int main()
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, CourseOrResult;
-    int numSchoolYear = 0;
+    short numSchoolYear = 0;
     while (!WindowShouldClose())
     {
         mousePosition = GetMousePosition();
@@ -86,7 +100,7 @@ int main()
             logInMenu(mousePosition, touchPosition, indexMouse, indexTouch, a, b, bStar, menu, true, idCount, passwordCount, uStaff, sStudent, role, rec_Login);
             break;
         case 0: // Main Menu
-            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult);
+            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult, numSchoolYear);
             break;
         case 1: // View Profile Menu
             viewProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, uStaff, menu, role, rec_Profile, ch);
@@ -103,7 +117,8 @@ int main()
         case 5: // Semester Student Menu
             semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, CourseOrResult);
             break;
-        case 6:
+        case 11:
+            schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);
