@@ -594,7 +594,8 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
         if (CheckCollisionPointRec(mousePosition, rec_changePass[i]))
         {
             indexMouse = i;
-            SetMouseCursor(2);
+            if (indexMouse < 3)
+                SetMouseCursor(2);
             break;
         }
 

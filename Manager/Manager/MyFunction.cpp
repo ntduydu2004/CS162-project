@@ -477,14 +477,16 @@ void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister)
     }
     else
     {
-        if (cCourse.nStudentHead->data.id == sStudent.id)
+        if (cCourse.nStudentHead->data.Class == sStudent.Class && cCourse.nStudentHead->data.id == sStudent.id)
         {
+            node<student>* pDel = cCourse.nStudentHead;
             cCourse.nStudentHead = cCourse.nStudentHead->next;
-            delete p;
+            delete pDel;
+            p = cCourse.nStudentHead;
         }
         for (int i = 0;i < cCourse.numStudent;i++)
         {
-            if (p->next->data.id == sStudent.id)
+            if (p->next && p->next->data.Class == sStudent.Class && p->next->data.id == sStudent.id)
             {
                 node<student>* pDel = p->next;
                 p->next = p->next->next;
@@ -494,7 +496,6 @@ void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister)
             p = p->next;
         }
     }
-    
     fout.close();
 }
 
