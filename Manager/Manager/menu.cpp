@@ -181,10 +181,10 @@ void logInMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse
     EndDrawing();
 }
 
-void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& menu, char b[], char bStar[], short& passwordCount, student& sStudent,
-     user& uStaff, short role, Rectangle rec_Main[], short& CourseOrResult, short& numSchoolYear) // menu = 0
+void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, char b[], char bStar[], short &passwordCount, student &sStudent,
+              user &uStaff, short role, Rectangle rec_Main[], short &CourseOrResult, short &numSchoolYear) // menu = 0
 {
-    if (role == 0) //Student
+    if (role == 0) // Student
     {
         if (CheckCollisionPointRec(mousePosition, rec_Main[0]))
             indexMouse = 0;
@@ -281,8 +281,8 @@ void mainMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse,
     }
 }
 
-void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-    Rectangle rec_StaffSchoolYear[], short &numSchoolYear) // menu = 11
+void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
+                         Rectangle rec_StaffSchoolYear[], short &numSchoolYear) // menu = 11
 {
     indexMouse = -1;
     for (int i = 0; i <= numSchoolYear; i++)
@@ -294,6 +294,8 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
         indexMouse = 9;
     if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[10]))
         indexMouse = 10;
+    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[11]))
+        indexMouse = 11;
     string newYear;
     ofstream test;
     ofstream fout;
@@ -307,12 +309,15 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
             menu = 0;
             break;
         case 10:
+            menu = 12;
+            break;
+        case 11:
             numSchoolYear++;
             fout.open("../data/SchoolYear.txt");
             fout << numSchoolYear;
             fout.close();
             newYear = to_string(2020 - 2000 + numSchoolYear) + "-" + to_string(2021 - 2000 + numSchoolYear);
-            _mkdir((const char*)("../data/" + newYear).c_str());
+            _mkdir((const char *)("../data/" + newYear).c_str());
             test.open("../data/" + newYear + "/test.txt");
             test << "Hello";
             test.close();
@@ -324,6 +329,7 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    DrawText("ADD CLASS", GetScreenWidth() - 330 + 15, GetScreenHeight() - 120, 28, GREEN);
     DrawText("CREATE NEW YEAR", GetScreenWidth() - 330 + 15, GetScreenHeight() - 60, 28, GREEN);
     if (indexMouse >= 0)
         DrawRectangleLines(rec_StaffSchoolYear[indexMouse].x, rec_StaffSchoolYear[indexMouse].y, rec_StaffSchoolYear[indexMouse].width, rec_StaffSchoolYear[indexMouse].height, BLACK);
@@ -549,7 +555,7 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
         else if (indexMouse == 5)
             DrawRectangleLines(rec_StudentCourse[indexMouse].x, rec_StudentCourse[indexMouse].y, rec_StudentCourse[indexMouse].width, rec_StudentCourse[indexMouse].height, BLACK);
         DrawRectangleLines(rec_StudentCourse[0].x, rec_StudentCourse[0].y - 50, rec_StudentCourse[0].width, 300, BLACK);
-        for (int i = 0;i < 5;i++)
+        for (int i = 0; i < 5; i++)
         {
             DrawLine(50, rec_StudentCourse[i].y, GetScreenWidth() - 50, rec_StudentCourse[i].y, BLACK);
             if (sStudent.rResult[i].quiz == -2.0)
@@ -854,6 +860,33 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
             DrawRectangleLines(rec_changePass[indexTouch].x, rec_changePass[indexTouch].y, rec_changePass[indexTouch].width, rec_changePass[indexTouch].height, GREEN);
     }
     DrawRectangleLines(rec_changePass[indexMouse].x, rec_changePass[indexMouse].y, rec_changePass[indexMouse].width, rec_changePass[indexMouse].height, GREEN);
+    EndDrawing();
+}
+void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_back)
+{
+    indexMouse = -1;
+    if (CheckCollisionPointRec(touchPosition, rec_back))
+    {
+        if (IsMouseButtonPressed(0))
+        {
+            menu = 11;
+            return;
+        }
+        BeginDrawing();
+        DrawRectangleLines(rec_back.x, rec_back.y, rec_back.width, rec_back.height, BLACK);
+        EndDrawing();
+    }
+
+    fstream fclass;
+    fclass.open("listofclass.txt");
+    int n;
+    cin >> n;
+    fclass.close();
+
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText("Drop CSV File here (format: [class name].csv)", 30, 30, 30, BLACK);
+    DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
     EndDrawing();
 }
 void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_white[], short CourseOrResult)

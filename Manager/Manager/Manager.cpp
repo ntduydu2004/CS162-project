@@ -65,7 +65,7 @@ int main()
             {800, 300, 200, 50},
             {30, GetScreenHeight() - 70, 140, 60}};
     Rectangle rec_StaffSchoolYear[] =
-    {
+        {
             {100, 100, 200, 50},
             {500, 100, 200, 50},
             {900, 100, 200, 50},
@@ -76,8 +76,8 @@ int main()
             {500, 300, 200, 50},
             {900, 300, 200, 50},
             {30, GetScreenHeight() - 70, 140, 60},
-            {GetScreenWidth() - 330, GetScreenHeight() - 70, 300, 60}
-    };
+            {GetScreenWidth() - 330, GetScreenHeight() - 140, 300, 60},
+            {GetScreenWidth() - 330, GetScreenHeight() - 70, 300, 60}};
     Rectangle rec_changePass[] =
         {
             {GetScreenWidth() / 2 - 10, GetScreenHeight() / 2 - 120 - 10, 340, 60},
@@ -92,7 +92,7 @@ int main()
             {480, GetScreenHeight() / 2 - 30, 240, 50},
             {480, GetScreenHeight() / 2 + 20, 240, 50},
             {30, GetScreenHeight() - 70, 140, 60}};
-
+    Rectangle rec_back = {30, GetScreenHeight() - 70, 140, 60};
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, CourseOrResult;
@@ -133,6 +133,9 @@ int main()
             break;
         case 11:
             schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
+            break;
+        case 12:
+            classInput(mousePosition, touchPosition, indexMouse, menu, rec_back);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);
