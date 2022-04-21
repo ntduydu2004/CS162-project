@@ -128,10 +128,11 @@ void loadFileCourseOfClass(node<student>*& pHead, student& sStudent, int& n);
 void checkStudentCourse(student& sStudent);
 void loadFileCourse(string courseID, Course& cCourse, student& sStudent);
 void registerCourse(student& sStudent, Course& cCourse);
+void unregisterCourse(student& sStudent, Course& cCourse);
 bool checkFileExist(student& sStudent, short CourseOrResult);
 void checkStudentResult(student& sStudent);
 void loadFileResultOfClass(node<student>*& pHead, student& sStudent, int& n);
-void updateFileCourse(student& sStudent, Course& cCourse);
+void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister);
 void updateFileCourseOfClass(student& sStudent, node<student>* pHead, int& n);
 void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n);
 
