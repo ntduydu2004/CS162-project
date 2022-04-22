@@ -15,6 +15,8 @@ int main()
     short idCount = 0, passwordCount = 0, role = 0;
     char oldPass[17] = "\0", newPass[17] = "\0", confirmPass[17] = "\0", oldPassStar[17] = "\0", newPassStar[17] = "\0", confirmPassStar[17] = "\0";
     short oldPassCount = 0, newPassCount = 0, confirmPassCount = 0;
+    int count = 0;
+    char **droppedFiles = {0};
     string Class;
     Course cCourse;
     Rectangle rec_Role[] =
@@ -91,7 +93,9 @@ int main()
             {480, GetScreenHeight() / 2 - 30, 240, 50},
             {480, GetScreenHeight() / 2 + 20, 240, 50},
             {30, GetScreenHeight() - 70, 140, 60}};
-    Rectangle rec_back = {30, GetScreenHeight() - 70, 140, 60};
+    Rectangle rec_classInput[] = {
+        {GetScreenWidth() - 170, GetScreenHeight() - 70, 140, 60},
+        {30, GetScreenHeight() - 70, 140, 60}};
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, CourseOrResult;
@@ -134,7 +138,7 @@ int main()
             schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
             break;
         case 12:
-            classInput(mousePosition, touchPosition, indexMouse, menu, rec_back);
+            classInput(mousePosition, touchPosition, indexMouse, menu, rec_classInput, count, droppedFiles);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);
