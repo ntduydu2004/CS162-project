@@ -1,4 +1,5 @@
 #include "../include/menu.h"
+#include "MyFunction.h"
 #include <fstream>
 #include <cstring>
 #include <direct.h>
@@ -765,31 +766,106 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
     DrawRectangleLines(rec_changePass[indexMouse].x, rec_changePass[indexMouse].y, rec_changePass[indexMouse].width, rec_changePass[indexMouse].height, GREEN);
     EndDrawing();
 }
-void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_back)
+void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_classInput[], int &count, char **droppedFiles)
 {
-    indexMouse = -1;
-    if (CheckCollisionPointRec(touchPosition, rec_back))
+    if (IsFileDropped())
     {
+        droppedFiles = GetDroppedFiles(&count);
+    }
+    indexMouse = -1;
+    if (CheckCollisionPointRec(touchPosition, rec_classInput[0]))
+    {
+        indexMouse = 0;
+        std::cerr << count << ' ';
+        if (IsMouseButtonPressed(0) && count != 0)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                ifstream fin;
+                fin.open(droppedFiles[i]);
+                int n;
+                node<student> *pHead = NULL;
+                if (fin.is_open())
+                {
+                    fin >> n;
+                    fin.get();
+                    node<student> *pCur = nullptr;
+                    for (int j = 0; j < n + 1; j++)
+                    {
+                        if (pHead == nullptr)
+                        {
+                            pHead = new node<student>;
+                            pCur = pHead;
+                        }
+                        else
+                        {
+                            pCur->next = new node<student>;
+                            pCur = pCur->next;
+                        }
+                        getline(fin, pCur->data.id, ',');
+                        getline(fin, pCur->data.fullname, ',');
+                        getline(fin, pCur->data.gender, ',');
+                        getline(fin, pCur->data.sDate, ',');
+                        getline(fin, pCur->data.email, '\n');
+                    }
+                }
+                fin.close();
+                ofstream fout;
+                string classname = GetFileName(droppedFiles[i]);
+                fout.open("../data/detailofeachclass/" + classname);
+                fout << n << '\n';
+                fout << "ID,Full Name,Gender,Birthday,Email\n";
+                node<student> *p = pHead->next;
+                while (p)
+                {
+                    fout << p->data.id << ',' << p->data.fullname << ',' << p->data.gender << ','
+                         << p->data.sDate << ',' << p->data.email << '\n';
+                    p = p->next;
+                }
+                delete pHead;
+                fout.close();
+            }
+            ClearDroppedFiles();
+            count = 0;
+            **droppedFiles = {0};
+        }
+    }
+    if (CheckCollisionPointRec(touchPosition, rec_classInput[1]))
+    {
+        indexMouse = 1;
         if (IsMouseButtonPressed(0))
         {
             menu = 11;
             return;
         }
-        BeginDrawing();
-        DrawRectangleLines(rec_back.x, rec_back.y, rec_back.width, rec_back.height, BLACK);
-        EndDrawing();
     }
-
-    fstream fclass;
-    fclass.open("listofclass.txt");
-    int n;
-    cin >> n;
-    fclass.close();
 
     BeginDrawing();
     ClearBackground(RAYWHITE);
-    DrawText("Drop CSV File here (format: [class name].csv)", 30, 30, 30, BLACK);
+    if (count == 0)
+        DrawText("Drop your files to this window! (CSV format)", 100, 40, 20, DARKGRAY);
+    else
+    {
+        DrawText("Dropped files:", 100, 40, 20, DARKGRAY);
+
+        for (int i = 0; i < count; i++)
+        {
+            if (i % 2 == 0)
+                DrawRectangle(0, 85 + 40 * i, 1200, 40, Fade(LIGHTGRAY, 0.5f));
+            else
+                DrawRectangle(0, 85 + 40 * i, 1200, 40, Fade(LIGHTGRAY, 0.3f));
+
+            DrawText(droppedFiles[i], 120, 100 + 40 * i, 10, GRAY);
+        }
+
+        DrawText("Drop new files...", 100, 110 + 40 * count, 20, DARKGRAY);
+    }
+
+    DrawRectangle(rec_classInput[0].x, rec_classInput[0].y, rec_classInput[0].width, rec_classInput[0].height, GREEN);
+    DrawText("SUBMIT", GetScreenWidth() - 160, GetScreenHeight() - 50, 30, WHITE);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    if (indexMouse >= 0)
+        DrawRectangleLines(rec_classInput[indexMouse].x, rec_classInput[indexMouse].y, rec_classInput[indexMouse].width, rec_classInput[indexMouse].height, BLACK);
     EndDrawing();
 }
 void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_white[], short CourseOrResult)

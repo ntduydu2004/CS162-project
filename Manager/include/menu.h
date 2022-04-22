@@ -24,7 +24,9 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
 					student &sStudent, user &uStaff, short &menu, short role, Rectangle rec_changePass[], bool flag);
 void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_white[], short CourseOrResult);
 void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
+						 Rectangle rec_StaffSchoolYear[], short &numSchoolYear);
+void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_classInput[], int &count, char **droppedFiles);
 						 Rectangle rec_StaffSchoolYear[], short &numSchoolYear, short& iYear);
-void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_back);
+
 void StaffViewSchoolyearDetail(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
 	short& numSchoolYear, short& iYear);
