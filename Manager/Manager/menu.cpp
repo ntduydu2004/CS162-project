@@ -1,5 +1,5 @@
 #include "../include/menu.h"
-#include "MyFunction.h"
+#include "../include/MyFunction.h"
 #include <fstream>
 #include <cstring>
 #include <direct.h>
@@ -202,17 +202,16 @@ void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse,
         {
             if (CheckCollisionPointRec(touchPosition, rec_Main[0]))
                 menu = 1; // Profile Menu
-            if (CheckCollisionPointRec(touchPosition, rec_Main[1]))
+            if (CheckCollisionPointRec(touchPosition, rec_Main[1]) || CheckCollisionPointRec(touchPosition, rec_Main[2]))
             {
-                numSchoolYear = currentSchoolYear - sStudent.firstYear;
+                int n;
+                ifstream fin;
+                fin.open("../data/SchoolYear.txt");
+                fin >> n;
+                fin.close();
+                numSchoolYear = n - (sStudent.firstYear - 2020);
                 menu = 4; // SchoolYear Student Menu
-                CourseOrResult = 0;
-            }
-            if (CheckCollisionPointRec(touchPosition, rec_Main[2]))
-            {
-                numSchoolYear = currentSchoolYear - sStudent.firstYear;
-                menu = 4; // SchoolYear Student Menu
-                CourseOrResult = 1;
+                CourseOrResult = indexMouse - 1;
             }
             if (CheckCollisionPointRec(touchPosition, rec_Main[3]))
             {
@@ -879,7 +878,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                          << p->data.sDate << ',' << p->data.email << '\n';
                     p = p->next;
                 }
-                delete pHead;
+                deleteListStudent(pHead, n);
                 fout.close();
             }
             ClearDroppedFiles();
