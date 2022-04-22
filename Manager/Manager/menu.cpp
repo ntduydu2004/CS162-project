@@ -1,5 +1,5 @@
 #include "../include/menu.h"
-#include "MyFunction.h"
+#include "../include/MyFunction.h"
 #include <fstream>
 #include <cstring>
 #include <direct.h>
