@@ -100,6 +100,7 @@ int main()
     user uStaff;
     short indexMouse = -1, indexTouch = -1, CourseOrResult;
     short numSchoolYear = 0;
+    short iYear = -1;
     while (!WindowShouldClose())
     {
         mousePosition = GetMousePosition();
@@ -134,11 +135,14 @@ int main()
         case 6: // Change Password
             changePassword(mousePosition, touchPosition, indexMouse, indexTouch, oldPass, newPass, confirmPass, oldPassStar, newPassStar, confirmPassStar, oldPassCount, newPassCount, confirmPassCount, sStudent, uStaff, menu, role, rec_changePass, true);
             break;
-        case 11:
-            schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
+        case 11: // List of Schoolyears and Add Schoolyear option Menu for Staff
+            schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear, iYear);
             break;
         case 12:
             classInput(mousePosition, touchPosition, indexMouse, menu, rec_classInput, count, droppedFiles);
+            break;
+        case 13:
+            StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, iYear);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);

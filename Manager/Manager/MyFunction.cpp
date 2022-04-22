@@ -1,5 +1,7 @@
 #include "../include/MyFunction.h"
 
+#include <direct.h>
+
 void loadFileStaff(node<user> *&pHead, int &n)
 {
     ifstream fin;
@@ -612,4 +614,40 @@ void updateFileStudent(node<student> *pHead, int n)
     }
     fout.close();
     deleteListStudent(pHead, n);
+}
+
+void createSchoolYear(short& numSchoolYear)
+{
+    numSchoolYear++;
+    string newYear, prevYear;
+    ofstream fout;
+    ifstream fin;
+    fout.open("../data/SchoolYear.txt");
+    fout << numSchoolYear;
+    fout.close();
+    newYear = to_string(2020 - 2000 + numSchoolYear) + "-" + to_string(2021 - 2000 + numSchoolYear);
+    prevYear = to_string(2020 - 2000 + numSchoolYear - 1) + "-" + to_string(2021 - 2000 + numSchoolYear - 1);
+    _mkdir((const char*)("../data/" + newYear).c_str());
+    fin.open("../data/" + prevYear + "/Classes.txt");
+    fout.open("../data/" + newYear + "/Classes.txt");
+    int numClassNewYear = 0;
+    int n = 0;
+    fin >> n;
+    fout << 0 << "\n";
+    fout.seekp(0, ios::end);
+    fin.get();
+    for (int i = 0; i < n; i++)
+    {
+        string className;
+        getline(fin, className);
+        if (stoi(className.substr(0, 2)) >= 2020 - 2000 + numSchoolYear - 4)
+        {
+            fout << className << "\n";
+            numClassNewYear++;
+        }
+    }
+    fout.seekp(0);
+    fout << numClassNewYear;
+    fin.close();
+    fout.close();
 }
