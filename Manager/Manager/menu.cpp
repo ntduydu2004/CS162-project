@@ -281,63 +281,6 @@ void mainMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse,
     }
 }
 
-void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-                         Rectangle rec_StaffSchoolYear[], short &numSchoolYear) // menu = 11
-{
-    indexMouse = -1;
-    for (int i = 0; i <= numSchoolYear; i++)
-    {
-        if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[i]))
-            indexMouse = i;
-    }
-    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[9]))
-        indexMouse = 9;
-    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[10]))
-        indexMouse = 10;
-    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[11]))
-        indexMouse = 11;
-    string newYear;
-    ofstream test;
-    ofstream fout;
-    if (IsMouseButtonPressed(0))
-    {
-        switch (indexMouse)
-        {
-        case 0:
-            break;
-        case 9:
-            menu = 0;
-            break;
-        case 10:
-            menu = 12;
-            break;
-        case 11:
-            numSchoolYear++;
-            fout.open("../data/SchoolYear.txt");
-            fout << numSchoolYear;
-            fout.close();
-            newYear = to_string(2020 - 2000 + numSchoolYear) + "-" + to_string(2021 - 2000 + numSchoolYear);
-            _mkdir((const char *)("../data/" + newYear).c_str());
-            test.open("../data/" + newYear + "/test.txt");
-            test << "Hello";
-            test.close();
-            break;
-        default:
-            break;
-        }
-    }
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
-    DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
-    DrawText("ADD CLASS", GetScreenWidth() - 330 + 15, GetScreenHeight() - 120, 28, GREEN);
-    DrawText("CREATE NEW YEAR", GetScreenWidth() - 330 + 15, GetScreenHeight() - 60, 28, GREEN);
-    if (indexMouse >= 0)
-        DrawRectangleLines(rec_StaffSchoolYear[indexMouse].x, rec_StaffSchoolYear[indexMouse].y, rec_StaffSchoolYear[indexMouse].width, rec_StaffSchoolYear[indexMouse].height, BLACK);
-    for (int i = 0; i <= numSchoolYear; i++)
-        DrawText(TextFormat("%i - %i", 2020 + i, 2021 + i), rec_StaffSchoolYear[i].x + 10, rec_StaffSchoolYear[i].y + 15, 30, BLACK);
-    EndDrawing();
-}
-
 void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student sStudent, user uStaff, short &menu, short role,
                      Rectangle rec_Profile[]) // menu = 1
 {
@@ -869,5 +812,95 @@ void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &ind
         DrawText("No Result", 530, 300, 40, LIGHTGRAY);
     if (indexMouse == 0)
         DrawRectangleLines(rec_white[0].x, rec_white[0].y, rec_white[0].width, rec_white[0].height, BLACK);
+    EndDrawing();
+}
+
+void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
+    Rectangle rec_StaffSchoolYear[], short& numSchoolYear, short&iYear) // menu = 11
+{
+    indexMouse = -1;
+    for (int i = 0; i <= numSchoolYear; i++)
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[i]))
+            indexMouse = i;
+    }
+    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[9]))
+        indexMouse = 9;
+    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[10]))
+        indexMouse = 10;
+    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[11]))
+        indexMouse = 11;
+    if (IsMouseButtonPressed(0))
+    {
+        switch (indexMouse)
+        {
+        case 9:
+            menu = 0;
+            break;
+        case 10:
+            menu = 12;
+            break;
+        case 11:
+            createSchoolYear(numSchoolYear);
+            break;
+        default:
+            if (indexMouse >= 0 && indexMouse < 9)
+            {
+                menu = 13;
+                iYear = indexMouse;
+            }
+            break;
+        }
+    }
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    DrawText("ADD CLASS", GetScreenWidth() - 330 + 15, GetScreenHeight() - 120, 28, GREEN);
+    DrawText("CREATE NEW YEAR", GetScreenWidth() - 330 + 15, GetScreenHeight() - 60, 28, GREEN);
+    if (indexMouse >= 0)
+        DrawRectangleLines(rec_StaffSchoolYear[indexMouse].x, rec_StaffSchoolYear[indexMouse].y, rec_StaffSchoolYear[indexMouse].width, rec_StaffSchoolYear[indexMouse].height, BLACK);
+    for (int i = 0; i <= numSchoolYear; i++)
+        DrawText(TextFormat("%i - %i", 2020 + i, 2021 + i), rec_StaffSchoolYear[i].x + 10, rec_StaffSchoolYear[i].y + 15, 30, BLACK);
+    EndDrawing();
+}
+
+void StaffViewSchoolyearDetail(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
+    short& numSchoolYear, short& iYear)
+{
+    indexMouse = -1;
+    Rectangle rec_StaffViewSchoolyearDetail[]
+    {
+        {100, 200, 400, 200},
+        {700, 200, 400, 200},
+        {30, GetScreenHeight() - 70, 140, 60}, //BACK button
+    };
+    for (int i = 0; i < 3; i++)
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_StaffViewSchoolyearDetail[i]))
+            indexMouse = i;
+    }
+    if (IsMouseButtonPressed(0))
+    {
+        switch (indexMouse)
+        {
+        case 0:
+            break;
+        case 1:
+            break;
+        case 2:
+            menu = 11;
+            break;
+        default:
+            break;
+        }
+    }
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText(TextFormat("SHOOLYEAR: %i - %i", 2020 + iYear, 2021 + iYear), 100, 100, 40, BLACK);
+    DrawText("SEMESTERS", 120, 220, 40, BLACK);
+    DrawText("CLASSES", 720, 220, 40, BLACK);
+    DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    if (indexMouse >= 0)
+        DrawRectangleLines(rec_StaffViewSchoolyearDetail[indexMouse].x, rec_StaffViewSchoolyearDetail[indexMouse].y, rec_StaffViewSchoolyearDetail[indexMouse].width, rec_StaffViewSchoolyearDetail[indexMouse].height, BLACK);
     EndDrawing();
 }

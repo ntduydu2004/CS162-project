@@ -162,3 +162,5 @@ void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n);
 void updateFileStaff(node<user>* pHead, int n);
 void updateFileStudent(node<student>* pHead, int n);
 
+void createSchoolYear(short& numSchoolYear); // Add a new schoool year succeeding the current year
+
