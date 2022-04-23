@@ -931,7 +931,7 @@ void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &ind
 }
 
 void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-                         Rectangle rec_StaffSchoolYear[], short &numSchoolYear, short &iYear) // menu = 11
+                         Rectangle rec_StaffSchoolYear[], short &numSchoolYear) // menu = 11
 {
     indexMouse = -1;
     for (int i = 0; i <= numSchoolYear; i++)

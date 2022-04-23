@@ -118,11 +118,10 @@ int main()
     rec_listClass[51].height = 60;
     student sStudent;
     user uStaff;
-    short indexMouse = -1, indexTouch = -1, CourseOrResult;
+    short indexMouse = -1, indexTouch = -1, choose;
     short numSchoolYear = 0;
-    short iYear = -1;
     string name[50];
-    node<student>* nStudentHead = nullptr, *pCur= nullptr;
+    node<student> *pCur= nullptr;
     while (!WindowShouldClose())
     {
         mousePosition = GetMousePosition();
@@ -137,13 +136,13 @@ int main()
             logInMenu(mousePosition, touchPosition, indexMouse, indexTouch, a, b, bStar, menu, true, idCount, passwordCount, uStaff, sStudent, role, rec_Login);
             break;
         case 0: // Main Menu
-            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, CourseOrResult, numSchoolYear);
+            mainMenu(mousePosition, touchPosition, indexMouse, menu, b, bStar, passwordCount, sStudent, uStaff, role, rec_Main, choose, numSchoolYear);
             break;
         case 1: // View Profile Menu
             viewProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, uStaff, menu, role, rec_Profile);
             break;
         case 2: // Course Student Menu
-            courseOrResultStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, CourseOrResult);
+            courseOrResultStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, choose);
             break;
         case 3: // Detail of Course
             detailOfCourseMenu(mousePosition, touchPosition, indexMouse, cCourse, sStudent, menu, rec_detailOfCourseMenu, role);
@@ -152,28 +151,28 @@ int main()
             schoolYearStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSchoolYear, numSchoolYear);
             break;
         case 5: // Semester Student Menu
-            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, CourseOrResult, name, dummy, role);
+            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, choose, name, dummy, role);
             break;
         case 6: // Change Password
             changePassword(mousePosition, touchPosition, indexMouse, indexTouch, oldPass, newPass, confirmPass, oldPassStar, newPassStar, confirmPassStar, oldPassCount, newPassCount, confirmPassCount, sStudent, uStaff, menu, role, rec_changePass, true);
             break;
         case 11: // List of Schoolyears and Add Schoolyear option Menu for Staff
-            schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear, iYear);
+            schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
             break;
         case 12:
             classInput(mousePosition, touchPosition, indexMouse, menu, rec_classInput, count, droppedFiles);
             break;
         case 13:
-            StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, CourseOrResult);
+            StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, choose);
             break;
         case 20: // White Menu
-            studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);
+            studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, choose);
             break;
         case 21: // List of Class
-            viewListClassOrCourse(mousePosition, touchPosition, sStudent, cCourse, indexMouse, menu, rec_listClass, name, dummy, CourseOrResult);
+            viewListClassOrCourse(mousePosition, touchPosition, sStudent, cCourse, indexMouse, menu, rec_listClass, name, dummy, choose);
             break;
         case 22:
-            viewClassProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, cCourse, menu, rec_listClass, pCur, CourseOrResult);
+            viewClassProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, cCourse, menu, rec_listClass, pCur, choose);
             break;
         }
     }
