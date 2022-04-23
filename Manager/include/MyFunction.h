@@ -164,3 +164,5 @@ void updateFileStudent(node<student>* pHead, int n);
 
 void createSchoolYear(short& numSchoolYear); // Add a new schoool year succeeding the current year
 
+void RemoveCourse(student& sStudent, Course& course);
+

@@ -595,8 +595,20 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
             DrawText("     FULL", 460, 295, 30, RED);
     }
     else
+    {
         DrawText(" Student List", 460, 295, 30, RED);
-
+        Rectangle rec_removeCourse{ 750, 285, 280, 50 };
+        DrawText(" Remove Course", 760, 295, 30, DARKBLUE);
+        if (CheckCollisionPointRec(mousePosition, rec_removeCourse))
+        {
+            DrawRectangleLines(rec_removeCourse.x, rec_removeCourse.y, rec_removeCourse.width, rec_removeCourse.height, DARKBLUE);
+            if (IsMouseButtonPressed(0))
+            {
+                RemoveCourse(sStudent, cCourse);
+                menu = 3;
+            }
+        }
+    }
     EndDrawing();
 }
 
