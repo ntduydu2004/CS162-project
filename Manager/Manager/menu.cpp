@@ -828,17 +828,6 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
         {
             if (count != 0)
             {
-                //fin.open("../data/SchoolYear.txt");
-                //int n;
-                //fin >> n;
-                //int year = 20 + n;
-                //fin.close();
-
-                //int classNum;
-                //fin.open("../data/" + to_string(year) + "-" + to_string(year + 1) + "/Classes.txt");
-                //fin >> classNum;
-                //classNum += count;
-                //fin.close();
                 for (int i = 0; i < count; i++)
                 {
                     ifstream fin;
@@ -895,10 +884,9 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                     fout << name[j] << endl;
                 }
                 fout.close();
-                menu = 21;
                 ClearDroppedFiles();
+                menu = 21;
                 count = 0;
-                return;
             }
         }
         if (indexMouse == 1)
@@ -909,7 +897,6 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
         }
     }
     
-
     BeginDrawing();
     ClearBackground(RAYWHITE);
     if (count == 0)
@@ -925,7 +912,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
             else
                 DrawRectangle(0, 85 + 40 * i, 1200, 40, Fade(LIGHTGRAY, 0.3f));
 
-            DrawText(droppedFiles[i], 120, 100 + 40 * i, 25, GRAY);
+            DrawText(droppedFiles[i], 120, 95 + 40 * i, 25, BLACK);
         }
 
         DrawText("Drop new files...", 100, 110 + 40 * count, 20, DARKGRAY);
