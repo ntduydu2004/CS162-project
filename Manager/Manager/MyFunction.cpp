@@ -652,6 +652,15 @@ void createSchoolYear(short& numSchoolYear)
     fout << numClassNewYear;
     fin.close();
     fout.close();
+    for (int i = 1; i <= 3; i++)
+    {
+        string filename = "../data/" + newYear + "/HK" + to_string(i);
+        _mkdir((filename).c_str());
+        fout.open(filename + "/Courses.txt");
+        fout << 0 << "\n";
+        fout.close();
+    }
+        
 }
 
 void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)

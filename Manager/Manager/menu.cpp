@@ -412,7 +412,9 @@ void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
                 menu = 21;
                 ifstream fin;
                 fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+                cout << "../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt";
                 fin >> dummy;
+                cout << dummy << endl;
                 fin.get();
                 for (int i = 0; i < dummy; i++)
                     getline(fin, name[i], '\n');
@@ -1105,11 +1107,11 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
     }
     BeginDrawing();
     ClearBackground(RAYWHITE);
+    DrawRectangle(rec_listClass[52].x, rec_listClass[52].y, rec_listClass[52].width, rec_listClass[52].height, GREEN);
     if (indexMouse > 0 && indexMouse < 51)
         DrawRectangle(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, LIGHTGRAY);
     else
         DrawRectangleLines(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, BLACK);
-    DrawRectangle(rec_listClass[52].x, rec_listClass[52].y, rec_listClass[52].width, rec_listClass[52].height, GREEN);
     if (ClassOrCourse == 1)
     {
         DrawText("ADD CLASSES", rec_listClass[52].x + 10, rec_listClass[52].y + 10, 25, WHITE);
