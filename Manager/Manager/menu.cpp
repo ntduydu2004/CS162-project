@@ -813,9 +813,19 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
         {
             for (int i = 0; i < count; i++)
             {
+                if (GetFileExtension(droppedFiles[i]) != ".csv")
+                    continue;
+                int year = GetFileName(droppedFiles[i])[1] - '0' + (GetFileName(droppedFiles[i])[0] - '0') * 10;
                 ifstream fin;
-                fin.open(droppedFiles[i]);
+                fin.open("../data/SchoolYear.txt");
                 int n;
+                fin >> n;
+                fin.close();
+                if (year != 2020 + n)
+                    continue;
+                fin.close();
+
+                fin.open(droppedFiles[i]);
                 node<student> *pHead = NULL;
                 if (fin.is_open())
                 {
@@ -920,8 +930,8 @@ void studentWhiteMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &ind
     EndDrawing();
 }
 
-void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-    Rectangle rec_StaffSchoolYear[], short& numSchoolYear, short&iYear) // menu = 11
+void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
+                         Rectangle rec_StaffSchoolYear[], short &numSchoolYear, short &iYear) // menu = 11
 {
     indexMouse = -1;
     for (int i = 0; i <= numSchoolYear; i++)
