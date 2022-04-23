@@ -1,6 +1,7 @@
 #include "../include/MyFunction.h"
 
 #include <direct.h>
+#include <stdio.h>
 
 void loadFileStaff(node<user> *&pHead, int &n)
 {
@@ -650,4 +651,52 @@ void createSchoolYear(short& numSchoolYear)
     fout << numClassNewYear;
     fin.close();
     fout.close();
+}
+
+void RemoveCourse(student& sStudent, Course& cCourse)
+{
+    int n = 0;
+    fstream CourseListFile("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt", ios::in);
+    CourseListFile >> n;
+    CourseListFile.get();
+
+    // Get current list of Courses and ignore cCourse
+    node<string>* courseList = new node<string>;
+    node<string>* cur = courseList;
+    for (int i = 0; i < n; i++)
+    {
+        string temp;
+        getline(CourseListFile, temp);
+        if (temp != cCourse.ID)
+        {
+            cur->next = new node<string>;
+            cur->next->data = temp;
+            cur = cur->next;
+        }
+    }
+    cur = courseList;
+    courseList = cur->next;
+    delete cur;
+    CourseListFile.close();
+    // Update data Courses.txt
+    CourseListFile.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt", ios::out);
+    cur = courseList;
+    CourseListFile << n - 1 << "\n";
+    for (int i = 0; i < n - 1; i++)
+    {
+        CourseListFile << cur->data + "\n";
+        cur = cur->next;
+    }
+
+    // Deacllocation
+    cur = courseList;
+    while (cur)
+    {
+        node<string>* temp = cur;
+        cur = cur->next;
+        delete temp;
+    }
+    CourseListFile.close();
+
+    int k = remove(("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/" + cCourse.ID + ".txt").c_str());
 }
