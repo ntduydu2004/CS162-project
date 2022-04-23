@@ -12,7 +12,7 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
 void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu, Course &cCourse,
 							   Rectangle rec_StudentCourse[], short &courseOrResult);
 void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, Course &cCourse, student &sStudent, short &menu,
-						Rectangle rec_detailOfCourseMenu[], short& role);
+						Rectangle rec_detailOfCourseMenu[], int& dummy, string name[], short& role);
 void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
 						 Rectangle rec_StudentSemester[], short &CourseOrResult, string name[], int& dummy, short& role);
 void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,

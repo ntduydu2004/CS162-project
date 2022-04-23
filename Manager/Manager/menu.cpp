@@ -530,7 +530,7 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
 }
 
 void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, Course &cCourse, student &sStudent, short &menu,
-                        Rectangle rec_detailOfCourseMenu[], short &role) // menu = 3
+                        Rectangle rec_detailOfCourseMenu[], int& dummy, string name[], short& role) // menu = 3
 {
     if (CheckCollisionPointRec(mousePosition, rec_detailOfCourseMenu[0]))
         indexMouse = 0;
@@ -560,6 +560,15 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
             }
             else
                 menu = 22;
+        }
+        if (CheckCollisionPointRec(mousePosition, { 750, 285, 280, 50 }))
+        {
+            indexMouse = 2;
+            if (IsMouseButtonPressed(0))
+            {
+                RemoveCourse(sStudent, cCourse, name, dummy);
+                menu = 21;
+            }
         }
     }
     BeginDrawing();
@@ -597,17 +606,9 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
     else
     {
         DrawText(" Student List", 460, 295, 30, RED);
-        Rectangle rec_removeCourse{ 750, 285, 280, 50 };
         DrawText(" Remove Course", 760, 295, 30, DARKBLUE);
-        if (CheckCollisionPointRec(mousePosition, rec_removeCourse))
-        {
-            DrawRectangleLines(rec_removeCourse.x, rec_removeCourse.y, rec_removeCourse.width, rec_removeCourse.height, DARKBLUE);
-            if (IsMouseButtonPressed(0))
-            {
-                RemoveCourse(sStudent, cCourse);
-                menu = 3;
-            }
-        }
+        if (CheckCollisionPointRec(mousePosition,{ 750, 285, 280, 50 }))
+            DrawRectangleLines(750, 285, 280, 50, DARKBLUE);
     }
     EndDrawing();
 }
@@ -1095,6 +1096,7 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
                 }
                 if (ClassOrCourse == 0)
                 {
+                    sStudent.courseView = indexMouse - 1;
                     loadFileCourse(name[indexMouse - 1], cCourse, sStudent);
                     menu = 3;
                 }
