@@ -77,7 +77,6 @@ int main()
             {500, 300, 200, 50},
             {900, 300, 200, 50},
             {30, GetScreenHeight() - 70, 140, 60},
-            {GetScreenWidth() - 330, GetScreenHeight() - 140, 300, 60},
             {GetScreenWidth() - 330, GetScreenHeight() - 70, 300, 60}};
     Rectangle rec_changePass[] =
         {
@@ -104,7 +103,7 @@ int main()
         {30, GetScreenHeight() - 70, 140, 60}, //BACK button
     };
 
-    Rectangle rec_listClass[52];
+    Rectangle rec_listClass[53];
     for (int i = 0;i < 50;i++)
     {
         rec_listClass[i].x = 70;
@@ -116,6 +115,10 @@ int main()
     rec_listClass[51].x = 5;
     rec_listClass[51].width = 60;
     rec_listClass[51].height = 60;
+    rec_listClass[52].y = 10;
+    rec_listClass[52].x = 50;
+    rec_listClass[52].width = 230;
+    rec_listClass[52].height = 40;
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, choose;
@@ -160,7 +163,7 @@ int main()
             schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
             break;
         case 12:
-            classInput(mousePosition, touchPosition, indexMouse, menu, rec_classInput, count, droppedFiles);
+            classInput(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_classInput, count, droppedFiles, name, dummy);
             break;
         case 13:
             StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, choose);

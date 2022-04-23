@@ -798,98 +798,105 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
     DrawRectangleLines(rec_changePass[indexMouse].x, rec_changePass[indexMouse].y, rec_changePass[indexMouse].width, rec_changePass[indexMouse].height, GREEN);
     EndDrawing();
 }
-void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_classInput[], int &count, char **droppedFiles)
+void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student& sStudent, short &menu,
+    Rectangle rec_classInput[], int &count, char **droppedFiles, string name[], int& dummy)
 {
     if (IsFileDropped())
     {
         droppedFiles = GetDroppedFiles(&count);
     }
     indexMouse = -1;
-    if (CheckCollisionPointRec(touchPosition, rec_classInput[0]))
-    {
+    if (CheckCollisionPointRec(mousePosition, rec_classInput[0]))
         indexMouse = 0;
-        std::cerr << count << ' ';
-        if (IsMouseButtonPressed(0) && count != 0)
+    if (CheckCollisionPointRec(mousePosition, rec_classInput[1]))
+        indexMouse = 1;
+    if (IsMouseButtonPressed(0))
+    {
+        if (indexMouse == 0)
         {
-            ifstream fin;
-
-            fin.open("../data/SchoolYear.txt");
-            int n;
-            fin >> n;
-            int year = 20 + n;
-            fin.close();
-
-            int classNum;
-            fin.open("../data/" + to_string(year) + "-" + to_string(year + 1) + "/Classes.txt");
-            fin >> classNum;
-            classNum += count;
-            fin.close();
-            for (int i = 0; i < count; i++)
+            if (count != 0)
             {
-                fin.open(droppedFiles[i]);
-                node<student> *pHead = NULL;
-                if (fin.is_open())
+                //fin.open("../data/SchoolYear.txt");
+                //int n;
+                //fin >> n;
+                //int year = 20 + n;
+                //fin.close();
+
+                //int classNum;
+                //fin.open("../data/" + to_string(year) + "-" + to_string(year + 1) + "/Classes.txt");
+                //fin >> classNum;
+                //classNum += count;
+                //fin.close();
+                for (int i = 0; i < count; i++)
                 {
-                    fin >> n;
-                    fin.get();
-                    node<student> *pCur = nullptr;
-                    for (int j = 0; j < n + 1; j++)
+                    ifstream fin;
+                    name[dummy + i] = GetFileNameWithoutExt(droppedFiles[i]);
+                    fin.open(droppedFiles[i]);
+                    int n;
+                    node<student>* pHead = NULL;
+                    if (fin.is_open())
                     {
-                        if (pHead == nullptr)
+                        fin >> n;
+                        fin.get();
+                        node<student>* pCur = nullptr;
+                        for (int j = 0; j < n + 1; j++)
                         {
-                            pHead = new node<student>;
-                            pCur = pHead;
+                            if (pHead == nullptr)
+                            {
+                                pHead = new node<student>;
+                                pCur = pHead;
+                            }
+                            else
+                            {
+                                pCur->next = new node<student>;
+                                pCur = pCur->next;
+                            }
+                            getline(fin, pCur->data.id, ',');
+                            getline(fin, pCur->data.fullname, ',');
+                            getline(fin, pCur->data.gender, ',');
+                            getline(fin, pCur->data.sDate, ',');
+                            getline(fin, pCur->data.email, '\n');
                         }
-                        else
-                        {
-                            pCur->next = new node<student>;
-                            pCur = pCur->next;
-                        }
-                        getline(fin, pCur->data.id, ',');
-                        getline(fin, pCur->data.fullname, ',');
-                        getline(fin, pCur->data.gender, ',');
-                        getline(fin, pCur->data.sDate, ',');
-                        getline(fin, pCur->data.email, '\n');
                     }
+                    fin.close();
+                    ofstream fout;
+
+                    fout.open("../data/detailofeachclass/" + name[dummy + i] + ".csv");
+                    fout << n << '\n';
+                    fout << "ID,Full Name,Gender,Birthday,Email\n";
+                    node<student>* p = pHead->next;
+                    while (p)
+                    {
+                        fout << p->data.id << ',' << p->data.fullname << ',' << p->data.gender << ','
+                            << p->data.sDate << ',' << p->data.email << '\n';
+                        p = p->next;
+                    }
+                    deleteListStudent(pHead, n + 1);
+                    fout.close();
                 }
-                fin.close();
+                dummy += count;
                 ofstream fout;
-                string classname = GetFileNameWithoutExt(droppedFiles[i]);
-
-                fout.open("../data/" + to_string(year) + "-" + to_string(year + 1) + "/Classes.txt", ios::app);
-                fout.seekp(0, ios::beg);
-                fout << classNum;
-                fout << classname << '\n';
-                fout.close();
-
-                fout.open("../data/detailofeachclass/" + classname + ".csv");
-                fout << n << '\n';
-                fout << "ID,Full Name,Gender,Birthday,Email\n";
-                node<student> *p = pHead->next;
-                while (p)
+                fout.open("../data/" + sStudent.schoolYear + "/Classes.txt");
+                fout << dummy << endl;
+                for (int j = 0;j < dummy;j++)
                 {
-                    fout << p->data.id << ',' << p->data.fullname << ',' << p->data.gender << ','
-                         << p->data.sDate << ',' << p->data.email << '\n';
-                    p = p->next;
+                    fout << name[j] << endl;
                 }
-                deleteListStudent(pHead, n + 1);
                 fout.close();
+                menu = 21;
+                ClearDroppedFiles();
+                count = 0;
+                return;
             }
-            ofstream fout;
-            fout.open("../data/" + to_string(year) + "-" + to_string(year + 1) + "/Classes.txt");
-            fout << classNum;
-            fout.close();
+        }
+        if (indexMouse == 1)
+        {
             ClearDroppedFiles();
             count = 0;
-            **droppedFiles = {0};
+            menu = 21;
         }
     }
-    if (CheckCollisionPointRec(touchPosition, rec_classInput[1]))
-    {
-        indexMouse = 1;
-        if (IsMouseButtonPressed(0))
-            menu = 11;
-    }
+    
 
     BeginDrawing();
     ClearBackground(RAYWHITE);
@@ -906,7 +913,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
             else
                 DrawRectangle(0, 85 + 40 * i, 1200, 40, Fade(LIGHTGRAY, 0.3f));
 
-            DrawText(droppedFiles[i], 120, 100 + 40 * i, 10, GRAY);
+            DrawText(droppedFiles[i], 120, 100 + 40 * i, 25, GRAY);
         }
 
         DrawText("Drop new files...", 100, 110 + 40 * count, 20, DARKGRAY);
@@ -955,8 +962,6 @@ void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
         indexMouse = 9;
     if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[10]))
         indexMouse = 10;
-    if (CheckCollisionPointRec(mousePosition, rec_StaffSchoolYear[11]))
-        indexMouse = 11;
     if (IsMouseButtonPressed(0))
     {
         switch (indexMouse)
@@ -965,9 +970,6 @@ void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
             menu = 0;
             break;
         case 10:
-            menu = 12;
-            break;
-        case 11:
             createSchoolYear(numSchoolYear);
             break;
         default:
@@ -983,7 +985,6 @@ void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
-    DrawText("ADD CLASS", GetScreenWidth() - 330 + 15, GetScreenHeight() - 120, 28, GREEN);
     DrawText("CREATE NEW YEAR", GetScreenWidth() - 330 + 15, GetScreenHeight() - 60, 28, GREEN);
     if (indexMouse >= 0)
         DrawRectangleLines(rec_StaffSchoolYear[indexMouse].x, rec_StaffSchoolYear[indexMouse].y, rec_StaffSchoolYear[indexMouse].width, rec_StaffSchoolYear[indexMouse].height, BLACK);
@@ -993,7 +994,7 @@ void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
 }
 
 void StaffViewSchoolyearDetail(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-                               short &numSchoolYear, Rectangle rec_StaffViewSchoolyearDetail[], string name[], int &dummy, short &ClassOrCourse) // menu = 13
+           short &numSchoolYear, Rectangle rec_StaffViewSchoolyearDetail[], string name[], int &dummy, short &ClassOrCourse) // menu = 13
 {
     indexMouse = -1;
     for (int i = 0; i < 3; i++)
@@ -1044,6 +1045,8 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
     indexMouse = -1;
     if (CheckCollisionPointRec(mousePosition, rec_listClass[51]))
         indexMouse = 51;
+    if (CheckCollisionPointRec(mousePosition, rec_listClass[52]))
+        indexMouse = 52;
     for (int i = 0; i <= dummy; i++)
     {
         if (CheckCollisionPointRec(mousePosition, rec_listClass[i]))
@@ -1054,6 +1057,7 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
         {
             for (int i = 0; i <= dummy; i++)
                 rec_listClass[i].y += GetMouseWheelMove() * 20;
+            rec_listClass[52].y += GetMouseWheelMove() * 20;
         }
     if (IsMouseButtonPressed(0))
     {
@@ -1077,6 +1081,11 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
                 else
                     menu = 5;
             }
+            else if (indexMouse == 52)
+            {
+                if (ClassOrCourse == 1)
+                    menu = 12;
+            }
             else
             {
                 if (ClassOrCourse == 1)
@@ -1099,10 +1108,17 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
         DrawRectangle(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, LIGHTGRAY);
     else
         DrawRectangleLines(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, BLACK);
-    if (ClassOrCourse)
+    DrawRectangle(rec_listClass[52].x, rec_listClass[52].y, rec_listClass[52].width, rec_listClass[52].height, GREEN);
+    if (ClassOrCourse == 1)
+    {
+        DrawText("ADD CLASSES", rec_listClass[52].x + 10, rec_listClass[52].y + 10, 25, WHITE);
         DrawText(TextFormat("LIST OF CLASSES"), rec_listClass[0].x + 10, rec_listClass[0].y + 10, 30, BLACK);
+    }
     else
+    {
         DrawText(TextFormat("LIST OF COURSES"), rec_listClass[0].x + 10, rec_listClass[0].y + 10, 30, BLACK);
+        DrawText("ADD COURSES", rec_listClass[52].x + 10, rec_listClass[52].y + 10, 25, WHITE);
+    }
     DrawRectangleLines(rec_listClass[0].x, rec_listClass[0].y, rec_listClass[0].width, rec_listClass[0].height, BLACK);
     for (int i = 1; i <= dummy; i++)
     {

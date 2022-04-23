@@ -226,6 +226,7 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
     {
         fin >> n;
         fin.get();
+
         string s;
         getline(fin, s, ',');
         getline(fin, sStudent.courseID[0], ',');
