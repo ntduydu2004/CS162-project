@@ -15,7 +15,7 @@ int main()
     short idCount = 0, passwordCount = 0, role = 0;
     char oldPass[17] = "\0", newPass[17] = "\0", confirmPass[17] = "\0", oldPassStar[17] = "\0", newPassStar[17] = "\0", confirmPassStar[17] = "\0";
     short oldPassCount = 0, newPassCount = 0, confirmPassCount = 0;
-    int count = 0;
+    int count = 0, dummy = 0;
     char **droppedFiles = {0};
     string Class;
     Course cCourse;
@@ -96,11 +96,33 @@ int main()
     Rectangle rec_classInput[] = {
         {GetScreenWidth() - 170, GetScreenHeight() - 70, 140, 60},
         {30, GetScreenHeight() - 70, 140, 60}};
+
+    Rectangle rec_StaffViewSchoolyearDetail[]
+    {
+        {100, 200, 400, 200},
+        {700, 200, 400, 200},
+        {30, GetScreenHeight() - 70, 140, 60}, //BACK button
+    };
+
+    Rectangle rec_listClass[52];
+    for (int i = 0;i < 50;i++)
+    {
+        rec_listClass[i].x = 70;
+        rec_listClass[i].y = 70 + 60 * i;
+        rec_listClass[i].width = GetScreenWidth() - rec_listClass[i].x - 30;
+        rec_listClass[i].height = 60;
+    }
+    rec_listClass[51].y = 270;
+    rec_listClass[51].x = 5;
+    rec_listClass[51].width = 60;
+    rec_listClass[51].height = 60;
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, CourseOrResult;
     short numSchoolYear = 0;
     short iYear = -1;
+    string name[50];
+    node<student>* nStudentHead = nullptr, *pCur= nullptr;
     while (!WindowShouldClose())
     {
         mousePosition = GetMousePosition();
@@ -124,13 +146,13 @@ int main()
             courseOrResultStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, cCourse, rec_StudentCourse, CourseOrResult);
             break;
         case 3: // Detail of Course
-            detailOfCourseMenu(mousePosition, touchPosition, indexMouse, cCourse, sStudent, menu, rec_detailOfCourseMenu);
+            detailOfCourseMenu(mousePosition, touchPosition, indexMouse, cCourse, sStudent, menu, rec_detailOfCourseMenu, role);
             break;
         case 4: // SchoolYear Student Menu
             schoolYearStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSchoolYear, numSchoolYear);
             break;
         case 5: // Semester Student Menu
-            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, CourseOrResult);
+            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, CourseOrResult, name, dummy, role);
             break;
         case 6: // Change Password
             changePassword(mousePosition, touchPosition, indexMouse, indexTouch, oldPass, newPass, confirmPass, oldPassStar, newPassStar, confirmPassStar, oldPassCount, newPassCount, confirmPassCount, sStudent, uStaff, menu, role, rec_changePass, true);
@@ -142,10 +164,16 @@ int main()
             classInput(mousePosition, touchPosition, indexMouse, menu, rec_classInput, count, droppedFiles);
             break;
         case 13:
-            StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, iYear);
+            StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, CourseOrResult);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, CourseOrResult);
+            break;
+        case 21: // List of Class
+            viewListClassOrCourse(mousePosition, touchPosition, sStudent, cCourse, indexMouse, menu, rec_listClass, name, dummy, CourseOrResult);
+            break;
+        case 22:
+            viewClassProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, cCourse, menu, rec_listClass, pCur, CourseOrResult);
             break;
         }
     }

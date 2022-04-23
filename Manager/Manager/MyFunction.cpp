@@ -152,7 +152,7 @@ void loadFileClass(node<student> *&pHead, string className, int &n)
     if (fin.is_open())
     {
         fin >> n;
-        fin.get();
+        while(fin.get() != '\n');
         node<student> *pCur = nullptr;
         for (int i = 0; i < n + 1; i++)
         {

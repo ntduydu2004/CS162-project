@@ -12,9 +12,9 @@ void viewProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &inde
 void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu, Course &cCourse,
 							   Rectangle rec_StudentCourse[], short &courseOrResult);
 void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, Course &cCourse, student &sStudent, short &menu,
-						Rectangle rec_detailOfCourseMenu[]);
+						Rectangle rec_detailOfCourseMenu[], short& role);
 void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-						 Rectangle rec_StudentSemester[], short &CourseOrResult);
+						 Rectangle rec_StudentSemester[], short &CourseOrResult, string name[], int& dummy, short& role);
 void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
 						   Rectangle rec_StudentSchoolYear[], short &numSchoolYear);
 void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &indexTouch,
@@ -27,4 +27,9 @@ void schoolYearStaffMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
 						 Rectangle rec_StaffSchoolYear[], short &numSchoolYear, short& iYear);
 void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, Rectangle rec_classInput[], int &count, char **droppedFiles);
 void StaffViewSchoolyearDetail(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-	short& numSchoolYear, short& iYear);
+	short& numSchoolYear, Rectangle rec_StaffViewSchoolyearDetail[], string className[], int& dummy, short& ClassOrCourse);
+void viewListClassOrCourse(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& menu,
+	Rectangle rec_listClass[], string name[], int& dummy, short& ClassOrCourse);
+
+void viewClassProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, Course& cCourse, short& menu,
+	Rectangle rec_listClass[], node<student>*& pCur, short& ClassOrCourse);

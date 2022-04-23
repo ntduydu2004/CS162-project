@@ -368,7 +368,7 @@ void schoolYearStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short
 }
 
 void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu,
-                         Rectangle rec_StudentSemester[], short &CourseOrResult) // menu = 5
+                         Rectangle rec_StudentSemester[], short &CourseOrResult, string name[], int& dummy, short& role) // menu = 5
 {
     if (CheckCollisionPointRec(mousePosition, rec_StudentSemester[0]))
         indexMouse = 0;
@@ -382,23 +382,42 @@ void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
         indexMouse = -1;
     if (IsMouseButtonPressed(0))
     {
-        if (CheckCollisionPointRec(touchPosition, rec_StudentSemester[3]))
-            menu = 4; // School Year Student Menu
+        if (indexMouse == 3)
+        {
+            if (role == 0)
+                menu = 4; // School Year Student Menu
+            else
+                menu = 13;
+        }
         if (indexMouse >= 0 && indexMouse < 3 && CheckCollisionPointRec(touchPosition, rec_StudentSemester[indexMouse]))
         {
             sStudent.semeter = "HK" + to_string(indexMouse + 1);
-            if (CourseOrResult == 0 && checkFileExist(sStudent, CourseOrResult))
+            if (role == 0)
             {
-                checkStudentCourse(sStudent);
-                menu = 2; // Course Student Menu
-            }
-            else if (CourseOrResult == 1 && checkFileExist(sStudent, CourseOrResult))
-            {
-                checkStudentResult(sStudent);
-                menu = 2; // Result Student Menu
+                if (CourseOrResult == 0 && checkFileExist(sStudent, CourseOrResult))
+                {
+                    checkStudentCourse(sStudent);
+                    menu = 2; // Course Student Menu
+                }
+                else if (CourseOrResult == 1 && checkFileExist(sStudent, CourseOrResult))
+                {
+                    checkStudentResult(sStudent);
+                    menu = 2; // Result Student Menu
+                }
+                else
+                    menu = 20;
             }
             else
-                menu = 20;
+            {
+                menu = 21;
+                ifstream fin;
+                fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+                fin >> dummy;
+                fin.get();
+                for (int i = 0;i < dummy;i++)
+                    getline(fin, name[i], '\n');
+                fin.close();
+            }
         }
     }
     BeginDrawing();
@@ -411,8 +430,8 @@ void semesterStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &
     EndDrawing();
 }
 
-void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, student &sStudent, short &menu, Course &cCourse,
-                               Rectangle rec_StudentCourse[], short &courseOrResult) // menu = 2
+void courseOrResultStudentMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu, Course& cCourse,
+    Rectangle rec_StudentCourse[], short& courseOrResult) // menu = 2
 {
     if (CheckCollisionPointRec(mousePosition, rec_StudentCourse[0]))
         indexMouse = 0;
@@ -511,7 +530,7 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
 }
 
 void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, Course &cCourse, student &sStudent, short &menu,
-                        Rectangle rec_detailOfCourseMenu[]) // menu = 3
+                        Rectangle rec_detailOfCourseMenu[], short& role) // menu = 3
 {
     if (CheckCollisionPointRec(mousePosition, rec_detailOfCourseMenu[0]))
         indexMouse = 0;
@@ -522,17 +541,24 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
 
     if (IsMouseButtonPressed(0))
     {
-        if (CheckCollisionPointRec(touchPosition, rec_detailOfCourseMenu[1]))
+        if (indexMouse == 1)
         {
             deleteListStudent(cCourse.nStudentHead, cCourse.numStudent);
-            menu = 2; // Student Course Menu
+            if (role == 0)
+                menu = 2; // Student Course Menu
+            else menu = 21;
         }
-        if (CheckCollisionPointRec(touchPosition, rec_detailOfCourseMenu[0]))
+        if (indexMouse == 0)
         {
-            if (sStudent.isRegistered[sStudent.courseView] == "Not Registered" && cCourse.numStudent < cCourse.maxStudent)
-                registerCourse(sStudent, cCourse);
-            else if (sStudent.isRegistered[sStudent.courseView] == "Registered")
-                unregisterCourse(sStudent, cCourse);
+            if (role == 0)
+            {
+                if (sStudent.isRegistered[sStudent.courseView] == "Not Registered" && cCourse.numStudent < cCourse.maxStudent)
+                    registerCourse(sStudent, cCourse);
+                else if (sStudent.isRegistered[sStudent.courseView] == "Registered")
+                    unregisterCourse(sStudent, cCourse);
+            }
+            else
+                menu = 22;
         }
     }
     BeginDrawing();
@@ -555,15 +581,22 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
         }
     }
     DrawRectangle(rec_detailOfCourseMenu[0].x, rec_detailOfCourseMenu[0].y, rec_detailOfCourseMenu[0].width, rec_detailOfCourseMenu[0].height, LIGHTGRAY);
-    DrawText(TextFormat("Registered: %i / %i", cCourse.numStudent, cCourse.maxStudent), 70, 300, 25, BLACK);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
+    DrawText(TextFormat("Registered: %i / %i", cCourse.numStudent, cCourse.maxStudent), 70, 300, 25, BLACK);
     DrawRectangleLines(rec_detailOfCourseMenu[indexMouse].x, rec_detailOfCourseMenu[indexMouse].y, rec_detailOfCourseMenu[indexMouse].width, rec_detailOfCourseMenu[indexMouse].height, BLACK);
-    if (sStudent.isRegistered[sStudent.courseView] == "Registered")
-        DrawText("REGISTERED", 460, 295, 30, RED);
-    else if (cCourse.numStudent < cCourse.maxStudent)
-        DrawText("  REGISTER", 460, 295, 30, LIME);
+    if (role == 0)
+    {
+        if (sStudent.isRegistered[sStudent.courseView] == "Registered")
+            DrawText("REGISTERED", 460, 295, 30, RED);
+        else if (cCourse.numStudent < cCourse.maxStudent)
+            DrawText("  REGISTER", 460, 295, 30, LIME);
+        else
+            DrawText("     FULL", 460, 295, 30, RED);
+    }
     else
-        DrawText("     FULL", 460, 295, 30, RED);
+        DrawText(" Student List", 460, 295, 30, RED);
+
+
     EndDrawing();
 }
 
@@ -833,10 +866,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
     {
         indexMouse = 1;
         if (IsMouseButtonPressed(0))
-        {
             menu = 11;
-            return;
-        }
     }
 
     BeginDrawing();
@@ -922,7 +952,8 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
             if (indexMouse >= 0 && indexMouse < 9)
             {
                 menu = 13;
-                iYear = indexMouse;
+                sStudent.firstYear = 2020 + indexMouse;
+                sStudent.schoolYear = to_string(20 + indexMouse) + "-" + to_string(21 + indexMouse);
             }
             break;
         }
@@ -940,15 +971,9 @@ void schoolYearStaffMenu(Vector2& mousePosition, Vector2& touchPosition, short& 
 }
 
 void StaffViewSchoolyearDetail(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, short& menu,
-    short& numSchoolYear, short& iYear)
+    short& numSchoolYear, Rectangle rec_StaffViewSchoolyearDetail[], string name[], int& dummy, short& ClassOrCourse) // menu = 13
 {
     indexMouse = -1;
-    Rectangle rec_StaffViewSchoolyearDetail[]
-    {
-        {100, 200, 400, 200},
-        {700, 200, 400, 200},
-        {30, GetScreenHeight() - 70, 140, 60}, //BACK button
-    };
     for (int i = 0; i < 3; i++)
     {
         if (CheckCollisionPointRec(mousePosition, rec_StaffViewSchoolyearDetail[i]))
@@ -956,11 +981,22 @@ void StaffViewSchoolyearDetail(Vector2& mousePosition, Vector2& touchPosition, s
     }
     if (IsMouseButtonPressed(0))
     {
+        ifstream fin;
         switch (indexMouse)
         {
         case 0:
+            ClassOrCourse = 0;
+            menu = 5;
             break;
         case 1:
+            ClassOrCourse = 1;
+            fin.open("../data/" + sStudent.schoolYear + "/Classes.txt");
+            fin >> dummy;
+            fin.get();
+            for (int i = 0;i < dummy;i++)
+                getline(fin, name[i], '\n');
+            fin.close();
+            menu = 21;
             break;
         case 2:
             menu = 11;
@@ -971,11 +1007,181 @@ void StaffViewSchoolyearDetail(Vector2& mousePosition, Vector2& touchPosition, s
     }
     BeginDrawing();
     ClearBackground(RAYWHITE);
-    DrawText(TextFormat("SHOOLYEAR: %i - %i", 2020 + iYear, 2021 + iYear), 100, 100, 40, BLACK);
-    DrawText("SEMESTERS", 120, 220, 40, BLACK);
-    DrawText("CLASSES", 720, 220, 40, BLACK);
+    DrawText(TextFormat("SHOOLYEAR: %i - %i", sStudent.firstYear, sStudent.firstYear + 1), 100, 100, 40, BLACK);
+    DrawText("SEMESTERS", 165, 275, 40, BLACK);
+    DrawText("CLASSES", 815, 275, 40, BLACK);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
     if (indexMouse >= 0)
         DrawRectangleLines(rec_StaffViewSchoolyearDetail[indexMouse].x, rec_StaffViewSchoolyearDetail[indexMouse].y, rec_StaffViewSchoolyearDetail[indexMouse].width, rec_StaffViewSchoolyearDetail[indexMouse].height, BLACK);
     EndDrawing();
 }
+
+void viewListClassOrCourse(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& menu,
+    Rectangle rec_listClass[], string name[], int& dummy, short& ClassOrCourse) // menu = 21
+{
+    indexMouse = -1;
+    if (CheckCollisionPointRec(mousePosition, rec_listClass[51]))
+        indexMouse = 51;
+    for (int i = 0;i <= dummy;i++)
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_listClass[i]))
+            indexMouse = i;
+    }
+    if (GetMouseWheelMove())
+        if ((rec_listClass[dummy].y > GetScreenHeight() - 140 || GetMouseWheelMove() > 0) && (rec_listClass[0].y < 70 || GetMouseWheelMove() < 0))
+        {
+            for (int i = 0;i <= dummy;i++)
+                rec_listClass[i].y += GetMouseWheelMove() * 20;
+        }
+    if (IsMouseButtonPressed(0))
+    {
+        if (indexMouse > 0)
+        {
+            for (int i = 0;i < 50;i++)
+            {
+                rec_listClass[i].x = 70;
+                rec_listClass[i].y = 70 + 60 * i;
+                rec_listClass[i].width = GetScreenWidth() - rec_listClass[i].x - 30;
+                rec_listClass[i].height = 60;
+            }
+            rec_listClass[51].y = 270;
+            rec_listClass[51].x = 5;
+            rec_listClass[51].width = 60;
+            rec_listClass[51].height = 60;
+            if (indexMouse == 51)
+            {
+                if (ClassOrCourse == 1)
+                    menu = 13;
+                else
+                    menu = 5;
+            }
+            else
+            {
+                if (ClassOrCourse == 1)
+                {
+                    menu = 22;
+                    loadFileClass(cCourse.nStudentHead, name[indexMouse - 1], cCourse.numStudent);
+                    return;
+                }
+                if (ClassOrCourse == 0)
+                {
+                    loadFileCourse(name[indexMouse - 1], cCourse, sStudent);
+                    menu = 3;
+                }
+            }
+        }
+    }
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    if (indexMouse > 0 && indexMouse < 51)
+        DrawRectangle(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, LIGHTGRAY);
+    else 
+        DrawRectangleLines(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, BLACK);
+    if (ClassOrCourse)
+        DrawText(TextFormat("LIST OF CLASSES"), rec_listClass[0].x + 10, rec_listClass[0].y + 10, 30, BLACK);
+    else
+        DrawText(TextFormat("LIST OF COURSES"), rec_listClass[0].x + 10, rec_listClass[0].y + 10, 30, BLACK);
+    DrawRectangleLines(rec_listClass[0].x, rec_listClass[0].y, rec_listClass[0].width, rec_listClass[0].height, BLACK);
+    for (int i = 1;i <= dummy;i++)
+    {
+        DrawText(name[i - 1].c_str(), rec_listClass[i].x + 10, rec_listClass[i].y + 12, 33, BLACK);
+        DrawRectangleLines(rec_listClass[i].x, rec_listClass[i].y, rec_listClass[i].width, rec_listClass[i].height, BLACK);
+    }
+    DrawText("<<", 15, 280, 50, RED);
+    EndDrawing();
+}
+
+void viewClassProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, Course& cCourse, short& menu,
+    Rectangle rec_listClass[], node<student>*& pCur, short& ClassOrCourse) // menu = 22
+{
+    indexMouse = -1;
+    if (CheckCollisionPointRec(mousePosition, rec_listClass[51]))
+        indexMouse = 51;
+    for (int i = 0;i <= cCourse.numStudent;i++)
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_listClass[i]))
+            indexMouse = i;
+    }
+    if (GetMouseWheelMove())
+        if ((rec_listClass[cCourse.numStudent].y > GetScreenHeight() - 140 || GetMouseWheelMove() > 0) && (rec_listClass[0].y < 70 || GetMouseWheelMove() < 0))
+        {
+            for (int i = 0;i <= cCourse.numStudent;i++)
+                rec_listClass[i].y += GetMouseWheelMove() * 20;
+        }
+
+    if (IsMouseButtonPressed(0))
+    {
+        if (indexMouse == 51)
+        {
+            for (int i = 0;i < 50;i++)
+            {
+                rec_listClass[i].x = 70;
+                rec_listClass[i].y = 70 + 60 * i;
+                rec_listClass[i].width = GetScreenWidth() - rec_listClass[i].x - 30;
+                rec_listClass[i].height = 60;
+            }
+            rec_listClass[51].y = 270;
+            rec_listClass[51].x = 5;
+            rec_listClass[51].width = 60;
+            rec_listClass[51].height = 60;
+            if (ClassOrCourse == 1)
+            {
+                deleteListStudent(cCourse.nStudentHead, cCourse.numStudent + 1);
+                menu = 21;
+            }
+            else
+                menu = 3;
+        }
+    }
+
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    if (indexMouse > 0 && indexMouse < 51)
+        DrawRectangle(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, LIGHTGRAY);
+    else
+        DrawRectangleLines(rec_listClass[indexMouse].x, rec_listClass[indexMouse].y, rec_listClass[indexMouse].width, rec_listClass[indexMouse].height, BLACK);
+    DrawRectangleLines(rec_listClass[0].x, rec_listClass[0].y, rec_listClass[0].width, rec_listClass[0].height, BLACK);
+    pCur = cCourse.nStudentHead;
+    if (ClassOrCourse == 1)
+    {
+        for (int i = 0;i <= cCourse.numStudent && pCur;i++)
+        {
+            DrawText(pCur->data.id.c_str(), 75, rec_listClass[i].y + 12, 25, BLACK);
+            DrawText(pCur->data.fullname.c_str(), 185, rec_listClass[i].y + 12, 25, BLACK);
+            DrawText(pCur->data.gender.c_str(), 520, rec_listClass[i].y + 12, 25, BLACK);
+            DrawText(pCur->data.sDate.c_str(), 615, rec_listClass[i].y + 12, 25, BLACK);
+            DrawText(pCur->data.email.c_str(), 795, rec_listClass[i].y + 12, 25, BLACK);
+            pCur = pCur->next;
+            DrawRectangleLines(rec_listClass[i].x, rec_listClass[i].y, rec_listClass[i].width, rec_listClass[i].height, BLACK);
+        }
+        DrawLine(180, rec_listClass[0].y, 180, rec_listClass[cCourse.numStudent].y + 60, BLACK);
+        DrawLine(515, rec_listClass[0].y, 515, rec_listClass[cCourse.numStudent].y + 60, BLACK);
+        DrawLine(610, rec_listClass[0].y, 610, rec_listClass[cCourse.numStudent].y + 60, BLACK);
+        DrawLine(790, rec_listClass[0].y, 790, rec_listClass[cCourse.numStudent].y + 60, BLACK);
+    }
+    else {
+        DrawText("Class", 75, rec_listClass[0].y + 12, 25, BLACK);
+        DrawText("ID", 700, rec_listClass[0].y + 12, 25, BLACK);
+        for (int i = 1;i <= cCourse.numStudent && pCur;i++)
+        {
+            DrawText(pCur->data.Class.c_str(), 75, rec_listClass[i].y + 12, 25, BLACK);
+            DrawText(pCur->data.id.c_str(), 700, rec_listClass[i].y + 12, 25, BLACK);
+            pCur = pCur->next;
+            DrawRectangleLines(rec_listClass[i].x, rec_listClass[i].y, rec_listClass[i].width, rec_listClass[i].height, BLACK);
+            DrawLine(515, rec_listClass[0].y, 515, rec_listClass[cCourse.numStudent].y + 60, BLACK);
+        }
+    }
+    DrawText("<<", 15, 280, 50, RED);
+    EndDrawing();
+}
+
+
+
+
+
+
+
+
+
+
+
