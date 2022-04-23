@@ -82,6 +82,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -139,19 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="course.cpp" />
-    <ClCompile Include="CustomTime.cpp" />
-    <ClCompile Include="function.cpp" />
-    <ClCompile Include="Linkedlist.cpp" />
     <ClCompile Include="Manager.cpp" />
-    <ClCompile Include="user.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="MyFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="course.h" />
-    <ClInclude Include="CustomTime.h" />
-    <ClInclude Include="function.h" />
-    <ClInclude Include="Linkedlist.h" />
-    <ClInclude Include="user.h" />
+    <ClInclude Include="..\include\menu.h" />
+    <ClInclude Include="..\include\MyFunction.h" />
+    <ClInclude Include="..\include\CourseFunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
