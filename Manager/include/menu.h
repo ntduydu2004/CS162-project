@@ -34,5 +34,11 @@ void viewListClassOrCourse(Vector2& mousePosition, Vector2& touchPosition, stude
 
 void viewClassProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, Course& cCourse, short& menu,
 	Rectangle rec_listClass[], node<student>*& pCur, short& ClassOrCourse);
+
+void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
+	short& menu, Rectangle rec_addCourseMenu[], string name[], bool isChosen[], int& dummy, short& ClassOrCourse, string& dateInput);
+void chooseClass(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
+	short& menu, Rectangle rec_chooseClass[], string name[], bool isChosen[], int& dummy, short& ClassOrCourse, string& dateInput);
+	Rectangle rec_listClass[], node<student>*& pCur, short& ClassOrCourse);
 void exportFileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, short& indexTouch, student& sStudent,
 	Course& cCourse, short& menu, Rectangle rec_exportFile[], char path[], short& pathCount, short& ClassOrCourse);
