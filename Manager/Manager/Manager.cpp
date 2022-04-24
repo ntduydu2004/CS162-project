@@ -159,11 +159,37 @@ int main()
         
     };
 
+    Rectangle rec_chooseClass[]
+    {
+        {150, 100, 200, 40},
+        {150, 200, 200, 40},
+        {150, 300, 200, 40},
+        {150, 400, 200, 40},
+        {150, 500, 200, 40},
+
+        {400, 100, 200, 40},
+        {400, 200, 200, 40},
+        {400, 300, 200, 40},
+        {400, 400, 200, 40},
+        {400, 500, 200, 40},
+
+        {650, 100, 200, 40},
+        {650, 200, 200, 40},
+        {650, 300, 200, 40},
+        {650, 400, 200, 40},
+        {650, 500, 200, 40},
+
+        {5, 275, 60, 60}, //20 BACK button
+    };
+
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, choose;
     short numSchoolYear = 0;
     string name[50];
+    bool isChosen[50];
+    for (int i = 0; i < 50; i++)
+        isChosen[i] = false;
     node<student> *pCur= nullptr;
     while (!WindowShouldClose())
     {
@@ -209,7 +235,10 @@ int main()
             StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, choose);
             break;
         case 14:
-            addCourseMenu(mousePosition, touchPosition, sStudent, cCourse, indexMouse, indexTouch, menu, rec_addCourseMenu, name, dummy, choose, dateInput);
+            addCourseMenu(mousePosition, touchPosition, sStudent, cCourse, indexMouse, indexTouch, menu, rec_addCourseMenu, name, isChosen, dummy, choose, dateInput);
+            break;
+        case 15:
+            chooseClass(mousePosition, touchPosition, sStudent, cCourse, indexMouse, indexTouch, menu, rec_chooseClass, name, isChosen, dummy, choose, dateInput);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, choose);

@@ -1220,7 +1220,7 @@ void viewClassProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short 
 }
 
 void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
-    short& menu, Rectangle rec_addCourseMenu[], string name[], int& dummy, short& ClassOrCourse, string& dateInput)
+    short& menu, Rectangle rec_addCourseMenu[], string name[], bool isChosen[], int& dummy, short& ClassOrCourse, string& dateInput)
 {
     
     indexMouse = -1;
@@ -1315,11 +1315,134 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
             dateInput.clear();
         switch (indexMouse)
         {
-        case 20:
+        case 20: // BACK
+        {
             menu = 21;
+            // RESET DATA
+            for (int i = 0; i < dummy; i++)
+            {
+                name[i] = "";
+                isChosen[i] = false;
+            }
+            dummy = 0;
+
+            dateInput = "";
+            cCourse.ID = "";
+            cCourse.name = "";
+            cCourse.lecturer = "";
+            cCourse.maxStudent = 0;
+            cCourse.startDay.day = -1;
+            cCourse.startDay.month = -1;
+            cCourse.startDay.year = -1;
+            cCourse.endDay.day = -1;
+            cCourse.endDay.month = -1;
+            cCourse.endDay.year = -1;
+            cCourse.sDay = "";
+            cCourse.sSession[0].weekday = "";
+            cCourse.sSession[0].tTimeStart.hour = -1;
+            cCourse.sSession[0].tTimeStart.min = -1;
+            cCourse.sSession[0].tTimeEnd.hour = -1;
+            cCourse.sSession[0].tTimeEnd.min = -1;
+            cCourse.sSession[0].sTime = "";
+            cCourse.sSession[1].weekday = "";
+            cCourse.sSession[1].tTimeStart.hour = -1;
+            cCourse.sSession[1].tTimeStart.min = -1;
+            cCourse.sSession[1].tTimeEnd.hour = -1;
+            cCourse.sSession[1].tTimeEnd.min = -1;
+            cCourse.sSession[1].sTime = "";
             break;
-        case 21:
+        }
+        case 21: // FINISH
+        {
+            ofstream fout;
+            fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/" + cCourse.ID + ".txt");
+            fout << cCourse.name << endl;
+            fout << cCourse.lecturer << endl;
+            cCourse.getSDay();
+            fout << cCourse.sDay << "\n";
+            cCourse.sSession[0].getSTime();
+            cCourse.sSession[1].getSTime();
+            fout << cCourse.sSession[0].sTime << endl;
+            fout << cCourse.sSession[1].sTime << endl;
+            fout << cCourse.maxStudent << endl
+                << cCourse.numStudent << endl;
+            fout.close();
+            for (int i = 0; i < dummy; i++)
+                if (isChosen[i])
+                {
+                    string filename = "../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + name[i] + ".txt";
+                    ifstream fin(filename);
+                    string temp[5];
+                    for (int i = 0; i < 5; i++)
+                    {
+                        getline(fin, temp[i], ',');
+                        //fin.get();
+                        if (temp[i] == "none")
+                        {
+                            temp[i] = cCourse.ID;
+                            break;
+                        }
+                    }
+                    fin.close();
+                    ofstream fout(filename);
+                    for (int i = 0; i < 4; i++)
+                        if (temp[i] != "")
+                            fout << temp[i] << ",";
+                        else
+                            fout << "none,";
+                    if (temp[4] != "")
+                        fout << temp[4] << ",";
+                    else
+                        fout << "none\n";
+                    fout.close();
+                }
+            menu = 21;
+            // RESET DATA
+            for (int i = 0; i < dummy; i++)
+            {
+                name[i] = "";
+                isChosen[i] = false;
+            }
+            dummy = 0;
+
+            dateInput = "";
+            cCourse.ID = "";
+            cCourse.name = "";
+            cCourse.lecturer = "";
+            cCourse.maxStudent = 0;
+            cCourse.startDay.day = -1;
+            cCourse.startDay.month = -1;
+            cCourse.startDay.year = -1;
+            cCourse.endDay.day = -1;
+            cCourse.endDay.month = -1;
+            cCourse.endDay.year = -1;
+            cCourse.sDay = "";
+            cCourse.sSession[0].weekday = "";
+            cCourse.sSession[0].tTimeStart.hour = -1;
+            cCourse.sSession[0].tTimeStart.min = -1;
+            cCourse.sSession[0].tTimeEnd.hour = -1;
+            cCourse.sSession[0].tTimeEnd.min = -1;
+            cCourse.sSession[0].sTime = "";
+            cCourse.sSession[1].weekday = "";
+            cCourse.sSession[1].tTimeStart.hour = -1;
+            cCourse.sSession[1].tTimeStart.min = -1;
+            cCourse.sSession[1].tTimeEnd.hour = -1;
+            cCourse.sSession[1].tTimeEnd.min = -1;
+            cCourse.sSession[1].sTime = "";
             break;
+        }
+            
+        case 22: // EDIT
+        {
+            menu = 15;
+            ifstream fin("../data/" + sStudent.schoolYear + "/Classes.txt");
+            fin >> dummy;
+            fin.get();
+            for (int i = 0; i < dummy; i++)
+                getline(fin, name[i]);
+            fin.close();
+            break;
+        }
         default:
             if (indexMouse < 20)
                 indexTouch = indexMouse;
@@ -1749,6 +1872,59 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
         break;
     default:
         break;
+    }
+    EndDrawing();
+}
+void chooseClass(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
+    short& menu, Rectangle rec_chooseClass[], string name[], bool isChosen[], int& dummy, short& ClassOrCourse, string& dateInput)
+{
+
+    indexMouse = -1;
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    for (int i = 0; i < dummy; i++)
+    {
+        if (!name[i].empty())
+        {
+            DrawRectangleLines(rec_chooseClass[i].x, rec_chooseClass[i].y, rec_chooseClass[i].width, rec_chooseClass[i].height, BLACK);
+            DrawText(name[i].c_str(), rec_chooseClass[i].x + 5, rec_chooseClass[i].y + 5, 30, BLACK);
+        }
+    }
+    DrawText(" << ", rec_chooseClass[15].x + 5, rec_chooseClass[15].y + 3, 30, RED);
+    for (int i = 0; i < dummy; i++)
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_chooseClass[i]))
+            indexMouse = i;
+        if (isChosen[i])
+        {
+            DrawRectangleRec(rec_chooseClass[i], ORANGE);
+            DrawText(name[i].c_str(), rec_chooseClass[i].x + 5, rec_chooseClass[i].y + 5, 30, BLACK);
+        }
+    }
+    if (indexMouse >= 0 && indexMouse < 16)
+    {
+        DrawRectangleRec(rec_chooseClass[indexMouse], GRAY);
+        DrawText(name[indexMouse].c_str(), rec_chooseClass[indexMouse].x + 5, rec_chooseClass[indexMouse].y + 5, 30, WHITE);
+    }
+    if (CheckCollisionPointRec(mousePosition, rec_chooseClass[15]))
+        DrawRectangleLines(rec_chooseClass[15].x, rec_chooseClass[15].y, rec_chooseClass[15].width, rec_chooseClass[15].height, RED);
+
+    if (IsMouseButtonPressed(0))
+    {
+        if (CheckCollisionPointRec(mousePosition, rec_chooseClass[15]))
+        {
+            menu = 14;
+        }
+        else
+        {
+            if (isChosen[indexMouse] == false)
+            {
+                isChosen[indexMouse] = true;
+            }
+            else
+                isChosen[indexMouse] = false;
+        }
+
     }
     EndDrawing();
 }
