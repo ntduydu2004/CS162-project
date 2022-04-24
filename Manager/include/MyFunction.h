@@ -12,8 +12,8 @@ struct node
 };
 struct date
 {
-    short day, month;
-    int year;
+    short day{-1}, month{-1};
+    int year{-1};
 };
 struct result
 {

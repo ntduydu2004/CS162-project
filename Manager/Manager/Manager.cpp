@@ -19,6 +19,7 @@ int main()
     char **droppedFiles = {0};
     string Class;
     Course cCourse;
+    string dateInput; //for inputting dates in addCourseMenu
     Rectangle rec_Role[] =
         {
             {GetScreenWidth() / 2 - 150, GetScreenHeight() / 2 - 60, 300, 60},
@@ -119,6 +120,45 @@ int main()
     rec_listClass[52].x = 50;
     rec_listClass[52].width = 230;
     rec_listClass[52].height = 40;
+
+    Rectangle rec_addCourseMenu[] // 
+    {
+        {330, 145, 800, 40}, // 0 Course Name
+        {330, 195, 200, 40}, // 1 Course ID
+        {400, 245, 700, 40}, // 2 Lecturer ID
+
+        {280, 295, 70, 40}, // 3 Start Date day
+        {390, 295, 70, 40}, // 4 Start Date month
+        {510, 295, 140, 40}, // 5 Start Date year
+
+        {820, 295, 70, 40}, // 6 End Date day
+        {930, 295, 70, 40}, // 7 End Date month
+        {1040, 295, 140, 40}, // 8 End Date year
+
+        {260, 345, 140, 40}, // 9 Session 1 weekday
+        {510, 345, 70, 40}, // 10 Session 1 start hour
+        {610, 345, 70, 40}, // 11 Session 1 start minute
+        {750, 345, 70, 40}, // 12 Session 1 end hour
+        {850, 345, 70, 40}, // 13 Session 1 end minute
+
+        {260, 395, 140, 40}, // 14 Session 2 weekday
+        {510, 395, 70, 40}, // 15 Session 2 start hour
+        {610, 395, 70, 40}, // 16 Session 2 start minute
+        {750, 395, 70, 40}, // 17 Session 2 end hour
+        {850, 395, 70, 40}, // 18 Session 2 end minute
+
+        {330, 445, 150, 40}, // 19 Max Students
+
+        
+
+        {5, 275, 60, 60}, //20 BACK button
+
+        {300, 550, 600, 40}, //21 FINISH button
+
+        {450, 495, 150, 40}, // 22 Edit Allowed Classes
+        
+    };
+
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, choose;
@@ -167,6 +207,9 @@ int main()
             break;
         case 13:
             StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, choose);
+            break;
+        case 14:
+            addCourseMenu(mousePosition, touchPosition, sStudent, cCourse, indexMouse, indexTouch, menu, rec_addCourseMenu, name, dummy, choose, dateInput);
             break;
         case 20: // White Menu
             studentWhiteMenu(mousePosition, touchPosition, indexMouse, menu, rec_Profile, choose);

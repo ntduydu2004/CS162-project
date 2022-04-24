@@ -1087,6 +1087,8 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
             {
                 if (ClassOrCourse == 1)
                     menu = 12;
+                else
+                    menu = 14; // Add a Course Menu
             }
             else
             {
@@ -1214,5 +1216,539 @@ void viewClassProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short 
         }
     }
     DrawText("<<", 15, 280, 50, RED);
+    EndDrawing();
+}
+
+void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
+    short& menu, Rectangle rec_addCourseMenu[], string name[], int& dummy, short& ClassOrCourse, string& dateInput)
+{
+    
+    indexMouse = -1;
+
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText(("ADD A COURSE TO " + sStudent.semeter + ", " + sStudent.schoolYear).c_str(), 100, 50, 50, BLUE);
+    DrawText("Course Name: ", 100, 150, 30, BLACK);
+    DrawText(cCourse.name.c_str(), 350, 150, 30, BLACK);
+    DrawText("Course ID: ", 100, 200, 30, BLACK);
+    DrawText(cCourse.ID.c_str(), 350, 200, 30, BLACK);
+    DrawText("Course Lecturer: ", 100, 250, 30, BLACK);
+    DrawText(cCourse.lecturer.c_str(), 420, 250, 30, BLACK);
+    DrawText("Start Date:       /       /               End Date:       /       /", 100, 300, 30, BLACK);
+    if (cCourse.startDay.day >= 0)
+        DrawText(to_string(cCourse.startDay.day).c_str(), 300, 300, 30, BLACK);
+    if (cCourse.startDay.month >= 0)
+        DrawText(to_string(cCourse.startDay.month).c_str(), 395, 300, 30, BLACK);
+    if (cCourse.startDay.year >= 0)
+        DrawText(to_string(cCourse.startDay.year).c_str(), 515, 300, 30, BLACK);
+    if (cCourse.endDay.day >= 0)
+        DrawText(to_string(cCourse.endDay.day).c_str(), 825, 300, 30, BLACK);
+    if (cCourse.endDay.month >= 0)
+        DrawText(to_string(cCourse.endDay.month).c_str(), 935, 300, 30, BLACK);
+    if (cCourse.endDay.year >= 0)
+        DrawText(to_string(cCourse.endDay.year).c_str(), 1045, 300, 30, BLACK);
+    DrawText("Session 1:                Time:       :        to         :       ", 100, 350, 30, BLACK);
+    DrawText(cCourse.sSession[0].weekday.c_str(), 265, 350, 30, BLACK);
+    if (cCourse.sSession[0].tTimeStart.hour > 0)
+        DrawText(to_string(cCourse.sSession[0].tTimeStart.hour).c_str(), 515, 350, 30, BLACK);
+    if (cCourse.sSession[0].tTimeStart.min > 0)
+        DrawText(to_string(cCourse.sSession[0].tTimeStart.min).c_str(), 615, 350, 30, BLACK);
+    if (cCourse.sSession[0].tTimeEnd.hour > 0)
+        DrawText(to_string(cCourse.sSession[0].tTimeEnd.hour).c_str(), 755, 350, 30, BLACK);
+    if (cCourse.sSession[0].tTimeEnd.min > 0)
+        DrawText(to_string(cCourse.sSession[0].tTimeEnd.min).c_str(), 855, 350, 30, BLACK);
+
+    DrawText("Session 2:               Time:       :        to         :       ", 100, 400, 30, BLACK);
+    DrawText(cCourse.sSession[1].weekday.c_str(), 265, 400, 30, BLACK);
+    if (cCourse.sSession[1].tTimeStart.hour > 0)
+        DrawText(to_string(cCourse.sSession[1].tTimeStart.hour).c_str(), 515, 400, 30, BLACK);
+    if (cCourse.sSession[1].tTimeStart.min > 0)
+        DrawText(to_string(cCourse.sSession[1].tTimeStart.min).c_str(), 615, 400, 30, BLACK);
+    if (cCourse.sSession[1].tTimeEnd.hour > 0)
+        DrawText(to_string(cCourse.sSession[1].tTimeEnd.hour).c_str(), 755, 400, 30, BLACK);
+    if (cCourse.sSession[1].tTimeEnd.min > 0)
+        DrawText(to_string(cCourse.sSession[1].tTimeEnd.min).c_str(), 855, 400, 30, BLACK);
+    DrawText("Max Students: ", 100, 450, 30, BLACK);
+    DrawText(to_string(cCourse.maxStudent).c_str(), 335, 450, 30, BLACK);
+    DrawText("Classes Allowed: ", 100, 500, 30, BLACK);
+    DrawText("FINISH", 547, 553, 40, GREEN);
+    DrawText("Edit", 475, 497, 40, DARKGRAY);
+    DrawText("<<", 15, 280, 50, RED);
+
+    for (int i = 0; i < 20; i++)
+    {
+        DrawRectangleLines(rec_addCourseMenu[i].x, rec_addCourseMenu[i].y, rec_addCourseMenu[i].width, rec_addCourseMenu[i].height, BLACK);
+    }
+    DrawRectangleLines(rec_addCourseMenu[21].x, rec_addCourseMenu[21].y, rec_addCourseMenu[21].width, rec_addCourseMenu[21].height, GREEN);
+    DrawRectangleLines(rec_addCourseMenu[22].x, rec_addCourseMenu[22].y, rec_addCourseMenu[22].width, rec_addCourseMenu[22].height, DARKGRAY);
+
+    for (int i = 0; i < 23; i++)
+        if (CheckCollisionPointRec(mousePosition, rec_addCourseMenu[i]))
+        {
+            if (i < 20)
+                SetMouseCursor(2);
+            indexMouse = i;
+        }
+
+
+    switch (indexMouse)
+    {
+    case 21: // FINISH 
+        DrawRectangleRec(rec_addCourseMenu[21], GREEN);
+        DrawText("FINISH", 547, 553, 40, WHITE);
+        break;
+    case 20:// BACK
+        DrawRectangleLines(rec_addCourseMenu[20].x, rec_addCourseMenu[20].y, rec_addCourseMenu[20].width, rec_addCourseMenu[20].width, RED);
+        break;
+    case 22:
+        DrawRectangleRec(rec_addCourseMenu[22], DARKGRAY);
+        DrawText("Edit", 475, 497, 40, WHITE);
+        break;
+    default:
+        break;
+    }
+    
+
+    if (IsMouseButtonPressed(0))
+    {
+        if (indexMouse != indexTouch) // Reset input string
+            dateInput.clear();
+        switch (indexMouse)
+        {
+        case 20:
+            menu = 21;
+            break;
+        case 21:
+            break;
+        default:
+            if (indexMouse < 20)
+                indexTouch = indexMouse;
+            break;
+        }
+    }
+    int key = -1;
+    if (indexTouch >= 0 && indexTouch < 20)
+        DrawRectangleLines(rec_addCourseMenu[indexTouch].x, rec_addCourseMenu[indexTouch].y, rec_addCourseMenu[indexTouch].width, rec_addCourseMenu[indexTouch].height, GREEN);
+    switch (indexTouch)
+    {
+    // the cout commands are for debugging
+    case 0: // Course Name
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 32) && (key <= 125))
+            {
+                cCourse.name += (char)key;
+            }
+            cout << cCourse.name << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!cCourse.name.empty()))
+        {
+                cCourse.name.pop_back();
+                cout << cCourse.name << endl;
+        }
+        break;
+    case 1: // Course ID
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 32) && (key <= 125))
+            {
+                cCourse.ID += (char)key;
+            }
+            key = GetCharPressed();
+            cout << cCourse.ID << endl;
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!cCourse.ID.empty()))
+        {
+            cCourse.ID.pop_back();
+            cout << cCourse.ID << endl;
+        }
+        break;
+    case 2: // Course lecturer
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 32) && (key <= 125))
+            {
+                cCourse.lecturer += (char)key;
+            }
+            key = GetCharPressed();
+            cout << cCourse.lecturer << endl;
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!cCourse.lecturer.empty()))
+        {
+            cCourse.lecturer.pop_back();
+            cout << cCourse.lecturer << endl;
+        }
+        break;
+    case 3: // Course startDay day
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.startDay.day = stoi(dateInput);
+            }
+            cout << cCourse.startDay.day << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.startDay.day = stoi(dateInput);
+            else
+                cCourse.startDay.day = -1;
+            cout << cCourse.startDay.day << endl;
+        }
+        break;
+    case 4: // Course startDay month
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.startDay.month = stoi(dateInput);
+            }
+            cout << cCourse.startDay.month << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.startDay.month = stoi(dateInput);
+            else
+                cCourse.startDay.month = -1;
+            cout << cCourse.startDay.month << endl;
+        }
+        break;
+    case 5: // Course startDay Year
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.startDay.year = stoi(dateInput);
+            }
+            cout << cCourse.startDay.year << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.startDay.year = stoi(dateInput);
+            else
+                cCourse.startDay.year = -1;
+            cout << cCourse.startDay.year << endl;
+        }
+        break;
+    case 6: // Course endDay day
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.endDay.day = stoi(dateInput);
+            }
+            cout << cCourse.endDay.day << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.endDay.day = stoi(dateInput);
+            else
+                cCourse.endDay.day = -1;
+            cout << cCourse.endDay.day << endl;
+        }
+        break;
+    case 7: // Course endDay month
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.endDay.month = stoi(dateInput);
+            }
+            cout << cCourse.endDay.month << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.endDay.month = stoi(dateInput);
+            else
+                cCourse.endDay.month = -1;
+            cout << cCourse.endDay.month << endl;
+        }
+        break;
+    case 8: // Course endDay Year
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.endDay.year = stoi(dateInput);
+            }
+            cout << cCourse.endDay.year << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.endDay.year = stoi(dateInput);
+            else
+                cCourse.endDay.year = -1;
+            cout << cCourse.endDay.year << endl;
+        }
+        break;
+    case 9: // Course 1stSession weekday
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 32) && (key <= 125))
+            {
+                cCourse.sSession[0].weekday += (char)key;
+            }
+            cout << cCourse.sSession[0].weekday << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!cCourse.sSession[0].weekday.empty()))
+        {
+            cCourse.sSession[0].weekday.pop_back();
+            cout << cCourse.sSession[0].weekday << endl;
+        }
+        break;
+    case 10: // Course 1stSession startTime hour
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[0].tTimeStart.hour = stoi(dateInput);
+            }
+            cout << cCourse.sSession[0].tTimeStart.hour << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[0].tTimeStart.hour = stoi(dateInput);
+            else
+                cCourse.sSession[0].tTimeStart.hour = -1;
+            cout << cCourse.sSession[0].tTimeStart.hour << endl;
+        }
+        break;
+    case 11: // Course 1stSession startTime min
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[0].tTimeStart.min = stoi(dateInput);
+            }
+            cout << cCourse.sSession[0].tTimeStart.min << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[0].tTimeStart.min = stoi(dateInput);
+            else
+                cCourse.sSession[0].tTimeStart.min = -1;
+            cout << cCourse.sSession[0].tTimeStart.min << endl;
+        }
+        break;
+    case 12: // Course 1stSession endTime hour
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[0].tTimeEnd.hour = stoi(dateInput);
+            }
+            cout << cCourse.sSession[0].tTimeEnd.hour << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[0].tTimeEnd.hour = stoi(dateInput);
+            else
+                cCourse.sSession[0].tTimeEnd.hour = -1;
+            cout << cCourse.sSession[0].tTimeEnd.hour << endl;
+        }
+        break;
+    case 13: // Course 1stSession endTime min
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[0].tTimeEnd.min = stoi(dateInput);
+            }
+            cout << cCourse.sSession[0].tTimeEnd.min << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[0].tTimeEnd.min = stoi(dateInput);
+            else
+                cCourse.sSession[0].tTimeEnd.min = -1;
+            cout << cCourse.sSession[0].tTimeEnd.min << endl;
+        }
+        break;
+    case 14: // Course 2ndSession weekday
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 32) && (key <= 125))
+            {
+                cCourse.sSession[1].weekday += (char)key;
+            }
+            cout << cCourse.sSession[1].weekday << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!cCourse.sSession[1].weekday.empty()))
+        {
+            cCourse.sSession[1].weekday.pop_back();
+            cout << cCourse.sSession[1].weekday << endl;
+        }
+        break;
+    case 15: // Course 2ndSession startTime hour
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[1].tTimeStart.hour = stoi(dateInput);
+            }
+            cout << cCourse.sSession[1].tTimeStart.hour << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[1].tTimeStart.hour = stoi(dateInput);
+            else
+                cCourse.sSession[1].tTimeStart.hour = -1;
+            cout << cCourse.sSession[1].tTimeStart.hour << endl;
+        }
+        break;
+    case 16: // Course 2ndSession startTime min
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[1].tTimeStart.min = stoi(dateInput);
+            }
+            cout << cCourse.sSession[1].tTimeStart.min << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[1].tTimeStart.min = stoi(dateInput);
+            else
+                cCourse.sSession[1].tTimeStart.min = -1;
+            cout << cCourse.sSession[1].tTimeStart.min << endl;
+        }
+        break;
+    case 17: // Course 2ndSession endTime hour
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[1].tTimeEnd.hour = stoi(dateInput);
+            }
+            cout << cCourse.sSession[1].tTimeEnd.hour << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[1].tTimeEnd.hour = stoi(dateInput);
+            else
+                cCourse.sSession[1].tTimeEnd.hour = -1;
+            cout << cCourse.sSession[1].tTimeEnd.hour << endl;
+        }
+        break;
+    case 18: // Course 2ndSession endTime min
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.sSession[1].tTimeEnd.min = stoi(dateInput);
+            }
+            cout << cCourse.sSession[1].tTimeEnd.min << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.sSession[1].tTimeEnd.min = stoi(dateInput);
+            else
+                cCourse.sSession[1].tTimeEnd.min = -1;
+            cout << cCourse.sSession[1].tTimeEnd.min << endl;
+        }
+        break;
+    case 19: // Course 2ndSession endTime min
+        key = GetCharPressed();
+        while (key > 0)
+        {
+            if ((key >= 48) && (key <= 57))
+            {
+                dateInput += (char)key;
+                cCourse.maxStudent = stoi(dateInput);
+            }
+            cout << cCourse.maxStudent << endl;
+            key = GetCharPressed();
+        }
+        if (IsKeyPressed(KEY_BACKSPACE) && (!dateInput.empty()))
+        {
+            dateInput.pop_back();
+            if (!dateInput.empty())
+                cCourse.maxStudent = stoi(dateInput);
+            else
+                cCourse.maxStudent = 0;
+            cout << cCourse.maxStudent << endl;
+        }
+        break;
+    default:
+        break;
+    }
     EndDrawing();
 }

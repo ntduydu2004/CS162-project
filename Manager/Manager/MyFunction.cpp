@@ -642,7 +642,7 @@ void createSchoolYear(short& numSchoolYear)
     {
         string className;
         getline(fin, className);
-        if (stoi(className.substr(0, 2)) >= 2020 - 2000 + numSchoolYear - 4)
+        if (stoi(className.substr(0, 2)) >= 2020 - 2000 + numSchoolYear - 3)
         {
             fout << className << "\n";
             numClassNewYear++;
@@ -652,6 +652,22 @@ void createSchoolYear(short& numSchoolYear)
     fout << numClassNewYear;
     fin.close();
     fout.close();
+
+    fin.open("../data/" + newYear + "/Classes.txt");
+    fin >> n;
+    node<string>*pClass = new node<string>;
+    node<string>* cur = pClass;
+    fin.get();
+    for (int i = 0; i < n; i++)
+    {
+        cur->next = new node<string>;
+        getline(fin, cur->next->data);
+        cur = cur->next;
+    }
+    cur = pClass;
+    pClass = pClass->next;
+    delete cur;
+    fin.close();
     for (int i = 1; i <= 3; i++)
     {
         string filename = "../data/" + newYear + "/HK" + to_string(i);
@@ -659,8 +675,23 @@ void createSchoolYear(short& numSchoolYear)
         fout.open(filename + "/Courses.txt");
         fout << 0 << "\n";
         fout.close();
+        cur = pClass;
+        for (int i = 0; i < n; i++)
+        {
+            fout.open(filename + "/CourseOf" + cur->data + ".txt");
+            fout << "none,none,none,none,none\n";
+            fout.close();
+            cur = cur->next;
+        }
     }
-        
+    // Dealloc pClass
+    cur = pClass;
+    while (cur)
+    {
+        node<string>* temp = cur;
+        cur = cur->next;
+        delete temp;
+    }
 }
 
 void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)

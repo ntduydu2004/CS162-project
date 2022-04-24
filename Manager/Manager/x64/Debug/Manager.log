@@ -1,4 +1,113 @@
-﻿  menu.cpp
+﻿  Manager.cpp
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\include\MyFunction.h(63,106): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(25,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(25,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(25,64): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(25,64): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(26,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(26,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(26,64): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(26,64): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(30,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(30,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(30,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(30,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(31,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(31,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(31,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(31,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(32,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(32,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(32,70): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(32,70): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(33,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(33,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(37,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(37,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(37,75): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(37,75): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(38,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(38,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(38,74): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(38,74): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(39,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(39,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(39,73): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(39,73): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(40,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(40,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(40,74): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(40,74): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(43,32): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(43,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(48,46): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(48,46): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(48,69): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(48,69): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(49,45): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(49,45): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(49,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(49,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(50,45): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(50,45): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(50,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(50,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(51,45): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(51,45): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(51,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(51,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(52,45): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(52,45): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(52,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(52,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(53,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(53,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(58,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(58,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(68,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(68,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(80,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(80,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(81,31): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(81,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(81,56): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(81,56): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(84,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(84,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(84,69): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(84,69): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(85,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(85,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(85,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(85,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(86,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(86,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(86,68): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(86,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(87,35): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(87,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(87,70): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(87,70): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(88,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(88,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(92,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(92,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(93,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(93,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(94,41): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(94,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(95,36): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(95,36): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(97,27): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(97,27): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(97,52): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(97,52): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(98,32): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(98,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(104,32): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(104,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\Manager.cpp(111,33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  menu.cpp
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\include\MyFunction.h(63,106): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(37,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(37,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
@@ -184,74 +293,95 @@ D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1040,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1040,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1071,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1117,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1117,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1118,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1118,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1122,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1122,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1123,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1123,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1128,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1128,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1160,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1190,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1191,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1192,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1193,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1194,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1199,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1199,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1116,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1116,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1116,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1116,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1119,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1119,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1120,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1120,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1124,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1124,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1127,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1127,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1127,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1127,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1130,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1130,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1131,108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1131,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1131,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1131,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1162,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1185,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1185,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1185,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1185,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1186,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1186,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1186,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1186,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1192,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1193,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1194,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1195,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1200,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1200,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1201,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1201,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1205,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1206,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1209,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1210,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1213,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1213,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1202,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1202,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1203,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1203,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1207,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1208,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1211,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1214,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1214,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1214,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1214,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1215,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1215,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1280,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1280,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1280,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1280,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1282,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1282,95): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1282,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1282,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1283,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1283,95): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1283,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1283,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1301,128): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1301,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1301,74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1301,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1331,160): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1331,123): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1331,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1331,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   Manager.vcxproj -> D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\x64\Debug\Manager.exe

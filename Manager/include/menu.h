@@ -34,3 +34,6 @@ void viewListClassOrCourse(Vector2& mousePosition, Vector2& touchPosition, stude
 
 void viewClassProfileMenu(Vector2& mousePosition, Vector2& touchPosition, short& indexMouse, student& sStudent, Course& cCourse, short& menu,
 	Rectangle rec_listClass[], node<student>*& pCur, short& ClassOrCourse);
+
+void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
+	short& menu, Rectangle rec_addCourseMenu[], string name[], int& dummy, short& ClassOrCourse, string& dateInput);
