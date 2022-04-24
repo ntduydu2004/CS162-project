@@ -295,7 +295,18 @@ void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
             nStudentCur = nStudentCur->next;
         }
         getline(fin, nStudentCur->data.Class, ' ');
-        getline(fin, nStudentCur->data.id, '\n');
+        getline(fin, nStudentCur->data.id, ' ');
+        fin >> nStudentCur->data.rResult[sStudent.courseView].quiz;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].lab;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].midterm;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].finalterm;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].average;
+        fin.get();
+        getline(fin, nStudentCur->data.rResult[sStudent.courseView].type, '\n');
     }
     fin.close();
 }
@@ -318,12 +329,11 @@ void checkStudentCourse(student &sStudent)
         pCur = pCur->next;
     }
 }
-
-void checkStudentResult(student &sStudent)
+void checkStudentResult(student &sStudent, Course& cCourse)
 {
     int n = 0;
     node<student> *pHead = nullptr;
-    loadFileResultOfClass(pHead, sStudent, n);
+    loadFileCourseOfClass(pHead, sStudent, n);
     node<student> *pCur = pHead;
     for (int i = 0; i < n; i++)
     {
@@ -331,10 +341,32 @@ void checkStudentResult(student &sStudent)
         {
             for (int j = 0; j < 5; j++)
             {
-                sStudent.rResult[j].quiz = pCur->data.rResult[j].quiz;
-                sStudent.rResult[j].lab = pCur->data.rResult[j].lab;
-                sStudent.rResult[j].midterm = pCur->data.rResult[j].midterm;
-                sStudent.rResult[j].finalterm = pCur->data.rResult[j].finalterm;
+                sStudent.isRegistered[j] = pCur->data.isRegistered[j];
+                if (sStudent.isRegistered[j] == "Registered")
+                {
+                    loadFileCourse(sStudent.courseID[j], cCourse, sStudent);
+                    node<student>* p = cCourse.nStudentHead;
+                    for (int k = 0;k < cCourse.numStudent;k++)
+                    {
+                        if (p->data.id == sStudent.id && p->data.Class == sStudent.Class)
+                        {
+                            sStudent.rResult[j].quiz = pCur->data.rResult[j].quiz;
+                            sStudent.rResult[j].lab = pCur->data.rResult[j].lab;
+                            sStudent.rResult[j].midterm = pCur->data.rResult[j].midterm;
+                            sStudent.rResult[j].finalterm = pCur->data.rResult[j].finalterm;
+                            sStudent.rResult[j].average = pCur->data.rResult[j].average;
+                            sStudent.rResult[j].type = pCur->data.rResult[j].type;
+                            deleteListStudent(cCourse.nStudentHead, cCourse.numStudent);
+                            break;
+                        }
+                        p = p->next;
+                    }
+                }
+                else
+                {
+                    sStudent.rResult[j].type = "None";
+                    sStudent.rResult[j].quiz = -2;
+                }
             }
             deleteListStudent(pHead, n);
             return;
@@ -422,17 +454,10 @@ void registerCourse(student &sStudent, Course &cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Registered";
     cCourse.numStudent++;
-    sStudent.rResult[sStudent.courseView].quiz = -1;
-    sStudent.rResult[sStudent.courseView].lab = -1;
-    sStudent.rResult[sStudent.courseView].midterm = -1;
-    sStudent.rResult[sStudent.courseView].finalterm = -1;
     int n;
     node<student> *pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
     updateFileCourseOfClass(sStudent, pHead, n);
-    deleteListStudent(pHead, n);
-    loadFileResultOfClass(pHead, sStudent, n);
-    updateFileResultOfClass(sStudent, pHead, n);
     deleteListStudent(pHead, n);
     updateFileCourse(sStudent, cCourse, true);
 }
@@ -441,17 +466,10 @@ void unregisterCourse(student &sStudent, Course &cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Not Registered";
     cCourse.numStudent--;
-    sStudent.rResult[sStudent.courseView].quiz = -2;
-    sStudent.rResult[sStudent.courseView].lab = -2;
-    sStudent.rResult[sStudent.courseView].midterm = -2;
-    sStudent.rResult[sStudent.courseView].finalterm = -2;
     int n = 3;
     node<student> *pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
     updateFileCourseOfClass(sStudent, pHead, n);
-    deleteListStudent(pHead, n);
-    loadFileResultOfClass(pHead, sStudent, n);
-    updateFileResultOfClass(sStudent, pHead, n);
     deleteListStudent(pHead, n);
     updateFileCourse(sStudent, cCourse, false);
 }
@@ -490,7 +508,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
         {
             for (int i = 0; i < cCourse.numStudent - 1; i++)
             {
-                fout << p->data.Class << " " << p->data.id << endl;
+                fout << p->data.Class << " " << p->data.id << " -1 -1 -1 -1 -1 None" << endl;
                 if (i < cCourse.numStudent - 2)
                     p = p->next;
             }
@@ -504,7 +522,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
         }
         p->data.Class = sStudent.Class;
         p->data.id = sStudent.id;
-        fout << p->data.Class << " " << p->data.id << endl;
+        fout << p->data.Class << " " << p->data.id << " -1 -1 -1 -1 -1 None" << endl;
     }
     else
     {
@@ -523,7 +541,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
                 p->next = p->next->next;
                 delete pDel;
             }
-            fout << p->data.Class << " " << p->data.id << endl;
+            fout << p->data.Class << " " << p->data.id << " -1 -1 -1 -1 -1 None" << endl;
             p = p->next;
         }
     }

@@ -1,257 +1,301 @@
 ﻿  menu.cpp
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\include\MyFunction.h(63,106): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(37,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(37,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(37,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(37,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(39,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(39,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(39,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(39,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(163,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(163,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(164,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(164,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(165,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(165,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(165,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(165,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(170,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(170,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(170,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(170,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(171,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(171,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(171,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(171,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(176,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(176,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(176,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(176,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(177,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(177,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(177,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(177,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(179,132): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(179,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(179,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(179,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(181,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(181,95): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(181,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(181,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(233,128): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(233,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(233,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(233,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(279,128): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(279,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(279,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(279,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(311,136): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(311,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(311,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(311,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(363,172): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(363,131): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(363,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(363,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(366,153): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(366,120): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(427,164): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(427,125): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(427,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(427,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(429,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(429,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(430,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(430,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(431,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(431,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(485,164): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(485,127): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(485,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(485,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(498,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(498,122): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(498,89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(498,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(500,164): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(500,127): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(500,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(500,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(501,101): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(501,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(501,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(504,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(504,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(507,127): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(507,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(507,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(507,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(509,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(511,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(513,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(515,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(517,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(519,89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(520,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(521,74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(523,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(523,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(524,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(524,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(525,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(525,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(526,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(526,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(527,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(527,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(528,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(528,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(529,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(529,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(595,135): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(595,102): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(595,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(595,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(598,176): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(598,134): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(598,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(598,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(792,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(792,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(793,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(793,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(794,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(794,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(795,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(795,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(795,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(795,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(800,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(800,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(800,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(800,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(801,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(801,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(801,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(801,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(802,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(802,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(802,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(802,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(807,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(807,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(807,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(807,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(808,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(808,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(808,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(808,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(809,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(809,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(809,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(809,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(811,152): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(811,118): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(811,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(811,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(813,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(813,110): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(813,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(813,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(924,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(924,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(924,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(924,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(928,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(928,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(928,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(928,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(950,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(950,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(950,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(950,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(992,168): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(992,129): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(992,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(992,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(994,117): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(994,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1040,208): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1040,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1040,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1040,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1071,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1110,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1112,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1114,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1117,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1117,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1118,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1118,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1122,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1122,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1123,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1123,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1125,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1128,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1128,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1129,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1160,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1181,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1183,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1184,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1190,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1191,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1192,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1193,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1194,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1196,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1198,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1199,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1199,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1200,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1200,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1201,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1201,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1205,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1206,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1209,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1210,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1212,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1213,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\Manager\menu.cpp(1213,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Manager.vcxproj -> D:\blank\Documents\KHTN\APCS\LEARN\HK II\CS162\PROJECT_COURSE_MANAGEMENT\Manager\x64\Debug\Manager.exe
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\include\MyFunction.h(63,106): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(37,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(37,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(37,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(37,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(39,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(39,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(39,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(39,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(163,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(163,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(164,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(164,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(165,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(165,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(165,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(165,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(170,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(170,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(170,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(170,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(171,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(171,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(171,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(171,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(176,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(176,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(176,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(176,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(177,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(177,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(177,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(177,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(179,132): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(179,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(179,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(179,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(181,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(181,95): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(181,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(181,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(233,128): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(233,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(233,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(233,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(279,128): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(279,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(279,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(279,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(311,136): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(311,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(311,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(311,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(363,172): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(363,131): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(363,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(363,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(366,153): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(366,120): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(426,164): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(426,125): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(426,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(426,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(428,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(428,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(429,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(429,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(430,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(430,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(484,164): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(484,127): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(484,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(484,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(497,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(497,122): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(497,89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(497,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(499,164): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(499,127): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(499,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(499,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(500,101): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(500,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(500,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(503,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(503,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(505,127): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(505,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(505,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(505,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(507,100): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(509,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(511,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(513,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(515,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(517,89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(518,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(519,74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(521,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(521,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(522,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(522,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(523,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(523,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(524,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(524,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(525,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(525,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(526,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(526,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(527,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(527,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(593,135): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(593,102): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(593,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(593,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(596,176): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(596,134): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(596,96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(596,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(790,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(790,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(791,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(791,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(792,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(792,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(793,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(793,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(793,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(793,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(798,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(798,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(798,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(798,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(799,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(799,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(799,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(799,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(800,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(800,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(800,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(800,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(805,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(805,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(805,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(805,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(806,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(806,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(806,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(806,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(807,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(807,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(807,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(807,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(809,152): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(809,118): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(809,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(809,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(811,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(811,110): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(811,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(811,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1030,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1030,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1030,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1030,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1035,107): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1035,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1035,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1035,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1036,90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1036,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1039,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1039,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1039,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1039,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1061,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1061,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1061,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1061,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1103,168): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1103,129): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1103,94): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1103,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1105,117): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1105,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1151,208): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1151,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1151,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1151,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1182,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1221,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1221,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1221,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1221,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1223,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1223,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1223,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1223,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1225,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1225,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1225,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1225,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1228,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1228,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1229,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1229,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1233,93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1233,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1234,79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1234,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1236,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1236,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1236,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1236,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1239,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1239,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1240,108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1240,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1240,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1240,44): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1273,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1298,139): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1298,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1298,77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1298,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1300,144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1300,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1300,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1300,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1301,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1301,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1301,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1301,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1307,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1308,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1309,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1310,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1311,72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1313,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1313,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1313,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1313,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1315,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1315,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1316,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1316,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1317,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1317,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1318,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1318,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1322,107): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1322,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1322,61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1322,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1323,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1323,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1323,193): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1323,168): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1323,147): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1323,126): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1324,113): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1324,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1324,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1324,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1325,80): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1325,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1326,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1327,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1330,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1331,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1333,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1333,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1333,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1333,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1334,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1334,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1415,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1415,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1415,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1415,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1417,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1417,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1417,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1417,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1419,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1419,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1419,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1419,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1420,103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1420,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1420,57): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1420,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1421,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1421,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1422,108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1422,82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1424,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\Manager\menu.cpp(1424,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Manager.vcxproj -> C:\Users\84947\Source\FinalProject_CS162\CS162-project\Project\Manager\x64\Debug\Manager.exe

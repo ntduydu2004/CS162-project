@@ -11,10 +11,10 @@ int main()
     short menu = -2;
     Vector2 mousePosition;
     Vector2 touchPosition;
-    char a[17] = "\0", b[17] = "\0", bStar[17] = "\0";
+    char a[17] = "\0", b[17] = "\0", bStar[17] = "\0", path[100] = "\0";
     short idCount = 0, passwordCount = 0, role = 0;
     char oldPass[17] = "\0", newPass[17] = "\0", confirmPass[17] = "\0", oldPassStar[17] = "\0", newPassStar[17] = "\0", confirmPassStar[17] = "\0";
-    short oldPassCount = 0, newPassCount = 0, confirmPassCount = 0;
+    short oldPassCount = 0, newPassCount = 0, confirmPassCount = 0, pathCount = 0;
     int count = 0, dummy = 0;
     char **droppedFiles = {0};
     string Class;
@@ -94,7 +94,8 @@ int main()
             {30, GetScreenHeight() - 70, 140, 60}};
     Rectangle rec_classInput[] = {
         {GetScreenWidth() - 170, GetScreenHeight() - 70, 140, 60},
-        {30, GetScreenHeight() - 70, 140, 60}};
+        {30, GetScreenHeight() - 70, 140, 60},
+        {700, 400, 400, 60} };
 
     Rectangle rec_StaffViewSchoolyearDetail[]
     {
@@ -119,6 +120,13 @@ int main()
     rec_listClass[52].x = 50;
     rec_listClass[52].width = 230;
     rec_listClass[52].height = 40;
+
+    Rectangle rec_exportFile[]
+    {
+        {60,200,800,60},
+        {930,200,220,60},
+        {30, GetScreenHeight() - 70, 140, 60}
+    };
     student sStudent;
     user uStaff;
     short indexMouse = -1, indexTouch = -1, choose;
@@ -154,7 +162,7 @@ int main()
             schoolYearStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSchoolYear, numSchoolYear);
             break;
         case 5: // Semester Student Menu
-            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StudentSemester, choose, name, dummy, role);
+            semesterStudentMenu(mousePosition, touchPosition, indexMouse, sStudent, cCourse, menu, rec_StudentSemester, choose, name, dummy, role);
             break;
         case 6: // Change Password
             changePassword(mousePosition, touchPosition, indexMouse, indexTouch, oldPass, newPass, confirmPass, oldPassStar, newPassStar, confirmPassStar, oldPassCount, newPassCount, confirmPassCount, sStudent, uStaff, menu, role, rec_changePass, true);
@@ -163,7 +171,7 @@ int main()
             schoolYearStaffMenu(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_StaffSchoolYear, numSchoolYear);
             break;
         case 12:
-            classInput(mousePosition, touchPosition, indexMouse, sStudent, menu, rec_classInput, count, droppedFiles, name, dummy);
+            classInput(mousePosition, touchPosition, indexMouse, sStudent, cCourse, menu, rec_classInput, count, droppedFiles, name, dummy, choose);
             break;
         case 13:
             StaffViewSchoolyearDetail(mousePosition, touchPosition, indexMouse, sStudent, menu, numSchoolYear, rec_StaffViewSchoolyearDetail, name, dummy, choose);
@@ -176,6 +184,9 @@ int main()
             break;
         case 22:
             viewClassProfileMenu(mousePosition, touchPosition, indexMouse, sStudent, cCourse, menu, rec_listClass, pCur, choose);
+            break;
+        case 40:
+            exportFileMenu(mousePosition, touchPosition, indexMouse, indexTouch, sStudent, cCourse, menu, rec_exportFile, path, pathCount, choose);
             break;
         }
     }
