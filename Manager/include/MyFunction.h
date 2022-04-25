@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <direct.h>
 using namespace std;
-
 template <class T>
 struct node
 {
@@ -12,8 +12,8 @@ struct node
 };
 struct date
 {
-    short day, month;
-    int year;
+    short day{-1}, month{-1};
+    int year{-1};
 };
 struct result
 {
@@ -90,6 +90,41 @@ struct session
     string weekday = "\0";
     string sTime = "\0";
     Time tTimeStart, tTimeEnd;
+    void getSTime()
+    {
+        sTime = "";
+        if (weekday == "\0" || weekday == "")
+            sTime += "None ";
+        else
+            sTime += weekday + " ";
+
+        string strHour, strMin;
+
+        if (tTimeStart.hour > 9 || tTimeStart.hour == -1)
+            strHour = to_string(tTimeStart.hour);
+        else
+            strHour = "0" + to_string(tTimeStart.hour);
+
+        if (tTimeStart.min > 9 || tTimeStart.min == -1)
+            strMin = to_string(tTimeStart.min);
+        else
+            strMin = "0" + to_string(tTimeStart.min);
+
+        sTime += strHour + ":" + strMin + " - ";
+
+        if (tTimeEnd.hour > 9 || tTimeEnd.hour == -1)
+            strHour = to_string(tTimeEnd.hour);
+        else
+            strHour = "0" + to_string(tTimeEnd.hour);
+
+        if (tTimeEnd.min > 9 || tTimeEnd.min == -1)
+            strMin = to_string(tTimeEnd.min);
+        else
+            strMin = "0" + to_string(tTimeEnd.min);
+
+        sTime += strHour + ":" + strMin;
+
+    }
     void getStartTimeOfCourse()
     {
         string s = sTime.substr(0, 2);
@@ -112,10 +147,44 @@ struct Course
     string name;
     session sSession[2];
     string lecturer;
-    int maxStudent = 0, numStudent = 0;
+    int maxStudent = 0, numStudent = 0, classAllowed = 0;
+    string nameClassAllowed[10];
     date startDay, endDay;
     string sDay;
     node<student> *nStudentHead = nullptr;
+    void getSDay()
+    {
+        sDay = "";
+        string strDay, strMonth, strYear;
+
+        if (startDay.day > 9 || startDay.day < 0)
+            strDay = to_string(startDay.day);
+        else
+            strDay = "0" + to_string(startDay.day);
+
+        if (startDay.month > 9 || startDay.day < 0)
+            strMonth = to_string(startDay.month);
+        else
+            strMonth = "0" + to_string(startDay.month);
+
+        strYear = to_string(startDay.year);
+
+        sDay += strDay + "/" + strMonth + "/" + strYear + " - ";
+
+        if (endDay.day > 9 || endDay.day < 0)
+            strDay = to_string(endDay.day);
+        else
+            strDay = "0" + to_string(endDay.day);
+
+        if (endDay.month > 9 || endDay.month < 0)
+            strMonth = to_string(endDay.month);
+        else
+            strMonth = "0" + to_string(endDay.month);
+
+        strYear = to_string(endDay.year);
+
+        sDay += strDay + "/" + strMonth + "/" + strYear;
+    }
     void getStartDayOfCourse()
     {
         string s = sDay.substr(0, 2); // get the day
@@ -154,13 +223,13 @@ void loadFileCourse(string courseID, Course& cCourse, student& sStudent);
 void registerCourse(student& sStudent, Course& cCourse);
 void unregisterCourse(student& sStudent, Course& cCourse);
 bool checkFileExist(student& sStudent, short CourseOrResult);
-void checkStudentResult(student& sStudent);
-void loadFileResultOfClass(node<student>*& pHead, student& sStudent, int& n);
+void checkStudentResult(student& sStudent, Course& cCourse);
 void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister);
 void updateFileCourseOfClass(student& sStudent, node<student>* pHead, int& n);
-void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n);
 void updateFileStaff(node<user>* pHead, int n);
 void updateFileStudent(node<student>* pHead, int n);
 
 void createSchoolYear(short& numSchoolYear); // Add a new schoool year succeeding the current year
+
+void RemoveCourse(student& sStudent, Course& course, string name[], int& dummy);
 

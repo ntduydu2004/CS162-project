@@ -1,6 +1,6 @@
 #include "../include/MyFunction.h"
 
-#include <direct.h>
+#include <stdio.h>
 
 void loadFileStaff(node<user> *&pHead, int &n)
 {
@@ -224,8 +224,7 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
     fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
     if (fin.is_open())
     {
-        fin >> n;
-        fin.get();
+
         string s;
         getline(fin, s, ',');
         getline(fin, sStudent.courseID[0], ',');
@@ -240,6 +239,8 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
         getline(fin, sStudent.nameCourse[3], ',');
         getline(fin, sStudent.nameCourse[4], '\n');
         node<student> *pCur = nullptr;
+        fin >> n;
+        fin.get();
         for (int i = 0; i < n; i++)
         {
             if (pHead == nullptr)
@@ -275,6 +276,10 @@ void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
     getline(fin, cCourse.sSession[0].sTime, '\n');
     getline(fin, cCourse.sSession[1].weekday, ' ');
     getline(fin, cCourse.sSession[1].sTime, '\n');
+    fin >> cCourse.classAllowed;
+    fin.get();
+    for (int i = 0; i < cCourse.classAllowed; i++)
+        getline(fin, cCourse.nameClassAllowed[i], '\n');
     fin >> cCourse.maxStudent;
     fin.get();
     fin >> cCourse.numStudent;
@@ -293,7 +298,18 @@ void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
             nStudentCur = nStudentCur->next;
         }
         getline(fin, nStudentCur->data.Class, ' ');
-        getline(fin, nStudentCur->data.id, '\n');
+        getline(fin, nStudentCur->data.id, ' ');
+        fin >> nStudentCur->data.rResult[sStudent.courseView].quiz;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].lab;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].midterm;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].finalterm;
+        fin.get();
+        fin >> nStudentCur->data.rResult[sStudent.courseView].average;
+        fin.get();
+        getline(fin, nStudentCur->data.rResult[sStudent.courseView].type, '\n');
     }
     fin.close();
 }
@@ -316,12 +332,11 @@ void checkStudentCourse(student &sStudent)
         pCur = pCur->next;
     }
 }
-
-void checkStudentResult(student &sStudent)
+void checkStudentResult(student &sStudent, Course& cCourse)
 {
     int n = 0;
     node<student> *pHead = nullptr;
-    loadFileResultOfClass(pHead, sStudent, n);
+    loadFileCourseOfClass(pHead, sStudent, n);
     node<student> *pCur = pHead;
     for (int i = 0; i < n; i++)
     {
@@ -329,10 +344,32 @@ void checkStudentResult(student &sStudent)
         {
             for (int j = 0; j < 5; j++)
             {
-                sStudent.rResult[j].quiz = pCur->data.rResult[j].quiz;
-                sStudent.rResult[j].lab = pCur->data.rResult[j].lab;
-                sStudent.rResult[j].midterm = pCur->data.rResult[j].midterm;
-                sStudent.rResult[j].finalterm = pCur->data.rResult[j].finalterm;
+                sStudent.isRegistered[j] = pCur->data.isRegistered[j];
+                if (sStudent.isRegistered[j] == "Registered")
+                {
+                    loadFileCourse(sStudent.courseID[j], cCourse, sStudent);
+                    node<student>* p = cCourse.nStudentHead;
+                    for (int k = 0;k < cCourse.numStudent;k++)
+                    {
+                        if (p->data.id == sStudent.id && p->data.Class == sStudent.Class)
+                        {
+                            sStudent.rResult[j].quiz = pCur->data.rResult[j].quiz;
+                            sStudent.rResult[j].lab = pCur->data.rResult[j].lab;
+                            sStudent.rResult[j].midterm = pCur->data.rResult[j].midterm;
+                            sStudent.rResult[j].finalterm = pCur->data.rResult[j].finalterm;
+                            sStudent.rResult[j].average = pCur->data.rResult[j].average;
+                            sStudent.rResult[j].type = pCur->data.rResult[j].type;
+                            deleteListStudent(cCourse.nStudentHead, cCourse.numStudent);
+                            break;
+                        }
+                        p = p->next;
+                    }
+                }
+                else
+                {
+                    sStudent.rResult[j].type = "None";
+                    sStudent.rResult[j].quiz = -2;
+                }
             }
             deleteListStudent(pHead, n);
             return;
@@ -341,96 +378,14 @@ void checkStudentResult(student &sStudent)
     }
 }
 
-void loadFileResultOfClass(node<student> *&pHead, student &sStudent, int &n)
-{
-    ifstream fin;
-    fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/ResultOf" + sStudent.Class + ".csv");
-    if (fin.is_open())
-    {
-        fin >> n;
-        fin.get();
-        string s;
-        getline(fin, s, ',');
-        getline(fin, sStudent.courseID[0], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[1], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[2], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[3], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[4], '\n');
-        getline(fin, s, ',');
-        getline(fin, sStudent.nameCourse[0], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[1], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[2], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[3], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[4], '\n');
-        node<student> *pCur = nullptr;
-        for (int i = 0; i < n; i++)
-        {
-            if (pHead == nullptr)
-            {
-                pHead = new node<student>;
-                pCur = pHead;
-            }
-            else
-            {
-                pCur->next = new node<student>;
-                pCur = pCur->next;
-            }
-            getline(fin, pCur->data.id, ',');
-            for (int j = 0; j < 5; j++)
-            {
-                fin >> pCur->data.rResult[j].quiz;
-                fin.get();
-                fin >> pCur->data.rResult[j].lab;
-                fin.get();
-                fin >> pCur->data.rResult[j].midterm;
-                fin.get();
-                fin >> pCur->data.rResult[j].finalterm;
-                fin.get();
-            }
-        }
-    }
-    fin.close();
-}
-
 void registerCourse(student &sStudent, Course &cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Registered";
     cCourse.numStudent++;
-    sStudent.rResult[sStudent.courseView].quiz = -1;
-    sStudent.rResult[sStudent.courseView].lab = -1;
-    sStudent.rResult[sStudent.courseView].midterm = -1;
-    sStudent.rResult[sStudent.courseView].finalterm = -1;
     int n;
     node<student> *pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
     updateFileCourseOfClass(sStudent, pHead, n);
-    deleteListStudent(pHead, n);
-    loadFileResultOfClass(pHead, sStudent, n);
-    updateFileResultOfClass(sStudent, pHead, n);
     deleteListStudent(pHead, n);
     updateFileCourse(sStudent, cCourse, true);
 }
@@ -439,17 +394,10 @@ void unregisterCourse(student &sStudent, Course &cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Not Registered";
     cCourse.numStudent--;
-    sStudent.rResult[sStudent.courseView].quiz = -2;
-    sStudent.rResult[sStudent.courseView].lab = -2;
-    sStudent.rResult[sStudent.courseView].midterm = -2;
-    sStudent.rResult[sStudent.courseView].finalterm = -2;
     int n = 3;
     node<student> *pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
     updateFileCourseOfClass(sStudent, pHead, n);
-    deleteListStudent(pHead, n);
-    loadFileResultOfClass(pHead, sStudent, n);
-    updateFileResultOfClass(sStudent, pHead, n);
     deleteListStudent(pHead, n);
     updateFileCourse(sStudent, cCourse, false);
 }
@@ -480,6 +428,9 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
     fout << cCourse.sDay << endl;
     fout << cCourse.sSession[0].weekday << " " << cCourse.sSession[0].sTime << endl;
     fout << cCourse.sSession[1].weekday << " " << cCourse.sSession[1].sTime << endl;
+    fout << cCourse.classAllowed << endl;
+    for (int i = 0;i < cCourse.classAllowed;i++)
+        fout << cCourse.nameClassAllowed[i];
     fout << cCourse.maxStudent << endl
          << cCourse.numStudent << endl;
     if (isRegister == true)
@@ -488,7 +439,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
         {
             for (int i = 0; i < cCourse.numStudent - 1; i++)
             {
-                fout << p->data.Class << " " << p->data.id << endl;
+                fout << p->data.Class << " " << p->data.id << " -1 -1 -1 -1 -1 None" << endl;
                 if (i < cCourse.numStudent - 2)
                     p = p->next;
             }
@@ -502,7 +453,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
         }
         p->data.Class = sStudent.Class;
         p->data.id = sStudent.id;
-        fout << p->data.Class << " " << p->data.id << endl;
+        fout << p->data.Class << " " << p->data.id << " -1 -1 -1 -1 -1 None" << endl;
     }
     else
     {
@@ -521,7 +472,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
                 p->next = p->next->next;
                 delete pDel;
             }
-            fout << p->data.Class << " " << p->data.id << endl;
+            fout << p->data.Class << " " << p->data.id << " -1 -1 -1 -1 -1 None" << endl;
             p = p->next;
         }
     }
@@ -532,7 +483,6 @@ void updateFileCourseOfClass(student &sStudent, node<student> *pHead, int &n)
 {
     ofstream fout;
     fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
-    fout << n << endl;
     fout << "ID";
     for (int i = 0; i < 5; i++)
         fout << "," << sStudent.courseID[i];
@@ -541,6 +491,7 @@ void updateFileCourseOfClass(student &sStudent, node<student> *pHead, int &n)
     for (int i = 0; i < 5; i++)
         fout << "," << sStudent.nameCourse[i];
     node<student> *pCur = pHead;
+    fout << n << endl;
     for (int i = 0; i < n; i++)
     {
         if (pCur->data.id == sStudent.id)
@@ -640,7 +591,7 @@ void createSchoolYear(short& numSchoolYear)
     {
         string className;
         getline(fin, className);
-        if (stoi(className.substr(0, 2)) >= 2020 - 2000 + numSchoolYear - 4)
+        if (stoi(className.substr(0, 2)) >= 2020 - 2000 + numSchoolYear - 3)
         {
             fout << className << "\n";
             numClassNewYear++;
@@ -650,4 +601,104 @@ void createSchoolYear(short& numSchoolYear)
     fout << numClassNewYear;
     fin.close();
     fout.close();
+
+    fin.open("../data/" + newYear + "/Classes.txt");
+    fin >> n;
+    node<string>*pClass = new node<string>;
+    node<string>* cur = pClass;
+    fin.get();
+    for (int i = 0; i < n; i++)
+    {
+        cur->next = new node<string>;
+        getline(fin, cur->next->data);
+        cur = cur->next;
+    }
+    cur = pClass;
+    pClass = pClass->next;
+    delete cur;
+    fin.close();
+    for (int i = 1; i <= 3; i++)
+    {
+        string filename = "../data/" + newYear + "/HK" + to_string(i);
+        _mkdir((filename).c_str());
+        fout.open(filename + "/Courses.txt");
+        fout << 0 << "\n";
+        fout.close();
+        cur = pClass;
+        for (int i = 0; i < n; i++)
+        {
+            fout.open(filename + "/CourseOf" + cur->data + ".txt");
+            fout << "ID,none,none,none,none,none\nID,none,none,none,none,none\n";
+            fout.close();
+            cur = cur->next;
+        }
+    }
+    // Dealloc pClass
+    cur = pClass;
+    while (cur)
+    {
+        node<string>* temp = cur;
+        cur = cur->next;
+        delete temp;
+    }
+}
+
+void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)
+{
+    dummy--;
+    ofstream fout("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+    fout << dummy << "\n";
+    for (int i = 0; i < dummy; i++)
+    {
+        if (i >= sStudent.courseView)
+            name[i] = name[i + 1];
+        fout << name[i] + "\n";
+    }
+    fout.close();
+    string s[5], s1[5];
+    ifstream fin;
+    for (int i = 0;i < cCourse.classAllowed;i++)
+    {
+        string str;
+        fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + cCourse.nameClassAllowed[i] + ".csv");
+        getline(fin, str, ',');
+        for (int j = 0;j < 5;j++)
+        {
+            if (j == 4) getline(fin, s[j], '\n');
+            else getline(fin, s[j], ',');
+            if (s[j] == cCourse.ID)
+            {
+                for (int k = j;k < 4;k++)
+                {
+                    if (k == 3) getline(fin, s[k + 1], '\n');
+                    else getline(fin, s[k + 1], ',');
+                    s[k] = s[k + 1];
+                }
+                s[4] = "none";
+                getline(fin, str, ',');
+                for (int k = 0;k < j + 1;k++)
+                    getline(fin, s1[k], ',');
+                for (int k = j;k < 4;k++)
+                {
+                    if (k == 3) getline(fin, s1[k + 1], '\n');
+                    else getline(fin, s1[k + 1], ',');
+                    s1[k] = s1[k + 1];
+                }
+                s1[4] = "none";
+                break;
+            }
+        }
+        fin.close();
+        fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + cCourse.nameClassAllowed[i] + ".csv");
+        fout << "ID,";
+        for (int j = 0;j < 4;j++)
+            fout << s[j] << ',';
+        fout << s[4] << endl << "ID,";
+        for (int j = 0;j < 4;j++)
+            fout << s1[j] << ',';
+        fout << s1[4] << endl;
+        fout.close();
+    }
+
+    int k = remove(("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/" + cCourse.ID + ".txt").c_str());
 }
