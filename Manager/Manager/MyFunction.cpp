@@ -1,6 +1,5 @@
 #include "../include/MyFunction.h"
 
-#include <direct.h>
 #include <stdio.h>
 
 void loadFileStaff(node<user> *&pHead, int &n)
@@ -225,8 +224,6 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
     fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
     if (fin.is_open())
     {
-        fin >> n;
-        fin.get();
 
         string s;
         getline(fin, s, ',');
@@ -242,6 +239,8 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
         getline(fin, sStudent.nameCourse[3], ',');
         getline(fin, sStudent.nameCourse[4], '\n');
         node<student> *pCur = nullptr;
+        fin >> n;
+        fin.get();
         for (int i = 0; i < n; i++)
         {
             if (pHead == nullptr)
@@ -277,6 +276,10 @@ void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
     getline(fin, cCourse.sSession[0].sTime, '\n');
     getline(fin, cCourse.sSession[1].weekday, ' ');
     getline(fin, cCourse.sSession[1].sTime, '\n');
+    fin >> cCourse.classAllowed;
+    fin.get();
+    for (int i = 0; i < cCourse.classAllowed; i++)
+        getline(fin, cCourse.nameClassAllowed[i], '\n');
     fin >> cCourse.maxStudent;
     fin.get();
     fin >> cCourse.numStudent;
@@ -375,81 +378,6 @@ void checkStudentResult(student &sStudent, Course& cCourse)
     }
 }
 
-void loadFileResultOfClass(node<student> *&pHead, student &sStudent, int &n)
-{
-    ifstream fin;
-    fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/ResultOf" + sStudent.Class + ".csv");
-    if (fin.is_open())
-    {
-        fin >> n;
-        fin.get();
-        string s;
-        getline(fin, s, ',');
-        getline(fin, sStudent.courseID[0], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[1], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[2], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[3], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.courseID[4], '\n');
-        getline(fin, s, ',');
-        getline(fin, sStudent.nameCourse[0], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[1], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[2], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[3], ',');
-        fin.get();
-        fin.get();
-        fin.get();
-        getline(fin, sStudent.nameCourse[4], '\n');
-        node<student> *pCur = nullptr;
-        for (int i = 0; i < n; i++)
-        {
-            if (pHead == nullptr)
-            {
-                pHead = new node<student>;
-                pCur = pHead;
-            }
-            else
-            {
-                pCur->next = new node<student>;
-                pCur = pCur->next;
-            }
-            getline(fin, pCur->data.id, ',');
-            for (int j = 0; j < 5; j++)
-            {
-                fin >> pCur->data.rResult[j].quiz;
-                fin.get();
-                fin >> pCur->data.rResult[j].lab;
-                fin.get();
-                fin >> pCur->data.rResult[j].midterm;
-                fin.get();
-                fin >> pCur->data.rResult[j].finalterm;
-                fin.get();
-            }
-        }
-    }
-    fin.close();
-}
-
 void registerCourse(student &sStudent, Course &cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Registered";
@@ -500,6 +428,9 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
     fout << cCourse.sDay << endl;
     fout << cCourse.sSession[0].weekday << " " << cCourse.sSession[0].sTime << endl;
     fout << cCourse.sSession[1].weekday << " " << cCourse.sSession[1].sTime << endl;
+    fout << cCourse.classAllowed << endl;
+    for (int i = 0;i < cCourse.classAllowed;i++)
+        fout << cCourse.nameClassAllowed[i];
     fout << cCourse.maxStudent << endl
          << cCourse.numStudent << endl;
     if (isRegister == true)
@@ -552,7 +483,6 @@ void updateFileCourseOfClass(student &sStudent, node<student> *pHead, int &n)
 {
     ofstream fout;
     fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
-    fout << n << endl;
     fout << "ID";
     for (int i = 0; i < 5; i++)
         fout << "," << sStudent.courseID[i];
@@ -561,6 +491,7 @@ void updateFileCourseOfClass(student &sStudent, node<student> *pHead, int &n)
     for (int i = 0; i < 5; i++)
         fout << "," << sStudent.nameCourse[i];
     node<student> *pCur = pHead;
+    fout << n << endl;
     for (int i = 0; i < n; i++)
     {
         if (pCur->data.id == sStudent.id)
@@ -697,7 +628,7 @@ void createSchoolYear(short& numSchoolYear)
         for (int i = 0; i < n; i++)
         {
             fout.open(filename + "/CourseOf" + cur->data + ".txt");
-            fout << "none,none,none,none,none\n";
+            fout << "none,none,none,none,none\nnone,none,none,none,none\n";
             fout.close();
             cur = cur->next;
         }
@@ -724,6 +655,46 @@ void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)
         fout << name[i] + "\n";
     }
     fout.close();
+    string s[5], s1[5];
+    ifstream fin;
+    for (int i = 0;i < cCourse.classAllowed;i++)
+    {
+        fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + cCourse.nameClassAllowed[i] + ".csv");
+        for (int j = 0;j < 5;j++)
+        {
+            if (j == 4) getline(fin, s[j], '\n');
+            else getline(fin, s[j], ',');
+            if (s[j] == cCourse.ID)
+            {
+                for (int k = j;k < 4;k++)
+                {
+                    if (k == 3) getline(fin, s[k + 1], '\n');
+                    else getline(fin, s[k + 1], ',');
+                    s[k] = s[k + 1];
+                }
+                s[4] = "none";
+                for (int k = 0;k < j + 1;k++)
+                    getline(fin, s1[k], ',');
+                for (int k = j;k < 4;k++)
+                {
+                    if (k == 3) getline(fin, s1[k + 1], '\n');
+                    else getline(fin, s1[k + 1], ',');
+                    s1[k] = s1[k + 1];
+                }
+                s1[4] = "none";
+                break;
+            }
+        }
+        fin.close();
+        fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + cCourse.nameClassAllowed[i] + ".csv");
+        for (int j = 0;j < 4;j++)
+            fout << s[j] << ',';
+        fout << s[4] << endl;
+        for (int j = 0;j < 4;j++)
+            fout << s1[j] << ',';
+        fout << s1[4] << endl;
+        fout.close();
+    }
 
     int k = remove(("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/" + cCourse.ID + ".txt").c_str());
 }

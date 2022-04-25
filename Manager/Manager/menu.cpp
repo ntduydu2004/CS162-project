@@ -1,9 +1,6 @@
 #include "../include/menu.h"
-#include "../include/MyFunction.h"
-#include <fstream>
-#include <cstring>
-#include <direct.h>
-const int currentSchoolYear = 2021;
+
+
 void chooseRoleMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, short &role, Rectangle rec_Role[])
 {
 
@@ -561,7 +558,7 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
             else
                 menu = 22;
         }
-        if (CheckCollisionPointRec(mousePosition, { 750, 285, 280, 50 }))
+        if (role == -1 && CheckCollisionPointRec(mousePosition, { 750, 285, 280, 50 }))
         {
             indexMouse = 2;
             if (IsMouseButtonPressed(0))
@@ -593,7 +590,9 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
     DrawRectangle(rec_detailOfCourseMenu[0].x, rec_detailOfCourseMenu[0].y, rec_detailOfCourseMenu[0].width, rec_detailOfCourseMenu[0].height, LIGHTGRAY);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
     DrawText(TextFormat("Registered: %i / %i", cCourse.numStudent, cCourse.maxStudent), 70, 300, 25, BLACK);
-    DrawRectangleLines(rec_detailOfCourseMenu[indexMouse].x, rec_detailOfCourseMenu[indexMouse].y, rec_detailOfCourseMenu[indexMouse].width, rec_detailOfCourseMenu[indexMouse].height, BLACK);
+    DrawText("Class", 200, 350, 30, BLACK);
+    for (int i = 0;i < cCourse.classAllowed;i++)
+        DrawText(cCourse.nameClassAllowed[i].c_str(), 400 + (i % 4) * 100, 350 + (i / 4) * 50, 30, DARKBLUE);DrawRectangleLines(rec_detailOfCourseMenu[indexMouse].x, rec_detailOfCourseMenu[indexMouse].y, rec_detailOfCourseMenu[indexMouse].width, rec_detailOfCourseMenu[indexMouse].height, BLACK);
     if (role == 0)
     {
         if (sStudent.isRegistered[sStudent.courseView] == "Registered")
@@ -845,7 +844,8 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                             getline(fin, s, ' ');
                             fin >> n;
                             while (fin.get() != '\n');
-                            for (int j = 0; j < n + 1; j++)
+                            while (fin.get() != '\n');
+                            for (int j = 0; j < n; j++)
                             {
                                 if (pHead == nullptr)
                                 {
@@ -857,7 +857,6 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                                     pCur->next = new node<student>;
                                     pCur = pCur->next;
                                 }
-                                pCur->data.Class = name[dummy + 1];
                                 getline(fin, pCur->data.id, ',');
                                 getline(fin, pCur->data.fullname, ',');
                                 getline(fin, pCur->data.gender, ',');
@@ -871,7 +870,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                         fout.open("../data/detailofeachclass/" + name[dummy + i] + ".csv");
                         fout << n << '\n';
                         fout << "ID,Full Name,Gender,Birthday,Email\n";
-                        node<student>* p = pHead->next;
+                        node<student>* p = pHead;
                         while (p)
                         {
                             fout << p->data.id << ',' << p->data.fullname << ',' << p->data.gender << ','
@@ -882,7 +881,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                         node<student>* p2 = nullptr;
                         loadFileStudent(p2, n);
                         pCur = p2;
-                        for (int i = 0;i < n - 1;i++)
+                        for (int j = 0;j < n - 1;j++)
                             pCur = pCur->next;
                         if (p2)
                         {
@@ -894,9 +893,10 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                             p2 = pHead;
                             pCur = p2;
                         }
-                        for (int i = 0;i < add;i++)
+                        for (int j = 0;j < add;j++)
                         {
-                            pCur->data.password = 1;
+                            pCur->data.Class = name[dummy + i];
+                            pCur->data.password = '1';
                             pCur = pCur->next;
                         }
                         updateFileStudent(p2, n + add);
@@ -904,7 +904,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                         for (int j = 1;j < 4;j++)
                         {
                             fout.open("../data/" + sStudent.schoolYear + "/HK" + to_string(j) + "/CourseOf" + name[dummy + i] + ".csv");
-                            fout << "none,none,none,none,none" << endl;
+                            fout << "none,none,none,none,none" << endl << "none,none,none,none,none" << endl;
                             fout.close();
                         }
                     }
@@ -1187,6 +1187,10 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
             rec_listClass[51].x = 5;
             rec_listClass[51].width = 60;
             rec_listClass[51].height = 60;
+            rec_listClass[52].y = 10;
+            rec_listClass[52].x = 50;
+            rec_listClass[52].width = 230;
+            rec_listClass[52].height = 40;
             if (indexMouse == 51)
             {
                 if (ClassOrCourse == 1)
@@ -1199,7 +1203,32 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
                 if (ClassOrCourse == 1)
                     menu = 12;
                 else
+                {
+                    cCourse.ID = "";
+                    cCourse.name = "";
+                    cCourse.lecturer = "";
+                    cCourse.maxStudent = 0;
+                    cCourse.startDay.day = -1;
+                    cCourse.startDay.month = -1;
+                    cCourse.startDay.year = -1;
+                    cCourse.endDay.day = -1;
+                    cCourse.endDay.month = -1;
+                    cCourse.endDay.year = -1;
+                    cCourse.sDay = "";
+                    cCourse.sSession[0].weekday = "";
+                    cCourse.sSession[0].tTimeStart.hour = -1;
+                    cCourse.sSession[0].tTimeStart.min = -1;
+                    cCourse.sSession[0].tTimeEnd.hour = -1;
+                    cCourse.sSession[0].tTimeEnd.min = -1;
+                    cCourse.sSession[0].sTime = "";
+                    cCourse.sSession[1].weekday = "";
+                    cCourse.sSession[1].tTimeStart.hour = -1;
+                    cCourse.sSession[1].tTimeStart.min = -1;
+                    cCourse.sSession[1].tTimeEnd.hour = -1;
+                    cCourse.sSession[1].tTimeEnd.min = -1;
+                    cCourse.sSession[1].sTime = "";
                     menu = 14; // Add a Course Menu
+                }
             }
             else
             {
@@ -1280,6 +1309,10 @@ void viewClassProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short 
             rec_listClass[51].x = 5;
             rec_listClass[51].width = 60;
             rec_listClass[51].height = 60;
+            rec_listClass[52].y = 10;
+            rec_listClass[52].x = 50;
+            rec_listClass[52].width = 230;
+            rec_listClass[52].height = 40;
             if (ClassOrCourse == 1)
             {
                 deleteListStudent(cCourse.nStudentHead, cCourse.numStudent + 1);
@@ -1426,7 +1459,6 @@ void exportFileMenu(Vector2& mousePosition, Vector2& touchPosition, short& index
     DrawText(path, rec_exportFile[0].x + 15, rec_exportFile[0].y + 15, 30, DARKBLUE);
     EndDrawing();
 }
-}
 
 void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStudent, Course& cCourse, short& indexMouse, short& indexTouch,
     short& menu, Rectangle rec_addCourseMenu[], string name[], bool isChosen[], int& dummy, short& ClassOrCourse, string& dateInput)
@@ -1533,7 +1565,14 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
                 name[i] = "";
                 isChosen[i] = false;
             }
-            dummy = 0;
+
+            ifstream fin;
+            fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+            fin >> dummy;
+            fin.get();
+            for (int i = 0; i < dummy; i++)
+                getline(fin, name[i], '\n');
+            fin.close();
 
             dateInput = "";
             cCourse.ID = "";
@@ -1573,34 +1612,63 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
             cCourse.sSession[1].getSTime();
             fout << cCourse.sSession[0].sTime << endl;
             fout << cCourse.sSession[1].sTime << endl;
+            cCourse.classAllowed = 0;
+            for (int i = 0;i < dummy;i++)
+                if (isChosen[i])
+                    cCourse.classAllowed++;
+            fout << cCourse.classAllowed << endl;
+            for (int i = 0;i < dummy;i++)
+                if (isChosen[i])
+                    fout << name[i] << endl;
             fout << cCourse.maxStudent << endl
-                << cCourse.numStudent << endl;
+                << 0 << endl;
             fout.close();
             for (int i = 0; i < dummy; i++)
                 if (isChosen[i])
                 {
-                    string filename = "../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + name[i] + ".txt";
+                    string filename = "../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + name[i] + ".csv";
                     ifstream fin(filename);
-                    string temp[5];
-                    for (int i = 0; i < 5; i++)
+                    string temp1[5], temp2[5];
+                    for (int j = 0; j < 5; j++)
                     {
-                        getline(fin, temp[i], ',');
-                        //fin.get();
-                        if (temp[i] == "none")
+                        if (j == 4) getline(fin, temp1[j], '\n');
+                        else getline(fin, temp1[j], ',');
+                        if (temp1[j] == "none")
                         {
-                            temp[i] = cCourse.ID;
+                            temp1[j] = cCourse.ID;
+                            break;
+                        }
+                    }
+                    if (temp1[4] == "") getline(fin, temp2[0], '\n');
+                    for (int j = 0;j < 5;j++)
+                    {
+                        if (j == 4) getline(fin, temp2[j], '\n');
+                        else getline(fin, temp2[j], ',');
+                        if (temp2[j] == "none")
+                        {
+                            temp2[j] = cCourse.name;
                             break;
                         }
                     }
                     fin.close();
                     ofstream fout(filename);
-                    for (int i = 0; i < 4; i++)
-                        if (temp[i] != "")
-                            fout << temp[i] << ",";
+                    for (int j = 0; j < 4; j++)
+                        if (temp1[j] != "")
+                            fout << temp1[j] << ",";
                         else
                             fout << "none,";
-                    if (temp[4] != "")
-                        fout << temp[4] << ",";
+                    if (temp1[4] != "")
+                        fout << temp1[4] << "\n";
+                    else
+                        fout << "none\n";
+
+                    for (int j = 0; j < 4; j++)
+                        if (temp2[j] != "")
+                            fout << temp2[j] << ",";
+                        else
+                            fout << "none,";
+                    if (temp2[4] != "")
+                        fout << temp2[4] << "\n";
                     else
                         fout << "none\n";
                     fout.close();
@@ -1612,7 +1680,28 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
                 name[i] = "";
                 isChosen[i] = false;
             }
-            dummy = 0;
+            ifstream fin;
+            fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+            fin >> dummy;
+            fin.get();
+            for (int i = 0; i < dummy; i++)
+                getline(fin, name[i], '\n');
+            fin.close();
+
+            name[dummy] = cCourse.ID;
+            dummy++;
+            fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+            fout << dummy << endl;
+            for (int i = 0;i < dummy;i++)
+                fout << name[i] << endl;
+            fout.close();
+
+            fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+            fin >> dummy;
+            fin.get();
+            for (int i = 0; i < dummy; i++)
+                getline(fin, name[i], '\n');
+            fin.close();
 
             dateInput = "";
             cCourse.ID = "";
@@ -2099,7 +2188,7 @@ void chooseClass(Vector2& mousePosition, Vector2& touchPosition, student& sStude
             DrawText(name[i].c_str(), rec_chooseClass[i].x + 5, rec_chooseClass[i].y + 5, 30, BLACK);
         }
     }
-    DrawText(" << ", rec_chooseClass[15].x + 5, rec_chooseClass[15].y + 3, 30, RED);
+    DrawText("<<", 15, 280, 50, RED);
     for (int i = 0; i < dummy; i++)
     {
         if (CheckCollisionPointRec(mousePosition, rec_chooseClass[i]))
@@ -2121,15 +2210,11 @@ void chooseClass(Vector2& mousePosition, Vector2& touchPosition, student& sStude
     if (IsMouseButtonPressed(0))
     {
         if (CheckCollisionPointRec(mousePosition, rec_chooseClass[15]))
-        {
             menu = 14;
-        }
         else
         {
             if (isChosen[indexMouse] == false)
-            {
                 isChosen[indexMouse] = true;
-            }
             else
                 isChosen[indexMouse] = false;
         }

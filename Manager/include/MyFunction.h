@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <direct.h>
 using namespace std;
-
 template <class T>
 struct node
 {
@@ -147,7 +147,8 @@ struct Course
     string name;
     session sSession[2];
     string lecturer;
-    int maxStudent = 0, numStudent = 0;
+    int maxStudent = 0, numStudent = 0, classAllowed = 0;
+    string nameClassAllowed[10];
     date startDay, endDay;
     string sDay;
     node<student> *nStudentHead = nullptr;
@@ -156,37 +157,31 @@ struct Course
         sDay = "";
         string strDay, strMonth, strYear;
 
-        if (startDay.day > 9)
+        if (startDay.day > 9 || startDay.day < 0)
             strDay = to_string(startDay.day);
         else
             strDay = "0" + to_string(startDay.day);
 
-        if (startDay.month > 9)
+        if (startDay.month > 9 || startDay.day < 0)
             strMonth = to_string(startDay.month);
         else
             strMonth = "0" + to_string(startDay.month);
 
-        if (startDay.year > 9)
-            strYear = to_string(startDay.year);
-        else
-            strYear = "0" + to_string(startDay.year);
+        strYear = to_string(startDay.year);
 
         sDay += strDay + "/" + strMonth + "/" + strYear + " - ";
 
-        if (endDay.day > 9)
+        if (endDay.day > 9 || endDay.day < 0)
             strDay = to_string(endDay.day);
         else
             strDay = "0" + to_string(endDay.day);
 
-        if (endDay.month > 9)
+        if (endDay.month > 9 || endDay.month < 0)
             strMonth = to_string(endDay.month);
         else
             strMonth = "0" + to_string(endDay.month);
 
-        if (endDay.year > 9)
-            strYear = to_string(endDay.year);
-        else
-            strYear = "0" + to_string(endDay.year);
+        strYear = to_string(endDay.year);
 
         sDay += strDay + "/" + strMonth + "/" + strYear;
     }
