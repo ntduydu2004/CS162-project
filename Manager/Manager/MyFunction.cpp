@@ -628,7 +628,7 @@ void createSchoolYear(short& numSchoolYear)
         for (int i = 0; i < n; i++)
         {
             fout.open(filename + "/CourseOf" + cur->data + ".txt");
-            fout << "none,none,none,none,none\nnone,none,none,none,none\n";
+            fout << "ID,none,none,none,none,none\nID,none,none,none,none,none\n";
             fout.close();
             cur = cur->next;
         }
@@ -659,7 +659,9 @@ void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)
     ifstream fin;
     for (int i = 0;i < cCourse.classAllowed;i++)
     {
+        string str;
         fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + cCourse.nameClassAllowed[i] + ".csv");
+        getline(fin, str, ',');
         for (int j = 0;j < 5;j++)
         {
             if (j == 4) getline(fin, s[j], '\n');
@@ -673,6 +675,7 @@ void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)
                     s[k] = s[k + 1];
                 }
                 s[4] = "none";
+                getline(fin, str, ',');
                 for (int k = 0;k < j + 1;k++)
                     getline(fin, s1[k], ',');
                 for (int k = j;k < 4;k++)
@@ -687,9 +690,10 @@ void RemoveCourse(student& sStudent, Course& cCourse, string name[], int& dummy)
         }
         fin.close();
         fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + cCourse.nameClassAllowed[i] + ".csv");
+        fout << "ID,";
         for (int j = 0;j < 4;j++)
             fout << s[j] << ',';
-        fout << s[4] << endl;
+        fout << s[4] << endl << "ID,";
         for (int j = 0;j < 4;j++)
             fout << s1[j] << ',';
         fout << s1[4] << endl;

@@ -904,7 +904,7 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                         for (int j = 1;j < 4;j++)
                         {
                             fout.open("../data/" + sStudent.schoolYear + "/HK" + to_string(j) + "/CourseOf" + name[dummy + i] + ".csv");
-                            fout << "none,none,none,none,none" << endl << "none,none,none,none,none" << endl;
+                            fout << "ID,none,none,none,none,none" << endl << "ID,none,none,none,none,none" << endl;
                             fout.close();
                         }
                     }
@@ -1189,7 +1189,7 @@ void viewListClassOrCourse(Vector2 &mousePosition, Vector2 &touchPosition, stude
             rec_listClass[51].height = 60;
             rec_listClass[52].y = 10;
             rec_listClass[52].x = 50;
-            rec_listClass[52].width = 230;
+            rec_listClass[52].width = 180;
             rec_listClass[52].height = 40;
             if (indexMouse == 51)
             {
@@ -1280,7 +1280,7 @@ void viewClassProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short 
     indexMouse = -1;
     if (CheckCollisionPointRec(mousePosition, rec_listClass[51]))
         indexMouse = 51;
-    if (ClassOrCourse == 0 && CheckCollisionPointRec(mousePosition, rec_listClass[51]))
+    if (ClassOrCourse == 0 && CheckCollisionPointRec(mousePosition, rec_listClass[52]))
         indexMouse = 52;
     for (int i = 0; i <= cCourse.numStudent; i++)
     {
@@ -1311,7 +1311,7 @@ void viewClassProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short 
             rec_listClass[51].height = 60;
             rec_listClass[52].y = 10;
             rec_listClass[52].x = 50;
-            rec_listClass[52].width = 230;
+            rec_listClass[52].width = 180;
             rec_listClass[52].height = 40;
             if (ClassOrCourse == 1)
             {
@@ -1355,7 +1355,7 @@ void viewClassProfileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short 
     else
     {
         DrawRectangle(rec_listClass[52].x, rec_listClass[52].y, rec_listClass[52].width, rec_listClass[52].height, GREEN);
-        DrawText("Add result", rec_listClass[52].x + 10, rec_listClass[52].y + 10, 25, WHITE);DrawRectangle(rec_listClass[52].x, rec_listClass[52].y, rec_listClass[52].width, rec_listClass[52].height, GREEN);
+        DrawText("Add result", rec_listClass[52].x + 10, rec_listClass[52].y + 10, 25, WHITE);
         DrawRectangle(rec_listClass[52].x + 490, rec_listClass[52].y, rec_listClass[52].width, rec_listClass[52].height, GREEN);
         DrawText("Export File", rec_listClass[52].x + 500, rec_listClass[52].y + 10, 25, WHITE);
         DrawText("Class", 75, rec_listClass[0].y + 12, 25, BLACK);
@@ -1629,6 +1629,7 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
                     string filename = "../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + name[i] + ".csv";
                     ifstream fin(filename);
                     string temp1[5], temp2[5];
+                    getline(fin, temp1[0], ',');
                     for (int j = 0; j < 5; j++)
                     {
                         if (j == 4) getline(fin, temp1[j], '\n');
@@ -1640,6 +1641,7 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
                         }
                     }
                     if (temp1[4] == "") getline(fin, temp2[0], '\n');
+                    getline(fin, temp2[0], ',');
                     for (int j = 0;j < 5;j++)
                     {
                         if (j == 4) getline(fin, temp2[j], '\n');
@@ -1652,15 +1654,16 @@ void addCourseMenu(Vector2& mousePosition, Vector2& touchPosition, student& sStu
                     }
                     fin.close();
                     ofstream fout(filename);
+                    fout << "ID,";
                     for (int j = 0; j < 4; j++)
                         if (temp1[j] != "")
                             fout << temp1[j] << ",";
                         else
                             fout << "none,";
                     if (temp1[4] != "")
-                        fout << temp1[4] << "\n";
+                        fout << temp1[4] << "\nID,";
                     else
-                        fout << "none\n";
+                        fout << "none\nID,";
 
                     for (int j = 0; j < 4; j++)
                         if (temp2[j] != "")

@@ -118,7 +118,7 @@ int main()
     rec_listClass[51].height = 60;
     rec_listClass[52].y = 10;
     rec_listClass[52].x = 50;
-    rec_listClass[52].width = 230;
+    rec_listClass[52].width = 180;
     rec_listClass[52].height = 40;
 
     Rectangle rec_exportFile[]
