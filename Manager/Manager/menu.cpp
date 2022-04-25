@@ -1720,12 +1720,19 @@ void addCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, student &sStu
                 getline(fin, name[i], '\n');
             fin.close();
 
-            name[dummy] = cCourse.ID;
-            dummy++;
-            fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
-            fout << dummy << endl;
+            bool flag = true;
             for (int i = 0; i < dummy; i++)
-                fout << name[i] << endl;
+                if (cCourse.ID == name[i])
+                    flag = false;
+            if (flag)
+            {
+                name[dummy] = cCourse.ID;
+                dummy++;
+                fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
+                fout << dummy << endl;
+                for (int i = 0; i < dummy; i++)
+                    fout << name[i] << endl;
+            }
             fout.close();
 
             fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/Courses.txt");
