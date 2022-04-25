@@ -1,0 +1,10 @@
+.vscode
+.vs
+x64
+Debug
+
+
+*.log
+*.tlog
+*.idb
+*.pdb
