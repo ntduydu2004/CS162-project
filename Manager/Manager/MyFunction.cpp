@@ -2,13 +2,13 @@
 
 #include <stdio.h>
 
-void loadFileStaff(node<user> *&pHead, int &n)
+void loadFileStaff(node<user>*& pHead, int& n)
 {
     ifstream fin;
     fin.open("../data/listofstaff.txt");
     fin >> n;
     fin.get();
-    node<user> *pCur = nullptr;
+    node<user>* pCur = nullptr;
     for (int i = 0; i < n; i++)
     {
         if (pHead == nullptr)
@@ -27,22 +27,22 @@ void loadFileStaff(node<user> *&pHead, int &n)
     fin.close();
 }
 
-void deleteListStaff(node<user> *&pHead, int n)
+void deleteListStaff(node<user>*& pHead, int n)
 {
     for (int i = 0; i < n; i++)
     {
-        node<user> *pDel = pHead;
+        node<user>* pDel = pHead;
         pHead = pHead->next;
         delete pDel;
     }
 }
 
-bool checkStafflogin(user &uStaff)
+bool checkStafflogin(user& uStaff)
 {
-    node<user> *pHead = nullptr;
+    node<user>* pHead = nullptr;
     int n = 0;
     loadFileStaff(pHead, n);
-    node<user> *pCur = pHead;
+    node<user>* pCur = pHead;
     for (int i = 0; i < n; i++)
     {
         if (pCur->data.id == uStaff.id && pCur->data.password == uStaff.password)
@@ -57,13 +57,13 @@ bool checkStafflogin(user &uStaff)
     return false;
 }
 
-void loadFileStudent(node<student> *&pHead, int &n)
+void loadFileStudent(node<student>*& pHead, int& n)
 {
     ifstream fin;
     fin.open("../data/listofstudent.txt");
     fin >> n;
     fin.get();
-    node<student> *pCur = nullptr;
+    node<student>* pCur = nullptr;
     for (int i = 0; i < n; i++)
     {
         if (pHead == nullptr)
@@ -83,22 +83,22 @@ void loadFileStudent(node<student> *&pHead, int &n)
     fin.close();
 }
 
-void deleteListStudent(node<student> *&pHead, int n)
+void deleteListStudent(node<student>*& pHead, int n)
 {
     for (int i = 0; i < n; i++)
     {
-        node<student> *pDel = pHead;
+        node<student>* pDel = pHead;
         pHead = pHead->next;
         delete pDel;
     }
 }
 
-bool checkStudentLogin(student &sStudent)
+bool checkStudentLogin(student& sStudent)
 {
-    node<student> *pHead = nullptr;
+    node<student>* pHead = nullptr;
     int n = 0;
     loadFileStudent(pHead, n);
-    node<student> *pCur = pHead;
+    node<student>* pCur = pHead;
     for (int i = 0; i < n; i++)
     {
         if (pCur->data.id == sStudent.id && pCur->data.password == sStudent.password)
@@ -114,7 +114,7 @@ bool checkStudentLogin(student &sStudent)
     deleteListStudent(pHead, n);
     return false;
 }
-void loadFileDetailOfStaff(node<user> *&pHead, int &n)
+void loadFileDetailOfStaff(node<user>*& pHead, int& n)
 {
     ifstream fin;
     fin.open("../data/DetailOfStaff.csv");
@@ -122,7 +122,7 @@ void loadFileDetailOfStaff(node<user> *&pHead, int &n)
     {
         fin >> n;
         fin.get();
-        node<user> *pCur = nullptr;
+        node<user>* pCur = nullptr;
         for (int i = 0; i < n + 1; i++)
         {
             if (pHead == nullptr)
@@ -145,15 +145,15 @@ void loadFileDetailOfStaff(node<user> *&pHead, int &n)
     fin.close();
 }
 
-void loadFileClass(node<student> *&pHead, string className, int &n)
+void loadFileClass(node<student>*& pHead, string className, int& n)
 {
     ifstream fin;
     fin.open("../data/detailofeachclass/" + className + ".csv");
     if (fin.is_open())
     {
         fin >> n;
-        while(fin.get() != '\n');
-        node<student> *pCur = nullptr;
+        while (fin.get() != '\n');
+        node<student>* pCur = nullptr;
         for (int i = 0; i < n + 1; i++)
         {
             if (pHead == nullptr)
@@ -176,12 +176,12 @@ void loadFileClass(node<student> *&pHead, string className, int &n)
     fin.close();
 }
 
-void detailOfStaff(user &uStaff)
+void detailOfStaff(user& uStaff)
 {
-    node<user> *pHead = nullptr;
+    node<user>* pHead = nullptr;
     int n;
     loadFileDetailOfStaff(pHead, n);
-    node<user> *pCur = pHead;
+    node<user>* pCur = pHead;
     for (int i = 0; i < n + 1; i++)
     {
         if (uStaff.id == pCur->data.id)
@@ -197,12 +197,12 @@ void detailOfStaff(user &uStaff)
     }
 }
 
-void detailOfStudent(student &sStudent)
+void detailOfStudent(student& sStudent)
 {
-    node<student> *pHead = nullptr;
+    node<student>* pHead = nullptr;
     int n;
     loadFileClass(pHead, sStudent.Class, n);
-    node<student> *pCur = pHead;
+    node<student>* pCur = pHead;
     for (int i = 0; i < n + 1; i++)
     {
         if (sStudent.id == pCur->data.id)
@@ -218,7 +218,7 @@ void detailOfStudent(student &sStudent)
     }
 }
 
-void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
+void loadFileCourseOfClass(node<student>*& pHead, student& sStudent, int& n)
 {
     ifstream fin;
     fin.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
@@ -238,7 +238,7 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
         getline(fin, sStudent.nameCourse[2], ',');
         getline(fin, sStudent.nameCourse[3], ',');
         getline(fin, sStudent.nameCourse[4], '\n');
-        node<student> *pCur = nullptr;
+        node<student>* pCur = nullptr;
         fin >> n;
         fin.get();
         for (int i = 0; i < n; i++)
@@ -264,7 +264,7 @@ void loadFileCourseOfClass(node<student> *&pHead, student &sStudent, int &n)
     fin.close();
 }
 
-void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
+void loadFileCourse(string courseID, Course& cCourse, student& sStudent)
 {
     cCourse.ID = courseID;
     ifstream fin;
@@ -284,7 +284,7 @@ void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
     fin.get();
     fin >> cCourse.numStudent;
     fin.get();
-    node<student> *nStudentCur = nullptr;
+    node<student>* nStudentCur = nullptr;
     for (int i = 0; i < cCourse.numStudent; i++)
     {
         if (cCourse.nStudentHead == nullptr)
@@ -314,12 +314,12 @@ void loadFileCourse(string courseID, Course &cCourse, student &sStudent)
     fin.close();
 }
 
-void checkStudentCourse(student &sStudent)
+void checkStudentCourse(student& sStudent)
 {
     int n = 0;
-    node<student> *pHead = nullptr;
+    node<student>* pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
-    node<student> *pCur = pHead;
+    node<student>* pCur = pHead;
     for (int i = 0; i < n; i++)
     {
         if (sStudent.id == pCur->data.id)
@@ -332,12 +332,12 @@ void checkStudentCourse(student &sStudent)
         pCur = pCur->next;
     }
 }
-void checkStudentResult(student &sStudent, Course& cCourse)
+void checkStudentResult(student& sStudent, Course& cCourse)
 {
     int n = 0;
-    node<student> *pHead = nullptr;
+    node<student>* pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
-    node<student> *pCur = pHead;
+    node<student>* pCur = pHead;
     for (int i = 0; i < n; i++)
     {
         if (sStudent.id == pCur->data.id)
@@ -378,31 +378,31 @@ void checkStudentResult(student &sStudent, Course& cCourse)
     }
 }
 
-void registerCourse(student &sStudent, Course &cCourse)
+void registerCourse(student& sStudent, Course& cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Registered";
     cCourse.numStudent++;
     int n;
-    node<student> *pHead = nullptr;
+    node<student>* pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
     updateFileCourseOfClass(sStudent, pHead, n);
     deleteListStudent(pHead, n);
     updateFileCourse(sStudent, cCourse, true);
 }
 
-void unregisterCourse(student &sStudent, Course &cCourse)
+void unregisterCourse(student& sStudent, Course& cCourse)
 {
     sStudent.isRegistered[sStudent.courseView] = "Not Registered";
     cCourse.numStudent--;
     int n = 3;
-    node<student> *pHead = nullptr;
+    node<student>* pHead = nullptr;
     loadFileCourseOfClass(pHead, sStudent, n);
     updateFileCourseOfClass(sStudent, pHead, n);
     deleteListStudent(pHead, n);
     updateFileCourse(sStudent, cCourse, false);
 }
 
-bool checkFileExist(student &sStudent, short CourseOrResult)
+bool checkFileExist(student& sStudent, short CourseOrResult)
 {
     ifstream fin;
     if (CourseOrResult == 0) // File Course
@@ -418,9 +418,9 @@ bool checkFileExist(student &sStudent, short CourseOrResult)
     return false;
 }
 
-void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
+void updateFileCourse(student& sStudent, Course& cCourse, bool isRegister)
 {
-    node<student> *p = cCourse.nStudentHead;
+    node<student>* p = cCourse.nStudentHead;
     ofstream fout;
     fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/" + cCourse.ID + ".txt");
     fout << cCourse.name << endl;
@@ -430,9 +430,9 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
     fout << cCourse.sSession[1].weekday << " " << cCourse.sSession[1].sTime << endl;
     fout << cCourse.classAllowed << endl;
     for (int i = 0;i < cCourse.classAllowed;i++)
-        fout << cCourse.nameClassAllowed[i];
+        fout << cCourse.nameClassAllowed[i] << endl;
     fout << cCourse.maxStudent << endl
-         << cCourse.numStudent << endl;
+        << cCourse.numStudent << endl;
     if (isRegister == true)
     {
         if (p)
@@ -459,7 +459,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
     {
         if (cCourse.nStudentHead->data.Class == sStudent.Class && cCourse.nStudentHead->data.id == sStudent.id)
         {
-            node<student> *pDel = cCourse.nStudentHead;
+            node<student>* pDel = cCourse.nStudentHead;
             cCourse.nStudentHead = cCourse.nStudentHead->next;
             delete pDel;
             p = cCourse.nStudentHead;
@@ -468,7 +468,7 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
         {
             if (p->next && p->next->data.Class == sStudent.Class && p->next->data.id == sStudent.id)
             {
-                node<student> *pDel = p->next;
+                node<student>* pDel = p->next;
                 p->next = p->next->next;
                 delete pDel;
             }
@@ -479,25 +479,23 @@ void updateFileCourse(student &sStudent, Course &cCourse, bool isRegister)
     fout.close();
 }
 
-void updateFileCourseOfClass(student &sStudent, node<student> *pHead, int &n)
+void updateFileCourseOfClass(student& sStudent, node<student>* pHead, int& n)
 {
     ofstream fout;
     fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/CourseOf" + sStudent.Class + ".csv");
     fout << "ID";
     for (int i = 0; i < 5; i++)
         fout << "," << sStudent.courseID[i];
-    fout << endl
-         << "ID";
+    fout << endl << "ID";
     for (int i = 0; i < 5; i++)
         fout << "," << sStudent.nameCourse[i];
-    node<student> *pCur = pHead;
-    fout << n << endl;
+    node<student>* pCur = pHead;
+    fout << endl << n;
     for (int i = 0; i < n; i++)
     {
         if (pCur->data.id == sStudent.id)
             pCur->data.isRegistered[sStudent.courseView] = sStudent.isRegistered[sStudent.courseView];
-        fout << endl
-             << pCur->data.id;
+        fout << endl << pCur->data.id;
         for (int j = 0; j < 5; j++)
             fout << "," << pCur->data.isRegistered[j];
         pCur = pCur->next;
@@ -505,7 +503,7 @@ void updateFileCourseOfClass(student &sStudent, node<student> *pHead, int &n)
     fout.close();
 }
 
-void updateFileResultOfClass(student &sStudent, node<student> *pHead, int &n)
+void updateFileResultOfClass(student& sStudent, node<student>* pHead, int& n)
 {
     ofstream fout;
     fout.open("../data/" + sStudent.schoolYear + "/" + sStudent.semeter + "/ResultOf" + sStudent.Class + ".csv");
@@ -514,16 +512,16 @@ void updateFileResultOfClass(student &sStudent, node<student> *pHead, int &n)
     for (int i = 1; i < 5; i++)
         fout << ",,,," << sStudent.courseID[i];
     fout << endl
-         << "ID," << sStudent.nameCourse[0];
+        << "ID," << sStudent.nameCourse[0];
     for (int i = 1; i < 5; i++)
         fout << ",,,," << sStudent.nameCourse[i];
-    node<student> *pCur = pHead;
+    node<student>* pCur = pHead;
     for (int i = 0; i < n; i++)
     {
         if (pCur->data.id == sStudent.id)
             pCur->data.rResult[sStudent.courseView] = sStudent.rResult[sStudent.courseView];
         fout << endl
-             << pCur->data.id;
+            << pCur->data.id;
         for (int j = 0; j < 5; j++)
         {
             fout << "," << pCur->data.rResult[j].quiz;
@@ -537,9 +535,9 @@ void updateFileResultOfClass(student &sStudent, node<student> *pHead, int &n)
     fout.close();
 }
 
-void updateFileStaff(node<user> *pHead, int n)
+void updateFileStaff(node<user>* pHead, int n)
 {
-    node<user> *p = pHead;
+    node<user>* p = pHead;
     ofstream fout;
     fout.open("../data/listofstaff.txt");
     fout << n << '\n';
@@ -552,9 +550,9 @@ void updateFileStaff(node<user> *pHead, int n)
     deleteListStaff(pHead, n);
 }
 
-void updateFileStudent(node<student> *pHead, int n)
+void updateFileStudent(node<student>* pHead, int n)
 {
-    node<student> *p = pHead;
+    node<student>* p = pHead;
     ofstream fout;
     fout.open("../data/listofstudent.txt");
     fout << n << '\n';
@@ -604,7 +602,7 @@ void createSchoolYear(short& numSchoolYear)
 
     fin.open("../data/" + newYear + "/Classes.txt");
     fin >> n;
-    node<string>*pClass = new node<string>;
+    node<string>* pClass = new node<string>;
     node<string>* cur = pClass;
     fin.get();
     for (int i = 0; i < n; i++)
@@ -632,6 +630,9 @@ void createSchoolYear(short& numSchoolYear)
             fout.close();
             cur = cur->next;
         }
+        fout.open(filename + "/Status.txt");
+        fout << -1 << endl;
+        fout.close();
     }
     // Dealloc pClass
     cur = pClass;

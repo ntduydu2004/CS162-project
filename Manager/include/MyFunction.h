@@ -8,12 +8,12 @@ template <class T>
 struct node
 {
     T data;
-    node *next = nullptr;
+    node* next = nullptr;
 };
 struct date
 {
-    short day{-1}, month{-1};
-    int year{-1};
+    short day{ -1 }, month{ -1 };
+    int year{ -1 };
 };
 struct result
 {
@@ -53,6 +53,7 @@ struct student : user
     string nameCourse[5];
     result rResult[5];
     short courseView;
+    short semesterStatus = -1;
     void getFirstYear()
     {
         firstYear = stoi(Class.substr(0, 2)) + 2000;
@@ -151,7 +152,7 @@ struct Course
     string nameClassAllowed[10];
     date startDay, endDay;
     string sDay;
-    node<student> *nStudentHead = nullptr;
+    node<student>* nStudentHead = nullptr;
     void getSDay()
     {
         sDay = "";
@@ -205,11 +206,11 @@ struct Course
     }
 };
 
-void loadFileStaff(node<user> *&pHead, int &n);
-void deleteListStaff(node<user> *&pHead, int n);
-bool checkStafflogin(user &uStaff);
-void loadFileDetailOfStaff(node<user> *&pHead, int &n);
-void detailOfStaff(user &uStaff);
+void loadFileStaff(node<user>*& pHead, int& n);
+void deleteListStaff(node<user>*& pHead, int n);
+bool checkStafflogin(user& uStaff);
+void loadFileDetailOfStaff(node<user>*& pHead, int& n);
+void detailOfStaff(user& uStaff);
 
 
 void loadFileStudent(node<student>*& pHead, int& n);
@@ -232,4 +233,3 @@ void updateFileStudent(node<student>* pHead, int n);
 void createSchoolYear(short& numSchoolYear); // Add a new schoool year succeeding the current year
 
 void RemoveCourse(student& sStudent, Course& course, string name[], int& dummy);
-
