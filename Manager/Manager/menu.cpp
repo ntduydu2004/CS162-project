@@ -581,12 +581,14 @@ void detailOfCourseMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &i
             indexMouse = 3;
             if (IsMouseButtonPressed(0))
             {
+                /*
                 cCourse.getStartDayOfCourse();
                 cCourse.getEndDayOfCourse();
                 cCourse.sSession[0].getStartTimeOfCourse();
                 cCourse.sSession[0].getEndTimeOfCourse();
                 cCourse.sSession[1].getStartTimeOfCourse();
                 cCourse.sSession[1].getEndTimeOfCourse();
+                */
                 int n;
                 string s;
                 ifstream fin;
@@ -849,21 +851,13 @@ void changePassword(Vector2 &mousePosition, Vector2 &touchPosition, short &index
     DrawRectangle(rec_changePass[3].x, rec_changePass[3].y, rec_changePass[3].width, rec_changePass[3].height, GREEN);
     DrawText("Change", GetScreenWidth() / 2 - 120, GetScreenHeight() / 2 + 150, 40, WHITE);
     DrawText("BACK", 45, GetScreenHeight() - 60, 40, RED);
-    if (flag == false)
-    {
-        DrawRectangleLines(rec_changePass[0].x, rec_changePass[0].y, rec_changePass[0].width, rec_changePass[0].height, RED);
-        DrawRectangleLines(rec_changePass[1].x, rec_changePass[1].y, rec_changePass[1].width, rec_changePass[1].height, RED);
-        DrawRectangleLines(rec_changePass[2].x, rec_changePass[2].y, rec_changePass[2].width, rec_changePass[2].height, RED);
-        DrawText("Passwords do not match", GetScreenWidth() / 2 - 32 * 20 / 2, GetScreenHeight() / 2 + 100, 20, RED);
-    }
-    else
-    {
-        DrawRectangleLines(rec_changePass[0].x, rec_changePass[0].y, rec_changePass[0].width, rec_changePass[0].height, BLACK);
-        DrawRectangleLines(rec_changePass[1].x, rec_changePass[1].y, rec_changePass[1].width, rec_changePass[1].height, BLACK);
-        DrawRectangleLines(rec_changePass[2].x, rec_changePass[2].y, rec_changePass[2].width, rec_changePass[2].height, BLACK);
+    for (int i = 0; i < 3; i++)
+        DrawRectangleLines(rec_changePass[i].x, rec_changePass[i].y, rec_changePass[i].width, rec_changePass[i].height, flag ? BLACK : RED);
+    if (flag)
         if (indexTouch == 0 || indexTouch == 1 || indexTouch == 2)
             DrawRectangleLines(rec_changePass[indexTouch].x, rec_changePass[indexTouch].y, rec_changePass[indexTouch].width, rec_changePass[indexTouch].height, GREEN);
-    }
+        else
+            DrawText("Passwords do not match", GetScreenWidth() / 2 - 32 * 20 / 2, GetScreenHeight() / 2 + 100, 20, RED);
     DrawRectangleLines(rec_changePass[indexMouse].x, rec_changePass[indexMouse].y, rec_changePass[indexMouse].width, rec_changePass[indexMouse].height, GREEN);
     EndDrawing();
 }
