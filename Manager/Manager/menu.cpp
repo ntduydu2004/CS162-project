@@ -1,9 +1,7 @@
-
 #include "../include/menu.h"
 
 void chooseRoleMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMouse, short &menu, short &role, Rectangle rec_Role[])
 {
-
     if (CheckCollisionPointRec(mousePosition, rec_Role[0]))
         indexMouse = 1;
     else if (CheckCollisionPointRec(mousePosition, rec_Role[1]))
