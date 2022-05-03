@@ -1,0 +1,11 @@
+Introductions to Computer Science
+Dinh Ba Tien
+10/02/2022 - 30/04/2022
+MON 07:30 - 09:00
+SAT 13:30 - 15:00
+1
+21APCS2
+50
+2
+21APCS2 4 -1 -1 -1 -1 -1 None
+21APCS2 6 -1 -1 -1 -1 -1 None

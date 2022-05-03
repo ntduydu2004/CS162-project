@@ -1,0 +1,15 @@
+Introductions to Laws
+Nguyen Ngoc Phuong Hong
+31/01/2022 - 30/04/2022
+TUE 13:30 - 17:10
+None 00:00 - 00:00
+2
+21APCS1
+21APCS2
+90
+5
+21APCS1 21125167 -1 -1 -1 -1 -1 None
+21APCS1 1 -1 -1 -1 -1 -1 None
+21APCS2 4 -1 -1 -1 -1 -1 None
+21APCS2 6 -1 -1 -1 -1 -1 None
+21APCS1 21125169 -1 -1 -1 -1 -1 None
