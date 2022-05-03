@@ -347,18 +347,19 @@ void checkStudentResult(student& sStudent, Course& cCourse)
                 sStudent.isRegistered[j] = pCur->data.isRegistered[j];
                 if (sStudent.isRegistered[j] == "Registered")
                 {
+                    sStudent.courseView = j;
                     loadFileCourse(sStudent.courseID[j], cCourse, sStudent);
                     node<student>* p = cCourse.nStudentHead;
                     for (int k = 0;k < cCourse.numStudent;k++)
                     {
                         if (p->data.id == sStudent.id && p->data.Class == sStudent.Class)
                         {
-                            sStudent.rResult[j].quiz = pCur->data.rResult[j].quiz;
-                            sStudent.rResult[j].lab = pCur->data.rResult[j].lab;
-                            sStudent.rResult[j].midterm = pCur->data.rResult[j].midterm;
-                            sStudent.rResult[j].finalterm = pCur->data.rResult[j].finalterm;
-                            sStudent.rResult[j].average = pCur->data.rResult[j].average;
-                            sStudent.rResult[j].type = pCur->data.rResult[j].type;
+                            sStudent.rResult[j].quiz = p->data.rResult[j].quiz;
+                            sStudent.rResult[j].lab = p->data.rResult[j].lab;
+                            sStudent.rResult[j].midterm = p->data.rResult[j].midterm;
+                            sStudent.rResult[j].finalterm = p->data.rResult[j].finalterm;
+                            sStudent.rResult[j].average = p->data.rResult[j].average;
+                            sStudent.rResult[j].type = p->data.rResult[j].type;
                             deleteListStudent(cCourse.nStudentHead, cCourse.numStudent);
                             break;
                         }

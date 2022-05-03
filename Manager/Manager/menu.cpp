@@ -508,7 +508,7 @@ void courseOrResultStudentMenu(Vector2 &mousePosition, Vector2 &touchPosition, s
                 DrawText(TextFormat("%.2f", sStudent.rResult[i].lab), 723, rec_StudentCourse[i].y + 10, 25, BLACK);
             if (sStudent.rResult[i].midterm >= 0)
                 DrawText(TextFormat("%.2f", sStudent.rResult[i].midterm), 807, rec_StudentCourse[i].y + 10, 25, BLACK);
-            if (sStudent.rResult[i].finalterm >= 0)
+            if (sStudent.rResult[i].finalterm != 0)
                 DrawText(TextFormat("%.2f", sStudent.rResult[i].finalterm), 893, rec_StudentCourse[i].y + 10, 25, BLACK);
             if (sStudent.rResult[i].average >= 0)
                 DrawText(TextFormat("%.2f", sStudent.rResult[i].average), 995, rec_StudentCourse[i].y + 10, 25, BLACK);
