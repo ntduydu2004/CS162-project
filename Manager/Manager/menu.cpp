@@ -1001,30 +1001,30 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                                 getline(fin, pCur->data.id, ',');
                                 getline(fin, s, ',');
                                 if (s == "")
-                                    sStudent.rResult[sStudent.courseView].quiz = -1;
+                                    pCur->data.rResult[sStudent.courseView].quiz = -1;
                                 else
-                                    sStudent.rResult[sStudent.courseView].quiz = stof(s);
+                                    pCur->data.rResult[sStudent.courseView].quiz = stof(s);
                                 getline(fin, s, ',');
                                 if (s == "")
-                                    sStudent.rResult[sStudent.courseView].lab = -1;
+                                    pCur->data.rResult[sStudent.courseView].lab = -1;
                                 else
-                                    sStudent.rResult[sStudent.courseView].lab = stof(s);
+                                    pCur->data.rResult[sStudent.courseView].lab = stof(s);
                                 getline(fin, s, ',');
                                 if (s == "")
-                                    sStudent.rResult[sStudent.courseView].midterm = -1;
+                                    pCur->data.rResult[sStudent.courseView].midterm = -1;
                                 else
-                                    sStudent.rResult[sStudent.courseView].midterm = stof(s);
+                                    pCur->data.rResult[sStudent.courseView].midterm = stof(s);
                                 getline(fin, s, ',');
                                 if (s == "")
-                                    sStudent.rResult[sStudent.courseView].finalterm = -1;
+                                    pCur->data.rResult[sStudent.courseView].finalterm = -1;
                                 else
-                                    sStudent.rResult[sStudent.courseView].finalterm = stof(s);
+                                    pCur->data.rResult[sStudent.courseView].finalterm = stof(s);
                                 getline(fin, s, ',');
                                 if (s == "")
-                                    sStudent.rResult[sStudent.courseView].average = -1;
+                                    pCur->data.rResult[sStudent.courseView].average = -1;
                                 else
-                                    sStudent.rResult[sStudent.courseView].average = stof(s);
-                                getline(fin, sStudent.rResult[sStudent.courseView].type, '\n');
+                                    pCur->data.rResult[sStudent.courseView].average = stof(s);
+                                getline(fin, pCur->data.rResult[sStudent.courseView].type, '\n');
                                 pCur = pCur->next;
                             }
                         }
@@ -1036,6 +1036,9 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                         fout << cCourse.sDay << endl;
                         fout << cCourse.sSession[0].weekday << " " << cCourse.sSession[0].sTime << endl;
                         fout << cCourse.sSession[1].weekday << " " << cCourse.sSession[1].sTime << endl;
+                        fout << cCourse.classAllowed << endl;
+                        for (int i = 0;i < cCourse.classAllowed;i++)
+                            fout << cCourse.nameClassAllowed[i] << endl;
                         fout << cCourse.maxStudent << endl
                              << cCourse.numStudent << endl;
                         pCur = cCourse.nStudentHead;
@@ -1050,8 +1053,11 @@ void classInput(Vector2 &mousePosition, Vector2 &touchPosition, short &indexMous
                             if (pCur->data.rResult[sStudent.courseView].type == "")
                                 pCur->data.rResult[sStudent.courseView].type = "None";
                             fout << pCur->data.rResult[sStudent.courseView].type << endl;
+                            pCur = pCur->next;
                         }
                         fout.close();
+                        deleteListStudent(cCourse.nStudentHead, cCourse.numStudent);
+                        loadFileCourse(cCourse.ID, cCourse, sStudent);
                         ClearDroppedFiles();
                         count = 0;
                         menu = 22;
@@ -1617,7 +1623,10 @@ void exportFileMenu(Vector2 &mousePosition, Vector2 &touchPosition, short &index
                 fout << "Class,ID,Quiz,Lab,Midterm,Finalterm,Average,Type" << endl;
                 node<student> *pCur = cCourse.nStudentHead;
                 for (int i = 0; i < cCourse.numStudent; i++)
+                {
                     fout << pCur->data.Class << "," << pCur->data.id << endl;
+                    pCur = pCur->next;
+                }
             }
             fout.close();
             indexTouch = -1;
